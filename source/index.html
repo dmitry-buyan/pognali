@@ -25,17 +25,13 @@
               <a href="catalog.html" class="site-list__link">Попутчики</a>
             </li>
           </ul>
-          <ul class="main-nav__list user-list">
-            <li class="user-list__item">
-              <a href="" class="user-list__login">Авторизация</a>
-            </li>
-          </ul>
+          <a href="#" class="main-nav__login login-button">Авторизация</a>
           <ul class="main-nav__list contact-list">
             <li class="contact-list__item">
-              <a href="tel:88005558628" class="contact-list__link">8&nbsp;800&nbsp;555-86-28</a>
+              <a href="tel:88005558628" class="contact-list__link contact-list__link--phone-top">8&nbsp;800&nbsp;555-86-28</a>
             </li>
             <li class="contact-list__item">
-              <a href="mailto:mail@htmlacademy.ru" class="contact-list__link">mail@htmlacademy.ru</a>
+              <a href="mailto:mail@htmlacademy.ru" class="contact-list__link contact-list__link--email-top">mail@htmlacademy.ru</a>
             </li>
           </ul>
           <ul class="main_nav__list social-list">
@@ -56,24 +52,26 @@
             </li>
           </ul>
         </div>
-        <ul class="main-nav__list user-list">
-          <li class="user-list__item">
-            <a href="#login.html" class="user-list__login">Авторизация</a>
-          </li>
-        </ul>
-        <ul class="main-nav__list contact-list">
-          <li class="contact-list__item">
-            <a href="tel:88005558628" class="contact-list__link">8&nbsp;800&nbsp;555-86-28</a>
-          </li>
-          <li class="contact-list__item">
-            <a href="mailto:mail@htmlacademy.ru" class="contact-list__link">mail@htmlacademy.ru</a>
-          </li>
-        </ul>
       </nav>
     </header>
 
     <main class="page-main">
       <h1 class="page-main__title">В путешествие с крутыми попутчиками!</h1>
+      <div class="page-main__user-area">
+        <ul class="page-main__list">
+          <li class="page-main__item">
+            <a href="tel:88005558628" class="page-main__link">
+              <span class="visually-hidden">8&nbsp;800&nbsp;555-86-28</span>
+            </a>
+          </li>
+          <li class="page-main__item">
+            <a href="mailto:mail@htmlacademy.ru" class="page-main__link">
+              <span class="visually-hidden">mail@htmlacademy.ru</span>
+            </a>
+          </li>
+        </ul>
+        <a href="#" class="page-main__login login-button">Авторизация</a>
+      </div>
       <section class="about">
         <div class="about__reviews">
           <h2 class="visually-hidden">Отзывы о нас</h2>
@@ -104,16 +102,19 @@
         </div>
         <ul class="countries__list">
           <li class="counstries__item countries__item--thailand">
+            <img src="http://placehold.it/270x110" alt="Тайланд" class="countries__image" width="270" height="110">
             <h3 class="countries__name countries__name--thailand">Тайланд</h3>
             <span class="countries__visitors">18321</span>
             <p class="countries__text">Джугли зовут!</p>
           </li>
           <li class="counstries__item countries__item--france">
+            <img src="http://placehold.it/270x110" alt="Франция" class="countries__image" width="270" height="110">
             <h3 class="countries__name countries__name--france">Франция</h3>
             <span class="countries__visitors">12518</span>
             <p class="countries__text">Трэ бьен, манифик!</p>
           </li>
           <li class="counstries__item countries__item--сzech">
+            <img src="http://placehold.it/270x110" alt="Чехия" class="countries__image" width="270" height="110">
             <h3 class="countries__name countries__name--czech">Чехия</h3>
             <span class="countries__visitors">5326</span>
             <p class="countries__text">Закоулки старой Европы</p>
@@ -131,6 +132,10 @@
         <ul class="travelmates__list">
           <li class="travelmates__item">
             <img src="http://placehold.it/270x270" alt="Таня Фирсова" width="270" height="270" class="travelmates__avatar">
+            <div class="travelmates__level-wrapper">
+              <span class="travelmates__level-amount">99</span>
+              <span class="travelmates__level-title">level</span>
+            </div>
             <h4 class="visually-hidden">Хочет посетить</h4>
             <ul class="travelmates__sublist">
               <li class="travelmates__subitem">
@@ -153,23 +158,27 @@
               <a href="#">#смузи</a>
             </div>
             <h4 class="visually-hidden">Транспорт</h4>
-            <ul class="travelmates__travel-list">
-              <li class="travelmates__travel-item">
+            <ul class="travelmates__transport-list transport">
+              <li class="transport__item transport__item--plane transport__item--active">
                 <span class="visually-hidden">Самолет</span>
               </li>
-              <li class="travelmates__travel-item">
+              <li class="transport__item transport__item--bus">
                 <span class="visually-hidden">Автотранспорт</span>
               </li>
-              <li class="travelmates__travel-item">
+              <li class="transport__item transport__item--bicycle">
                 <span class="visually-hidden">Велотранспорт</span>
               </li>
-              <li class="travelmates__travel-item">
+              <li class="transport__item transport__item--walk">
                 <span class="visually-hidden">Пешком</span>
               </li>
             </ul>
           </li>
           <li class="travelmates__item">
             <img src="http://placehold.it/270x270" alt="Петя Демин" width="270" height="270" class="travelmates__avatar">
+            <div class="travelmates__level-wrapper">
+              <span class="travelmates__level-amount">80</span>
+              <span class="travelmates__level-title">level</span>
+            </div>
             <h4 class="visually-hidden">Хочет посетить</h4>
             <ul class="travelmates__sublist">
               <li class="travelmates__subitem">
@@ -188,17 +197,17 @@
               <a href="#">#крафт</a>
             </div>
             <h4 class="visually-hidden">Транспорт</h4>
-            <ul class="travelmates__travel-list">
-              <li class="travelmates__travel-item">
+            <ul class="travelmates__transport-list transport">
+              <li class="transport__item transport__item--plane transport__item--active">
                 <span class="visually-hidden">Самолет</span>
               </li>
-              <li class="travelmates__travel-item">
+              <li class="transport__item transport__item--bus transport__item--active">
                 <span class="visually-hidden">Автотранспорт</span>
               </li>
-              <li class="travelmates__travel-item">
+              <li class="transport__item transport__item--bicycle">
                 <span class="visually-hidden">Велотранспорт</span>
               </li>
-              <li class="travelmates__travel-item">
+              <li class="transport__item transport__item--walk transport__item--active">
                 <span class="visually-hidden">Пешком</span>
               </li>
             </ul>
@@ -229,7 +238,7 @@
 
       <section class="signin">
         <h2 class="signin__title subtitle">Заинтересовались?</h2>
-        <p>Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a href="#login.html">авторизуйтесь</a>.</p>
+        <p>Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a href="#">авторизуйтесь</a>.</p>
         <form action="https://echo.htmlacademy.ru" method="post" class="signin__form">
           <input type="email" name="email" required>
           <button type="submit" class="signin__button button">
@@ -240,10 +249,10 @@
           <p>Остались вопросы? Мы с радостью на них ответим!</p>
           <ul class="signin__list contact-list">
             <li class="contact-list__item">
-              <a href="tel:88005558628" class="contact-list__link contact-list__link--bottom">8&nbsp;800&nbsp;555-86-28</a>
+              <a href="tel:88005558628" class="contact-list__link contact-list__link--phone-bottom">8&nbsp;800&nbsp;555-86-28</a>
             </li>
             <li class="contact-list__item">
-              <a href="mailto:mail@htmlacademy.ru" class="contact-list__link contact-list-link--bottom">mail@htmlacademy.ru</a>
+              <a href="mailto:mail@htmlacademy.ru" class="contact-list__link contact-list-link--email-bottom">mail@htmlacademy.ru</a>
             </li>
           </ul>
         </div>
@@ -259,7 +268,7 @@
 
       <section class="map">
         <h2 class="visually-hidden">Мы на карте</h2>
-        <iframe src="https://yandex.ru/map-widget/v1/-/CCsdiD0N" width="560" height="400"></iframe>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab129b4155a80defd97335a3fbb0384bc92f53e2c89a4ef70bcc77025ec961ac6&amp;width=457&amp;height=378&amp;lang=ru_RU&amp;scroll=true"></script>
       </section>
     </main>
 
