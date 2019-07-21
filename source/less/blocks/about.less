@@ -1,9 +1,29 @@
 .about {
-  background-color: @bg-optional;
+  padding: 0 25px;
+  background-color: @color-darkblue;
+  outline: 5px dashed green;
 }
 
 .about__reviews {
-  background-color: @bg-main;
+  background-color: @color-darknavy;
+}
+
+.about__text {
+  &--bolder {
+    font-weight: @font-bold;
+  }
+}
+
+.about__author {
+  font-style: normal;
+  font-weight: @font-bold;
+}
+
+.about__guideline {
+  font-weight: @font-bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: @color-darknavy;
 }
 
 .about__item {

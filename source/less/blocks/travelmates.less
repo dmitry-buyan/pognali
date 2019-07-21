@@ -1,10 +1,31 @@
 .travelmates {
-  background-color: @bg-optional;
+  padding: 0 25px;
+  background-color: @color-darkblue;
   background-image: url("../img/rogovaya-back-mobile@1x.png");
   background-repeat: no-repeat;
+  // Временно для сетки
+  outline: 5px dashed green;
 }
 
 .travelmates__wrapper {
   background-image: url("../img/smolov-back-desktop@1x.png");
   background-repeat: no-repeat;
+}
+
+.travelmates__text {
+  &--bolder {
+    font-weight: @font-bold;
+  }
+}
+
+.travelmates__list {
+  color: @color-grey;
+}
+
+.travelmates__item {
+  background-color: @color-white;
+}
+
+.travelmates__name {
+  .heading(21px, 21px, @color-cobalt);
 }

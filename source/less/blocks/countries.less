@@ -1,3 +1,28 @@
 .countries {
-  background-color: @bg-body;
+  padding: 0 25px;
+  color: @color-grey;
+  background-color: @color-lightgrey;
+  // Временно для сетки
+  outline: 5px dashed green;
+}
+
+.countries__item {
+  background-color: @color-white;
+}
+
+.countries__name {
+  font-size: 21px;
+  line-height: 21px;
+  color: @color-darknavy;
+}
+
+.countries__visitors {
+  line-height: 30px;
+  color: fade(@color-grey, 30%);
+}
+
+.countries__text {
+  font-weight: @font-medium;
+  line-height: 18px;
+  color: fade(@color-grey, 30%);
 }
