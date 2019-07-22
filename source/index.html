@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Погнали? - Главная страница</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -56,22 +57,25 @@
     </header>
 
     <main class="page-main">
-      <h1 class="page-main__title">В путешествие с крутыми попутчиками!</h1>
-      <div class="page-main__user-area">
-        <ul class="page-main__list">
-          <li class="page-main__item">
-            <a href="tel:88005558628" class="page-main__link">
-              <span class="visually-hidden">8&nbsp;800&nbsp;555-86-28</span>
-            </a>
-          </li>
-          <li class="page-main__item">
-            <a href="mailto:mail@htmlacademy.ru" class="page-main__link">
-              <span class="visually-hidden">mail@htmlacademy.ru</span>
-            </a>
-          </li>
-        </ul>
-        <a href="#" class="page-main__login login-button">Авторизация</a>
-      </div>
+      <section class="intro">
+        <h1 class="intro__title">В путешествие с крутыми попутчиками!</h1>
+        <div class="intro__user-area">
+          <ul class="intro__list">
+            <li class="intro__item">
+              <a href="tel:88005558628" class="intro__link">
+                <span class="visually-hidden">8&nbsp;800&nbsp;555-86-28</span>
+              </a>
+            </li>
+            <li class="intor__item">
+              <a href="mailto:mail@htmlacademy.ru" class="intro__link">
+                <span class="visually-hidden">mail@htmlacademy.ru</span>
+              </a>
+            </li>
+          </ul>
+          <a href="#" class="intro__login login-button">Авторизация</a>
+        </div>
+      </section>
+
       <section class="about">
         <div class="about__reviews">
           <h2 class="visually-hidden">Отзывы о нас</h2>
@@ -90,8 +94,8 @@
         </div>
         <div class="about__description">
           <h2 class="about__subtitle subtitle">О сервисе</h2>
-          <p>Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-          <p><b>А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</b></p>
+          <p class="about__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+          <p class="about__text about__text--bolder">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
         </div>
       </section>
 
@@ -101,19 +105,19 @@
           <p class="countries__intro">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
         </div>
         <ul class="countries__list">
-          <li class="counstries__item countries__item--thailand">
+          <li class="countries__item countries__item--thailand">
             <img src="http://placehold.it/270x110" alt="Тайланд" class="countries__image" width="270" height="110">
             <h3 class="countries__name countries__name--thailand">Тайланд</h3>
             <span class="countries__visitors">18321</span>
             <p class="countries__text">Джугли зовут!</p>
           </li>
-          <li class="counstries__item countries__item--france">
+          <li class="countries__item countries__item--france">
             <img src="http://placehold.it/270x110" alt="Франция" class="countries__image" width="270" height="110">
             <h3 class="countries__name countries__name--france">Франция</h3>
             <span class="countries__visitors">12518</span>
             <p class="countries__text">Трэ бьен, манифик!</p>
           </li>
-          <li class="counstries__item countries__item--сzech">
+          <li class="countries__item countries__item--сzech">
             <img src="http://placehold.it/270x110" alt="Чехия" class="countries__image" width="270" height="110">
             <h3 class="countries__name countries__name--czech">Чехия</h3>
             <span class="countries__visitors">5326</span>
@@ -126,8 +130,8 @@
       <section class="travelmates">
         <div class="travelmates__wrapper">
           <h2 class="travelmates__subtitle subtitle">Попутчики</h2>
-          <p>Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-          <p><b>Теперь можно легко найти единомышленников!</b></p>
+          <p class="travelmates__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+          <p class="travelmates__text travelmates__text--bolder">Теперь можно легко найти единомышленников!</p>
         </div>
         <ul class="travelmates__list">
           <li class="travelmates__item">
@@ -149,13 +153,27 @@
               </li>
             </ul>
             <h3 class="travelmates__name travelmates__name--offline">Таня Фирсова</h3>
-            <div class="travelmates__hashtags">
-              <a href="#">#ЗОЖ</a>
-              <a href="#">#ПП</a>
-              <a href="#">#Фитнес</a>
-              <a href="#">#пляж</a>
-              <a href="#">#авокадо</a>
-              <a href="#">#смузи</a>
+            <div class="travelmates__hashtags hashtags">
+              <ul class="hashtags__list">
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#ЗОЖ</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#ПП</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#Фитнес</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#пляж</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#авокадо</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#смузи</a>
+                </li>
+              </ul>
             </div>
             <h4 class="visually-hidden">Транспорт</h4>
             <ul class="travelmates__transport-list transport">
@@ -189,12 +207,23 @@
               </li>
             </ul>
             <h3 class="travelmates__name travelmates__name--online">Петя Демин</h3>
-            <div class="travelmates__hashtags">
-              <a href="#">#бургер</a>
-              <a href="#">#бар</a>
-              <a href="#">#футбол</a>
-              <a href="#">#концерт</a>
-              <a href="#">#крафт</a>
+            <div class="travelmates__hashtags hashtags">
+              <ul class="hashtags__list">
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#бургер</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#бар</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#футбол</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#концерт</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#крафт</a>
+              </ul>
             </div>
             <h4 class="visually-hidden">Транспорт</h4>
             <ul class="travelmates__transport-list transport">
@@ -238,7 +267,7 @@
 
       <section class="signin">
         <h2 class="signin__title subtitle">Заинтересовались?</h2>
-        <p>Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a href="#">авторизуйтесь</a>.</p>
+        <p>Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a href="#" class="signin__link">авторизуйтесь</a>.</p>
         <form action="https://echo.htmlacademy.ru" method="post" class="signin__form">
           <input type="email" name="email" required>
           <button type="submit" class="signin__button button">
@@ -252,7 +281,7 @@
               <a href="tel:88005558628" class="contact-list__link contact-list__link--phone-bottom">8&nbsp;800&nbsp;555-86-28</a>
             </li>
             <li class="contact-list__item">
-              <a href="mailto:mail@htmlacademy.ru" class="contact-list__link contact-list-link--email-bottom">mail@htmlacademy.ru</a>
+              <a href="mailto:mail@htmlacademy.ru" class="contact-list__link contact-list__link--email-bottom">mail@htmlacademy.ru</a>
             </li>
           </ul>
         </div>
@@ -260,7 +289,7 @@
 
       <section class="address">
         <h2 class="visually-hidden">Как к нам добраться?</h2>
-        <address>
+        <address class="address__wrapper">
           <p class="address__text">ул. Большая Конюшенная, 19/8</p>
           <a href="#" class="address__route">Проложить маршрут</a>
         </address>

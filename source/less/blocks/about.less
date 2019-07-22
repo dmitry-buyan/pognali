@@ -1,0 +1,46 @@
+.about {
+  padding: 0 25px;
+  background-color: @color-darkblue;
+  outline: 5px dashed green;
+}
+
+.about__reviews {
+  background-color: @color-darknavy;
+}
+
+.about__text {
+  &--bolder {
+    font-weight: @font-bold;
+  }
+}
+
+.about__author {
+  font-style: normal;
+  font-weight: @font-bold;
+}
+
+.about__guideline {
+  font-weight: @font-bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: @color-darknavy;
+}
+
+.about__item {
+  background-color: #ff8d30;
+
+  &:nth-child(2) {
+    background-color: #ffa530;
+  }
+  &:nth-child(3) {
+    background-color: #ffbd30;
+  }
+  &:last-child {
+    background-color: #ffd74b;
+  }
+}
+
+.about__description {
+  background-image: url("../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+}

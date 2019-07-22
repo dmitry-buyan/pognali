@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Погнали? - Попутчики</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -25,7 +26,7 @@
               <a href="catalog.html" class="site-list__link site-list__link--active">Попутчики</a>
             </li>
           </ul>
-          <a href="#" class="main-nav__login">Авторизация</a>
+          <a href="#" class="main-nav__login login-button">Авторизация</a>
           <ul class="main-nav__list contact-list">
             <li class="contact-list__item">
               <a href="tel:88005558628" class="contact-list__link contact-list__link--phone-top">8&nbsp;800&nbsp;555-86-28</a>
@@ -56,7 +57,10 @@
     </header>
 
     <main class="page-inner">
-      <h1 class="page-inner__title">Попутчики</h1>
+      <header class="page-inner__header">
+        <h1 class="page-inner__title">Попутчики</h1>
+      </header>
+
       <section class="filter">
         <!-- Filter will be here -->
       </section>
@@ -67,19 +71,34 @@
             <a href="#">
               <img src="http://placehold.it/70x70" alt="Таня Фирсова" width="70" height="70" class="catalog__avatar">
             </a>
-            <p class="catalog__user-likes">
-              <span class="visually-hidden">Количество лайков: </span><span class="catalog__likes-amount catalog__likes-amount--high">1.5 м</span>
+            <p class="catalog__likes">
+              <span class="visually-hidden">Количество лайков:</span>
+              <span class="catalog__likes-amount catalog__likes-amount--isLike">1.5 м</span>
             </p>
-            <a href="#">
+            <a href="#" class="catalog__name-link">
               <h2 class="catalog__name catalog__name--offline">Таня Фирсова</h2>
             </a>
-            <div class="catalog__hashtags">
-              <a href="#">#ЗОЖ</a>
-              <a href="#">#ПП</a>
-              <a href="#">#Фитнес</a>
-              <a href="#">#пляж</a>
-              <a href="#">#авокадо</a>
-              <a href="#">#смузи</a>
+            <div class="catalog__hashtags hashtags">
+              <ul class="hashtags__list">
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#ЗОЖ</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#ПП</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#Фитнес</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#пляж</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#авокадо</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#смузи</a>
+                </li>
+              </ul>
             </div>
             <h3 class="catalog__subtitle">Хочет посетить</h3>
             <ul class="catalog__sublist">
@@ -112,18 +131,31 @@
             <a href="#">
               <img src="http://placehold.it/70x70" alt="Петя Демин" width="70" height="70" class="catalog__avatar">
             </a>
-            <p class="catalog__user-likes">
-              <span class="visually-hidden">Количество лайков: </span><span class="catalog__likes-amount catalog__likes-amount--low">150</span>
+            <p class="catalog__likes">
+              <span class="visually-hidden">Количество лайков:</span>
+              <span class="catalog__likes-amount">150</span>
             </p>
-            <a href="#">
+            <a href="#" class="catalog__name-link">
               <h2 class="catalog__name catalog__name--offline">Петя Демин</h2>
             </a>
-            <div class="catalog__hashtags">
-              <a href="#">#бургер</a>
-              <a href="#">#бар</a>
-              <a href="#">#футбол</a>
-              <a href="#">#концерт</a>
-              <a href="#">#крафт</a>
+            <div class="catalog__hashtags hashtags">
+              <ul class="hashtags__list">
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#бургер</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#бар</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#футбол</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#концерт</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#крафт</a>
+                </li>
+              </ul>
             </div>
             <h3 class="catalog__subtitle">Хочет посетить</h3>
             <ul class="catalog__sublist">
@@ -155,18 +187,31 @@
             <a href="#">
               <img src="http://placehold.it/70x70" alt="Марк Смолов" width="70" height="70" class="catalog__avatar">
             </a>
-            <p class="catalog__user-likes">
-              <span class="visually-hidden">Количество лайков: </span><span class="catalog__likes-amount catalog__likes-amount--low">1700</span>
+            <p class="catalog__likes">
+              <span class="visually-hidden">Количество лайков:</span>
+              <span class="catalog__likes-amount">1700</span>
             </p>
-            <a href="#">
+            <a href="#" class="catalog__name-link">
               <h2 class="catalog__name catalog__name--offline">Марк Смолов</h2>
             </a>
-            <div class="catalog__hashtags">
-              <a href="#">#рэп</a>
-              <a href="#">#тату</a>
-              <a href="#">#хайпбист</a>
-              <a href="#">#кроссовки</a>
-              <a href="#">#суприм</a>
+            <div class="catalog__hashtags hashtags">
+              <ul class="hashtags__list">
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#рэп</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#тату</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#хайпбист</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#кроссовки</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#суприм</a>
+                </li>
+              </ul>
             </div>
             <h3 class="catalog__subtitle">Хочет посетить</h3>
             <ul class="catalog__sublist">
@@ -199,17 +244,28 @@
             <a href="#">
               <img src="http://placehold.it/70x70" alt="Лариса Роговая" width="70" height="70" class="catalog__avatar">
             </a>
-            <p class="catalog__user-likes">
-              <span class="visually-hidden">Количество лайков: </span><span class="catalog__likes-amount catalog__likes-amount--low">23</span>
+            <p class="catalog__likes">
+              <span class="visually-hidden">Количество лайков:</span>
+              <span class="catalog__likes-amount">23</span>
             </p>
-            <a href="#">
+            <a href="#" class="catalog__name-link">
               <h2 class="catalog__name catalog__name--online">Лариса Роговая</h2>
             </a>
-            <div class="catalog__hashtags">
-              <a href="#">#образование</a>
-              <a href="#">#карьера</a>
-              <a href="#">#учеба</a>
-              <a href="#">#линкедин</a>
+            <div class="catalog__hashtags hashtags">
+              <ul class="hashtags__list">
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#образование</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#карьера</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#учеба</a>
+                </li>
+                <li class="hashtags__item">
+                  <a href="#" class="hashtags__link">#линкедин</a>
+                </li>
+              </ul>
             </div>
             <h3 class="catalog__subtitle">Хочет посетить</h3>
             <ul class="catalog__sublist">
