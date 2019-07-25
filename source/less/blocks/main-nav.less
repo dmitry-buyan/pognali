@@ -1,8 +1,16 @@
 .main-nav {
+  background-color: @color-white;
   // Временно для сетки
   outline: 5px dashed green;
 }
 
 .main-nav__wrapper {
-  background-color: @color-white;
+  width: 270px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__wrapper {
+    width: 688px;
+  }
 }

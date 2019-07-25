@@ -1,13 +1,37 @@
 .intro {
-  padding: 0 25px;
   background-color: @color-darknavy;
-  background-image:
-    url("../img/traveller-illustration-mobile@1x.png"),
-    url("../img/globe-back-mobile@1x.jpg");
+  background-image: url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
+  // Временно для сетки
   outline: 5px dashed green;
+}
+
+.intro__container {
+  width: 270px;
+  margin: 0 auto;
+  background-image: url("../img/traveller-illustration-mobile@1x.png");
+  background-repeat: no-repeat;
+  // Временно для сетки
+  outline: 3px dashed red;
 }
 
 .intro__title {
   .heading(36px, 40px, @color-white);
+  margin: 0;
+}
+
+.intro__list {
+  .list-reset();
+}
+
+@media (min-width: @tablet-width) {
+  .intro__container {
+    width: 688px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro__container {
+    width: 1320px;
+  }
 }

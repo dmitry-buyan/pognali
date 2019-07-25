@@ -1,7 +1,39 @@
 .page-footer {
+  position: relative;
   padding: 0 25px;
   color: @color-grey;
   background-color: @color-white;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   // Временно для сетки
   outline: 3px solid red;
+}
+
+.page-footer__container {
+  width: 270px;
+  margin: 0 auto;
+  // Временно для сетки
+  outline: 3px dashed red;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    border-top-left-radius: 55px;
+    border-top-right-radius: 55px;
+  }
+
+  .page-footer__container {
+    width: 688px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
+
+  .page-footer__container {
+    width: 1320px;
+  }
 }

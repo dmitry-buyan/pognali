@@ -1,9 +1,23 @@
 .countries {
+  position: relative;
+  z-index: 1;
   padding: 0 25px;
   color: @color-grey;
   background-color: @color-lightgrey;
+  .border-radius();
   // Временно для сетки
   outline: 5px dashed green;
+}
+
+.countries__container {
+  width: 270px;
+  margin: 0 auto;
+  // Временно для сетки
+  outline: 3px dashed red;
+}
+
+.countries__list {
+  .list-reset();
 }
 
 .countries__item {
@@ -25,4 +39,16 @@
   font-weight: @font-medium;
   line-height: 18px;
   color: fade(@color-grey, 30%);
+}
+
+@media (min-width: @tablet-width) {
+  .countries__container {
+    width: 688px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .countries__container {
+    width: 1320px;
+  }
 }

@@ -2,40 +2,326 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Погнали? - Попутчики</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a href="index.html" class="page-header__logo logo">
-        <img class="page-header__logo-image" src="http://placehold.it/96x15" alt="Логотип сайта Погнали" width="96" height="15">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="index.html" class="site-list__link">О сервисе</a>
+      <div class="page-header__container">
+        <a href="index.html" class="page-header__logo logo">
+          <img class="page-header__logo-image" src="http://placehold.it/96x15" alt="Логотип сайта Погнали" width="96" height="15">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item">
+                <a href="index.html" class="site-list__link">О сервисе</a>
+              </li>
+              <li class="site-list__item">
+                <a href="form.html" class="site-list__link">Направления</a>
+              </li>
+              <li class="site-list__item">
+                <a href="catalog.html" class="site-list__link site-list__link--active">Попутчики</a>
+              </li>
+            </ul>
+            <a href="#" class="main-nav__login login-button">Авторизация</a>
+            <ul class="main-nav__list contact-list">
+              <li class="contact-list__item">
+                <a href="tel:88005558628" class="contact-list__link contact-list__link--phone-top">8&nbsp;800&nbsp;555-86-28</a>
+              </li>
+              <li class="contact-list__item">
+                <a href="mailto:mail@htmlacademy.ru" class="contact-list__link contact-list__link--email-top">mail@htmlacademy.ru</a>
+              </li>
+            </ul>
+            <ul class="main_nav__list social-list">
+              <li class="social-list__item">
+                <a href="#" class="social-list__link social-list__link--fb">
+                  <span class="visually-hidden">Наш Фейсбук</span>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a href="#" class="social-list__link social-list__link--vk">
+                  <span class="visually-hidden">Наш Вконтакте</span>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a href="#" class="social-list__link social-list__link--inst">
+                  <span class="visually-hidden">Наш Инстаграм</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-inner">
+      <header class="page-inner__header">
+        <div class="page-inner__container">
+          <h1 class="page-inner__title">Попутчики</h1>
+        </div>
+      </header>
+
+      <section class="filter">
+        <!-- Filter will be here -->
+      </section>
+
+      <section class="catalog">
+        <div class="catalog__container">
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <a href="#">
+                <img src="http://placehold.it/70x70" alt="Таня Фирсова" width="70" height="70" class="catalog__avatar">
+              </a>
+              <p class="catalog__likes">
+                <span class="visually-hidden">Количество лайков:</span>
+                <span class="catalog__likes-amount catalog__likes-amount--isLike">1.5 м</span>
+              </p>
+              <a href="#" class="catalog__name-link">
+                <h2 class="catalog__name catalog__name--offline">Таня Фирсова</h2>
+              </a>
+              <div class="catalog__hashtags hashtags">
+                <ul class="hashtags__list">
+                  <li class="hashtags__item">
+                    <a href="#" class="hashtags__link">#ЗОЖ</a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a href="#" class="hashtags__link">#ПП</a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a href="#" class="hashtags__link">#Фитнес</a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a href="#" class="hashtags__link">#пляж</a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a href="#" class="hashtags__link">#авокадо</a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a href="#" class="hashtags__link">#смузи</a>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="catalog__subtitle">Хочет посетить</h3>
+              <ul class="catalog__sublist">
+                <li class="catalog__subitem catalog__subitem--shrilanka">Шри Ланка</li>
+                <li class="catalog__subitem catalog__subitem--thailand">Тайланд</li>
+                <li class="catalog__subitem catalog__subitem--seychelles">Сейшелы</li>
+              </ul>
+              <h3 class="catalog__subtitle">Транспорт</h3>
+              <ul class="catalog__transport-list transport">
+                <li class="transport__item transport__item--plane transport__item--active">
+                  <span class="visually-hidden">Авиаперелет</span>
+                </li>
+                <li class="transport__item transport__item--bus">
+                  <span class="visually-hidden">Автотранспорт</span>
+                </li>
+                <li class="transport__item transport__item--bicycle">
+                  <span class="visually-hidden">Велосипед</span>
+                </li>
+                <li class="transport__item transport__item--walk">
+                  <span class="visually-hidden">Пешком</span>
+                </li>
+              </ul>
+              <div class="catalog__level-wrapper">
+                <span class="catalog__level-title">Левел:</span>
+                <span class="catalog__level-amount">99</span>
+              </div>
+              <a href="#" class="catalog__button button-inner">Позвать!</a>
             </li>
-            <li class="site-list__item">
-              <a href="form.html" class="site-list__link">Направления</a>
+            <li class="catalog__item">
+              <a href="#">
+                <img src="http://placehold.it/70x70" alt="Петя Демин" width="70" height="70" class="catalog__avatar">
+              </a>
+              <p class="catalog__likes">
+                <span class="visually-hidden">Количество лайков:</span>
+                <span class="catalog__likes-amount">150</span>
+              </p>
+              <a href="#" class="catalog__name-link">
+                <h2 class="catalog__name catalog__name--offline">Петя Демин</h2>
+              </a>
+              <div class="catalog__hashtags hashtags">
+                <ul class="hashtags__list">
+                  <li class="hashtags__item">
+                    <a href="#" class="hashtags__link">#бургер</a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a href="#" class="hashtags__link">#бар</a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a href="#" class="hashtags__link">#футбол</a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a href="#" class="hashtags__link">#концерт</a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a href="#" class="hashtags__link">#крафт</a>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="catalog__subtitle">Хочет посетить</h3>
+              <ul class="catalog__sublist">
+                <li class="catalog__subitem catalog__subitem--belgium">Бельгия</li>
+                <li class="catalog__subitem catalog__subitem--czech">Чехия</li>
+              </ul>
+              <h3 class="catalog__subtitle">Транспорт</h3>
+              <ul class="catalog__transport-list transport">
+                <li class="transport__item transport__item--plane transport__item--active">
+                  <span class="visually-hidden">Авиаперелет</span>
+                </li>
+                <li class="transport__item transport__item--bus transport__item--active">
+                  <span class="visually-hidden">Автотранспорт</span>
+                </li>
+                <li class="transport__item transport__item--bicycle">
+                  <span class="visually-hidden">Велосипед</span>
+                </li>
+                <li class="transport__item transport__item--walk transport__item--active">
+                  <span class="visually-hidden">Пешком</span>
+                </li>
+              </ul>
+              <div class="catalog__level-wrapper">
+                <span class="catalog__level-title">Левел:</span>
+                <span class="catalog__level-amount">80</span>
+              </div>
+              <a href="#" class="catalog__button button-inner">Позвать!</a>
             </li>
-            <li class="site-list__item">
-              <a href="catalog.html" class="site-list__link site-list__link--active">Попутчики</a>
+            <li class="catalog__item">
+              <a href="#">
+                <img src="http://placehold.it/70x70" alt="Марк Смолов" width="70" height="70" class="catalog__avatar">
+              </a>
+              <p class="catalog__likes">
+                <span class="visually-hidden">Количество лайков:</span>
+                <span class="catalog__likes-amount">1700</span>
+              </p>
+              <a href="#" class="catalog__name-link">
+                <h2 class="catalog__name catalog__name--offline">Марк Смолов</h2>
+              </a>
+              <div class="catalog__hashtags hashtags">
+                <ul class="hashtags__list">
+                  <li class="hashtags__item">
+                    <a href="#" class="hashtags__link">#рэп</a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a href="#" class="hashtags__link">#тату</a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a href="#" class="hashtags__link">#хайпбист</a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a href="#" class="hashtags__link">#кроссовки</a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a href="#" class="hashtags__link">#суприм</a>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="catalog__subtitle">Хочет посетить</h3>
+              <ul class="catalog__sublist">
+                <li class="catalog__subitem catalog__subitem--usa">США</li>
+                <li class="catalog__subitem catalog__subitem--australia">Австралия</li>
+                <li class="catalog__subitem catalog__subitem--dominicana">Доминикана</li>
+              </ul>
+              <h3 class="catalog__subtitle">Транспорт</h3>
+              <ul class="catalog__transport-list transport">
+                <li class="transport__item transport__item--plane transport__item--active">
+                  <span class="visually-hidden">Авиаперелет</span>
+                </li>
+                <li class="transport__item transport__item--bus">
+                  <span class="visually-hidden">Автотранспорт</span>
+                </li>
+                <li class="transport__item transport__item--bicycle transport__item--active">
+                  <span class="visually-hidden">Велосипед</span>
+                </li>
+                <li class="transport__item transport__item--walk">
+                  <span class="visually-hidden">Пешком</span>
+                </li>
+              </ul>
+              <div class="catalog__level-wrapper">
+                <span class="catalog__level-title">Левел:</span>
+                <span class="catalog__level-amount">25</span>
+              </div>
+              <a href="#" class="catalog__button button-inner">Позвать!</a>
+            </li>
+            <li class="catalog__item">
+              <a href="#">
+                <img src="http://placehold.it/70x70" alt="Лариса Роговая" width="70" height="70" class="catalog__avatar">
+              </a>
+              <p class="catalog__likes">
+                <span class="visually-hidden">Количество лайков:</span>
+                <span class="catalog__likes-amount">23</span>
+              </p>
+              <a href="#" class="catalog__name-link">
+                <h2 class="catalog__name catalog__name--online">Лариса Роговая</h2>
+              </a>
+              <div class="catalog__hashtags hashtags">
+                <ul class="hashtags__list">
+                  <li class="hashtags__item">
+                    <a href="#" class="hashtags__link">#образование</a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a href="#" class="hashtags__link">#карьера</a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a href="#" class="hashtags__link">#учеба</a>
+                  </li>
+                  <li class="hashtags__item">
+                    <a href="#" class="hashtags__link">#линкедин</a>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="catalog__subtitle">Хочет посетить</h3>
+              <ul class="catalog__sublist">
+                <li class="catalog__subitem catalog__subitem--britain">Великобритания</li>
+                <li class="catalog__subitem catalog__subitem--germany">Германия</li>
+              </ul>
+              <h3 class="catalog__subtitle">Транспорт</h3>
+              <ul class="catalog__transport-list transport">
+                <li class="transport__item transport__item--plane transport__item--active">
+                  <span class="visually-hidden">Авиаперелет</span>
+                </li>
+                <li class="transport__item transport__item--bus transport__item--active">
+                  <span class="visually-hidden">Автотранспорт</span>
+                </li>
+                <li class="transport__item transport__item--bicycle">
+                  <span class="visually-hidden">Велосипед</span>
+                </li>
+                <li class="transport__item transport__item--walk">
+                  <span class="visually-hidden">Пешком</span>
+                </li>
+              </ul>
+              <div class="catalog__level-wrapper">
+                <span class="catalog__level-title">Левел:</span>
+                <span class="catalog__level-amount">50</span>
+              </div>
+              <a href="#" class="catalog__button button-inner">Позвать!</a>
             </li>
           </ul>
-          <a href="#" class="main-nav__login login-button">Авторизация</a>
-          <ul class="main-nav__list contact-list">
-            <li class="contact-list__item">
-              <a href="tel:88005558628" class="contact-list__link contact-list__link--phone-top">8&nbsp;800&nbsp;555-86-28</a>
-            </li>
-            <li class="contact-list__item">
-              <a href="mailto:mail@htmlacademy.ru" class="contact-list__link contact-list__link--email-top">mail@htmlacademy.ru</a>
-            </li>
-          </ul>
-          <ul class="main_nav__list social-list">
+          <a href="#" class="catalog__show-more">Показать еще</a>
+          <div class="catalog__pagination">
+            <ul class="catalog__pagination-list">
+              <li class="catalog__pagination-item">
+                <a href="#" class="catalog__pagination-link catalog__pagination-link--prev"><span class="visually-hidden">Назад</span></a>
+              </li>
+              <li class="catalog__pagination-item">
+                <a href="#" class="catalog__pagination-link catalog__pagination-link--next"><span class="visually-hidden">Вперед</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__container">
+        <a href="index.html" class="page-footer__logo logo">
+          <img class="page-footer__logo-image" src="http://placehold.it/96x15" alt="Логотип сайта Погнали" width="96" height="15">
+        </a>
+        <div class="page-footer__wrapper">
+          <ul class="page-footer__list social-list">
             <li class="social-list__item">
               <a href="#" class="social-list__link social-list__link--fb">
                 <span class="visually-hidden">Наш Фейсбук</span>
@@ -53,288 +339,11 @@
             </li>
           </ul>
         </div>
-      </nav>
-    </header>
-
-    <main class="page-inner">
-      <header class="page-inner__header">
-        <h1 class="page-inner__title">Попутчики</h1>
-      </header>
-
-      <section class="filter">
-        <!-- Filter will be here -->
-      </section>
-
-      <section class="catalog">
-        <ul class="catalog__list">
-          <li class="catalog__item">
-            <a href="#">
-              <img src="http://placehold.it/70x70" alt="Таня Фирсова" width="70" height="70" class="catalog__avatar">
-            </a>
-            <p class="catalog__likes">
-              <span class="visually-hidden">Количество лайков:</span>
-              <span class="catalog__likes-amount catalog__likes-amount--isLike">1.5 м</span>
-            </p>
-            <a href="#" class="catalog__name-link">
-              <h2 class="catalog__name catalog__name--offline">Таня Фирсова</h2>
-            </a>
-            <div class="catalog__hashtags hashtags">
-              <ul class="hashtags__list">
-                <li class="hashtags__item">
-                  <a href="#" class="hashtags__link">#ЗОЖ</a>
-                </li>
-                <li class="hashtags__item">
-                  <a href="#" class="hashtags__link">#ПП</a>
-                </li>
-                <li class="hashtags__item">
-                  <a href="#" class="hashtags__link">#Фитнес</a>
-                </li>
-                <li class="hashtags__item">
-                  <a href="#" class="hashtags__link">#пляж</a>
-                </li>
-                <li class="hashtags__item">
-                  <a href="#" class="hashtags__link">#авокадо</a>
-                </li>
-                <li class="hashtags__item">
-                  <a href="#" class="hashtags__link">#смузи</a>
-                </li>
-              </ul>
-            </div>
-            <h3 class="catalog__subtitle">Хочет посетить</h3>
-            <ul class="catalog__sublist">
-              <li class="catalog__subitem catalog__subitem--shrilanka">Шри Ланка</li>
-              <li class="catalog__subitem catalog__subitem--thailand">Тайланд</li>
-              <li class="catalog__subitem catalog__subitem--seychelles">Сейшелы</li>
-            </ul>
-            <h3 class="catalog__subtitle">Транспорт</h3>
-            <ul class="catalog__transport-list transport">
-              <li class="transport__item transport__item--plane transport__item--active">
-                <span class="visually-hidden">Самолет</span>
-              </li>
-              <li class="transport__item transport__item--bus">
-                <span class="visually-hidden">Автотранспорт</span>
-              </li>
-              <li class="transport__item transport__item--bicycle">
-                <span class="visually-hidden">Велотранспорт</span>
-              </li>
-              <li class="transport__item transport__item--walk">
-                <span class="visually-hidden">Пешком</span>
-              </li>
-            </ul>
-            <div class="catalog__level-wrapper">
-              <span class="catalog__level-title">Левел:</span>
-              <span class="catalog__level-amount">99</span>
-            </div>
-            <a href="#" class="catalog__button button-inner">Позвать!</a>
-          </li>
-          <li class="catalog__item">
-            <a href="#">
-              <img src="http://placehold.it/70x70" alt="Петя Демин" width="70" height="70" class="catalog__avatar">
-            </a>
-            <p class="catalog__likes">
-              <span class="visually-hidden">Количество лайков:</span>
-              <span class="catalog__likes-amount">150</span>
-            </p>
-            <a href="#" class="catalog__name-link">
-              <h2 class="catalog__name catalog__name--offline">Петя Демин</h2>
-            </a>
-            <div class="catalog__hashtags hashtags">
-              <ul class="hashtags__list">
-                <li class="hashtags__item">
-                  <a href="#" class="hashtags__link">#бургер</a>
-                </li>
-                <li class="hashtags__item">
-                  <a href="#" class="hashtags__link">#бар</a>
-                </li>
-                <li class="hashtags__item">
-                  <a href="#" class="hashtags__link">#футбол</a>
-                </li>
-                <li class="hashtags__item">
-                  <a href="#" class="hashtags__link">#концерт</a>
-                </li>
-                <li class="hashtags__item">
-                  <a href="#" class="hashtags__link">#крафт</a>
-                </li>
-              </ul>
-            </div>
-            <h3 class="catalog__subtitle">Хочет посетить</h3>
-            <ul class="catalog__sublist">
-              <li class="catalog__subitem catalog__subitem--belgium">Бельгия</li>
-              <li class="catalog__subitem catalog__subitem--czech">Чехия</li>
-            </ul>
-            <h3 class="catalog__subtitle">Транспорт</h3>
-            <ul class="catalog__transport-list transport">
-              <li class="transport__item transport__item--plane transport__item--active">
-                <span class="visually-hidden">Самолет</span>
-              </li>
-              <li class="transport__item transport__item--bus transport__item--active">
-                <span class="visually-hidden">Автотранспорт</span>
-              </li>
-              <li class="transport__item transport__item--bicycle">
-                <span class="visually-hidden">Велотранспорт</span>
-              </li>
-              <li class="transport__item transport__item--walk transport__item--active">
-                <span class="visually-hidden">Пешком</span>
-              </li>
-            </ul>
-            <div class="catalog__level-wrapper">
-              <span class="catalog__level-title">Левел:</span>
-              <span class="catalog__level-amount">80</span>
-            </div>
-            <a href="#" class="catalog__button button-inner">Позвать!</a>
-          </li>
-          <li class="catalog__item">
-            <a href="#">
-              <img src="http://placehold.it/70x70" alt="Марк Смолов" width="70" height="70" class="catalog__avatar">
-            </a>
-            <p class="catalog__likes">
-              <span class="visually-hidden">Количество лайков:</span>
-              <span class="catalog__likes-amount">1700</span>
-            </p>
-            <a href="#" class="catalog__name-link">
-              <h2 class="catalog__name catalog__name--offline">Марк Смолов</h2>
-            </a>
-            <div class="catalog__hashtags hashtags">
-              <ul class="hashtags__list">
-                <li class="hashtags__item">
-                  <a href="#" class="hashtags__link">#рэп</a>
-                </li>
-                <li class="hashtags__item">
-                  <a href="#" class="hashtags__link">#тату</a>
-                </li>
-                <li class="hashtags__item">
-                  <a href="#" class="hashtags__link">#хайпбист</a>
-                </li>
-                <li class="hashtags__item">
-                  <a href="#" class="hashtags__link">#кроссовки</a>
-                </li>
-                <li class="hashtags__item">
-                  <a href="#" class="hashtags__link">#суприм</a>
-                </li>
-              </ul>
-            </div>
-            <h3 class="catalog__subtitle">Хочет посетить</h3>
-            <ul class="catalog__sublist">
-              <li class="catalog__subitem catalog__subitem--usa">США</li>
-              <li class="catalog__subitem catalog__subitem--australia">Австралия</li>
-              <li class="catalog__subitem catalog__subitem--dominicana">Доминикана</li>
-            </ul>
-            <h3 class="catalog__subtitle">Транспорт</h3>
-            <ul class="catalog__transport-list transport">
-              <li class="transport__item transport__item--plane transport__item--active">
-                <span class="visually-hidden">Самолет</span>
-              </li>
-              <li class="transport__item transport__item--bus">
-                <span class="visually-hidden">Автотранспорт</span>
-              </li>
-              <li class="transport__item transport__item--bicycle transport__item--active">
-                <span class="visually-hidden">Велотранспорт</span>
-              </li>
-              <li class="transport__item transport__item--walk">
-                <span class="visually-hidden">Пешком</span>
-              </li>
-            </ul>
-            <div class="catalog__level-wrapper">
-              <span class="catalog__level-title">Левел:</span>
-              <span class="catalog__level-amount">25</span>
-            </div>
-            <a href="#" class="catalog__button button-inner">Позвать!</a>
-          </li>
-          <li class="catalog__item">
-            <a href="#">
-              <img src="http://placehold.it/70x70" alt="Лариса Роговая" width="70" height="70" class="catalog__avatar">
-            </a>
-            <p class="catalog__likes">
-              <span class="visually-hidden">Количество лайков:</span>
-              <span class="catalog__likes-amount">23</span>
-            </p>
-            <a href="#" class="catalog__name-link">
-              <h2 class="catalog__name catalog__name--online">Лариса Роговая</h2>
-            </a>
-            <div class="catalog__hashtags hashtags">
-              <ul class="hashtags__list">
-                <li class="hashtags__item">
-                  <a href="#" class="hashtags__link">#образование</a>
-                </li>
-                <li class="hashtags__item">
-                  <a href="#" class="hashtags__link">#карьера</a>
-                </li>
-                <li class="hashtags__item">
-                  <a href="#" class="hashtags__link">#учеба</a>
-                </li>
-                <li class="hashtags__item">
-                  <a href="#" class="hashtags__link">#линкедин</a>
-                </li>
-              </ul>
-            </div>
-            <h3 class="catalog__subtitle">Хочет посетить</h3>
-            <ul class="catalog__sublist">
-              <li class="catalog__subitem catalog__subitem--britain">Великобритания</li>
-              <li class="catalog__subitem catalog__subitem--germany">Германия</li>
-            </ul>
-            <h3 class="catalog__subtitle">Транспорт</h3>
-            <ul class="catalog__transport-list transport">
-              <li class="transport__item transport__item--plane transport__item--active">
-                <span class="visually-hidden">Самолет</span>
-              </li>
-              <li class="transport__item transport__item--bus transport__item--active">
-                <span class="visually-hidden">Автотранспорт</span>
-              </li>
-              <li class="transport__item transport__item--bicycle">
-                <span class="visually-hidden">Велотранспорт</span>
-              </li>
-              <li class="transport__item transport__item--walk">
-                <span class="visually-hidden">Пешком</span>
-              </li>
-            </ul>
-            <div class="catalog__level-wrapper">
-              <span class="catalog__level-title">Левел:</span>
-              <span class="catalog__level-amount">50</span>
-            </div>
-            <a href="#" class="catalog__button button-inner">Позвать!</a>
-          </li>
-        </ul>
-        <a href="#" class="catalog__show-more">Показать еще</a>
-        <div class="catalog__pagination">
-          <ul class="catalog__pagination-list">
-            <li class="catalog__pagination-item">
-              <a href="#" class="catalog__pagination-link catalog__pagination-link--prev"><span class="visually-hidden">Назад</span></a>
-            </li>
-            <li class="catalog__pagination-item">
-              <a href="#" class="catalog__pagination-link catalog__pagination-link--next"><span class="visually-hidden">Вперед</span></a>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-
-    <footer class="page-footer">
-      <a href="index.html" class="page-footer__logo logo">
-        <img class="page-footer__logo-image" src="http://placehold.it/96x15" alt="Логотип сайта Погнали" width="96" height="15">
-      </a>
-      <div class="page-footer__wrapper">
-        <ul class="page-footer__list social-list">
-          <li class="social-list__item">
-            <a href="#" class="social-list__link social-list__link--fb">
-              <span class="visually-hidden">Наш Фейсбук</span>
-            </a>
-          </li>
-          <li class="social-list__item">
-            <a href="#" class="social-list__link social-list__link--vk">
-              <span class="visually-hidden">Наш Вконтакте</span>
-            </a>
-          </li>
-          <li class="social-list__item">
-            <a href="#" class="social-list__link social-list__link--inst">
-              <span class="visually-hidden">Наш Инстаграм</span>
-            </a>
-          </li>
-        </ul>
+        <p class="page-footer__copyright">
+          <span>Разработано</span>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__link"><span class="visually-hidden">HTML Academy</span></a>
+        </p>
       </div>
-      <p class="page-footer__copyright">
-        <span>Разработано</span>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__link"><span class="visually-hidden">HTML Academy</span></a>
-      </p>
     </footer>
   </body>
 </html>

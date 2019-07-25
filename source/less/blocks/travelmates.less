@@ -1,10 +1,20 @@
 .travelmates {
+  margin-top: -50px;
   padding: 0 25px;
+  padding-top: 50px;
   background-color: @color-darkblue;
   background-image: url("../img/rogovaya-back-mobile@1x.png");
   background-repeat: no-repeat;
+  .border-radius();
   // Временно для сетки
   outline: 5px dashed green;
+}
+
+.travelmates__container {
+  width: 270px;
+  margin: 0 auto;
+  // Временно для сетки
+  outline: 3px dashed red;
 }
 
 .travelmates__wrapper {
@@ -19,7 +29,12 @@
 }
 
 .travelmates__list {
+  .list-reset();
   color: @color-grey;
+}
+
+.travelmates__sublist {
+  .list-reset();
 }
 
 .travelmates__item {
@@ -28,4 +43,16 @@
 
 .travelmates__name {
   .heading(21px, 21px, @color-cobalt);
+}
+
+@media (min-width: @tablet-width) {
+  .travelmates__container {
+    width: 688px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .travelmates__container {
+    width: 1320px;
+  }
 }

@@ -4,6 +4,17 @@
   outline: 5px dashed green;
 }
 
+.catalog__container {
+  width: 270px;
+  margin: 0 auto;
+  // Временно для сетки
+  outline: 3px dashed red;
+}
+
+.catalog__list {
+  .list-reset();
+}
+
 .catalog__item {
   font-size: 15px;
   line-height: 18px;
@@ -28,16 +39,15 @@
   color: @color-darknavy;
 }
 
-.catalog__hashtags .hashtags__link {
-  font: inherit;
-  font-weight: @font-normal;
-}
-
 .catalog__subtitle {
   font-size: 15px;
   line-height: 18px;
   font-weight: @font-normal;
   text-transform: lowercase;
+}
+
+.catalog__sublist {
+  .list-reset();
 }
 
 .catalog__subitem {
@@ -59,4 +69,20 @@
   text-transform: uppercase;
   text-decoration: none;
   color: @color-cobalt;
+}
+
+.catalog__pagination-list {
+  .list-reset();
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__container {
+    width: 688px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__container {
+    width: 1320px;
+  }
 }

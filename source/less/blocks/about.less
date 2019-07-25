@@ -1,14 +1,29 @@
 .about {
   padding: 0 25px;
   background-color: @color-darkblue;
+  .border-radius();
+  // Временно для сетки
   outline: 5px dashed green;
+}
+
+.about__container {
+  width: 270px;
+  margin: 0 auto;
+  // Временно для сетки
+  outline: 3px dashed red;
 }
 
 .about__reviews {
   background-color: @color-darknavy;
 }
 
+.about__quotation {
+  .indent-reset();
+}
+
 .about__text {
+  .indent-reset();
+
   &--bolder {
     font-weight: @font-bold;
   }
@@ -24,6 +39,10 @@
   font-size: 18px;
   line-height: 18px;
   color: @color-darknavy;
+}
+
+.about__list {
+  .list-reset();
 }
 
 .about__item {
@@ -45,4 +64,16 @@
 .about__description {
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .about__container {
+    width: 688px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about__container {
+    width: 1320px;
+  }
 }

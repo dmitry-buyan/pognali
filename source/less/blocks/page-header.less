@@ -1,6 +1,26 @@
 .page-header {
-  padding: 0 25px;
   background-color: @color-darknavy;
   // Временно для сетки
   outline: 3px solid red;
+}
+
+.page-header__container {
+  width: @mobile-width;
+  margin: 0 auto;
+  // Временно для сетки
+  outline: 3px dashed red;
+}
+
+.page-header__logo {
+  margin-left: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__container {
+    width: @tablet-width;
+  }
+
+  .page-header__logo {
+    margin-left: 40px;
+  }
 }

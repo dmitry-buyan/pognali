@@ -1,11 +1,22 @@
 .rates {
+  position: relative;
+  z-index: 3;
   padding: 0 25px;
   background-color: @color-lightgrey;
+  .border-radius();
   // Временно для сетки
   outline: 5px dashed green;
 }
 
+.rates__container {
+  width: 270px;
+  margin: 0 auto;
+  // Временно для сетки
+  outline: 3px dashed red;
+}
+
 .rates__list {
+  .list-reset();
   color: @color-grey;
 }
 
@@ -21,5 +32,18 @@
 }
 
 .rates__offer-list {
+  .list-reset();
   color: @color-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .rates__container {
+    width: 688px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .rates__container {
+    width: 1320px;
+  }
 }

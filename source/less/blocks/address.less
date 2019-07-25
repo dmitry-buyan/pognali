@@ -1,11 +1,23 @@
 .address {
+  position: relative;
+  z-index: 1;
+  margin-top: -50px;
   padding: 0 25px;
+  padding-top: 50px;
   font-style: normal;
   font-weight: @font-bold;
   color: @color-darkblue;
   background-color: @color-yellow;
+  .border-radius();
   // Временно для сетки
   outline: 5px dashed green;
+}
+
+.address__container {
+  width: 270px;
+  margin: 0 auto;
+  // Временно для сетки
+  outline: 3px dashed red;
 }
 
 .address__wrapper {
@@ -17,4 +29,16 @@
   line-height: 18px;
   color: @color-cobalt;
   text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .address__container {
+    width: 688px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .address__container {
+    width: 1320px;
+  }
 }
