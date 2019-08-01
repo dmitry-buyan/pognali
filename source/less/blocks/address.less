@@ -1,44 +1,123 @@
 .address {
-  position: relative;
-  z-index: 1;
-  margin-top: -50px;
-  padding: 0 25px;
-  padding-top: 50px;
+  padding: 55px @mobile-padding 35px;
   font-style: normal;
   font-weight: @font-bold;
   color: @color-darkblue;
   background-color: @color-yellow;
   .border-radius();
-  // Временно для сетки
-  outline: 5px dashed green;
 }
 
 .address__container {
-  width: 270px;
+  width: @mobile-width - @mobile-padding * 2;
   margin: 0 auto;
   // Временно для сетки
-  outline: 3px dashed red;
+  outline: 1px dashed red;
 }
 
 .address__wrapper {
   font: inherit;
 }
 
+.address__text {
+  position: relative;
+  display: inline-flex;
+  .indent-reset();
+  margin-bottom: 35px;
+  padding-left: 62px;
+  text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    content: "";
+    width: 45px;
+    height: 45px;
+    background-color: #121936;
+    border-radius: 50%;
+    background-image: url("../img/contacts-location.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px 22px;
+    transform: translateY(-50%);
+  }
+}
+
 .address__route {
+  box-sizing: border-box;
+  padding: 20px;
   font-size: 18px;
   line-height: 18px;
   color: @color-cobalt;
   text-decoration: none;
+  border: 3px solid @color-darkblue;
 }
 
 @media (min-width: @tablet-width) {
+  .address {
+    padding: 102px @tablet-padding 85px;
+  }
+
   .address__container {
-    width: 688px;
+    box-sizing: border-box;
+    width: @tablet-width - @tablet-padding * 2;
+    padding: 0 35px;
+  }
+
+  .address__wrapper {
+    padding-top: 24px;
+  }
+
+  .address__text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 44px;
+    padding-left: 94px;
+    line-height: 28px;
+
+    &::before {
+      width: 68px;
+      height: 68px;
+      background-size: 21px 32px;
+    }
+  }
+
+  .address__route {
+    padding: 25px 33px 25px 35px;
+    .heading(@font-size: 24px, @line-height: 24px, @color: @color-darkblue);
   }
 }
 
 @media (min-width: @desktop-width) {
+  .address {
+    padding: 102px @desktop-padding 60px;
+  }
+
   .address__container {
-    width: 1320px;
+    display: flex;
+    justify-content: flex-end;
+    width: @desktop-width - @desktop-padding * 2;
+    padding: 0 74px;
+  }
+
+  .address__wrapper {
+    padding: 0;
+  }
+
+  .address__text {
+    margin-bottom: 0;
+    padding-left: 122px;
+    height: 100%;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+      background-size: 28px 43px;
+    }
+  }
+
+  .address__route {
+    min-width: 324px;
+    margin-left: 148px;
   }
 }

@@ -1,16 +1,133 @@
 .main-nav {
   background-color: @color-white;
-  // Временно для сетки
-  outline: 5px dashed green;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 27px;
+  right: @mobile-padding;
+  width: 27px;
+  height: 27px;
+  border: none;
+  background-color: transparent;
+}
+
+.main-nav--opened .main-nav__toggle {
+  width: 27px;
+  height: 27px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 0;
+    width: 25px;
+    height: 3px;
+    background-color: #cccccc;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
 
 .main-nav__wrapper {
-  width: 270px;
+  box-sizing: border-box;
+  width: @mobile-width - @mobile-padding * 2;
   margin: 0 auto;
 }
 
+.main-nav__site-list {
+  .list-reset();
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.main-nav__user {
+  margin-bottom: 40px;
+}
+
+.main-nav__login {
+  display: block;
+  margin-bottom: 50px;
+  padding: 10px;
+}
+
+.main-nav__social {
+  display: flex;
+  justify-content: center;
+}
+
 @media (min-width: @tablet-width) {
+  .main-nav__toggle {
+    top: 55px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .main-nav__site-list {
+    text-align: left;
+  }
+
   .main-nav__wrapper {
-    width: 688px;
+    width: @tablet-width - @tablet-padding * 2;
+    padding-left: 60px;
+  }
+
+  .main-nav__login {
+    position: absolute;
+    top: 40px;
+    right: @tablet-padding;
+    margin: 0;
+  }
+
+  .main-nav__social {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    width: 975px;
+    margin-left: auto;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .main-nav__site-list {
+    width: 630px;
+    .list-reset();
+  }
+
+  .main-nav__user {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 345px;
+    margin-left: auto;
+    margin-bottom: 0;
+  }
+
+  .main-nav__login {
+    position: static;
+  }
+
+  .main-nav__social {
+    display: none;
   }
 }

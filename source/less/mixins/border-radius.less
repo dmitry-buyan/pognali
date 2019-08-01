@@ -1,14 +1,16 @@
-.border-radius() {
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
+.border-radius(@border-radius: 30px) {
+  border-bottom-right-radius: @border-radius;
+  border-bottom-left-radius: @border-radius;
 
   @media (min-width: @tablet-width) {
-    border-bottom-right-radius: 55px;
-    border-bottom-left-radius: 55px;
+    @border-radius: 55px;
+    border-bottom-right-radius: @border-radius;
+    border-bottom-left-radius: @border-radius;
   }
 
   @media (min-width: @desktop-width) {
-    border-bottom-right-radius: 60px;
-    border-bottom-left-radius: 60px;
+    @border-radius: 60px;
+    border-bottom-right-radius: @border-radius;
+    border-bottom-left-radius: @border-radius;
   }
 }

@@ -1,4 +1,72 @@
-.page-main {
-  // Временно для сетки
-  outline: 3px solid red;
+.page-main__countries {
+  position: relative;
+  z-index: 5;
+}
+
+.page-main__travelmates {
+  position: relative;
+  z-index: 4;
+  margin-top: -30px;
+}
+
+.page-main__rates {
+  position: relative;
+  z-index: 3;
+  margin-top: -30px;
+}
+
+.page-main__signin {
+  position: relative;
+  z-index: 2;
+  margin-top: -30px;
+}
+
+.page-main__address {
+  position: relative;
+  z-index: 1;
+  margin-top: -30px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__intro {
+    margin-bottom: 85px;
+  }
+
+  .page-main__travelmates {
+    margin-top: -55px;
+  }
+
+  .page-main__rates {
+    margin-top: -55px;
+  }
+
+  .page-main__signin {
+    margin-top: -55px;
+  }
+
+  .page-main__address {
+    margin-top: -55px;
+  }
+
+  .page-main__map {
+    height: 670px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__travelmates {
+    margin-top: -60px;
+  }
+
+  .page-main__rates {
+    margin-top: -60px;
+  }
+
+  .page-main__address {
+    margin-top: -60px;
+  }
+
+  .page-main__signin {
+    margin-top: -60px;
+  }
 }

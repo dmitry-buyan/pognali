@@ -1,22 +1,48 @@
 .rates {
-  position: relative;
-  z-index: 3;
-  padding: 0 25px;
-  background-color: @color-lightgrey;
+  padding: 37px @mobile-padding;
+  background-color: #e6e8f1;
   .border-radius();
-  // Временно для сетки
-  outline: 5px dashed green;
 }
 
 .rates__container {
-  width: 270px;
+  width: @mobile-width - @mobile-padding * 2;
   margin: 0 auto;
   // Временно для сетки
-  outline: 3px dashed red;
+  outline: 1px dashed red;
+}
+
+.rates__wrapper {
+  position: relative;
+  padding: 15px @mobile-padding 0;
+  background-color: transparent;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    width: 99px;
+    height: 99px;
+    background-image: url("../img/rates@1x.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.rates__title {
+  padding-right: 140px;
+  margin-bottom: 45px;
+
+  &--modal {
+    margin-bottom: 30px;
+    padding-right: 0;
+    text-align: center;
+  }
 }
 
 .rates__list {
   .list-reset();
+  margin-bottom: 30px;
   color: @color-grey;
 }
 
@@ -29,6 +55,11 @@
 
 .rates__modal {
   background-color: @color-white;
+  border-radius: 18px;
+}
+
+.rates__modal-wrapper {
+  padding: 35px @mobile-padding 33px;
 }
 
 .rates__offer-list {
@@ -36,14 +67,81 @@
   color: @color-grey;
 }
 
+.rates__modal-close {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  padding: 22px 10px;
+  font: inherit;
+  font-weight: @font-bold;
+  color: @color-cobalt;
+  background-color: #f3f4f8;
+  border: none;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  text-transform: uppercase;
+}
+
 @media (min-width: @tablet-width) {
+  .rates {
+    padding: 75px @tablet-padding 60px;
+  }
+
   .rates__container {
-    width: 688px;
+    width: @tablet-width - @tablet-padding * 2;
+  }
+
+  .rates__wrapper {
+    padding: 0;
+  }
+
+  .rates__title {
+    margin-bottom: 74px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .rates__toggle {
+    .heading(@font-size: 20px, @line-height: 20px, @color: #132576);
+  }
+
+  .rates__modal {
+    border-radius: 25px;
+  }
+
+  .rates__modal-wrapper {
+    padding: 53px 91px 51px;
+  }
+
+  .rates__modal-close {
+    padding: 42px 20px;
+    .heading(@color: @color-cobalt);
+    text-transform: none;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .rates {
+    padding: 168px @desktop-padding 165px;
+  }
+
   .rates__container {
-    width: 1320px;
+    box-sizing: border-box;
+    width: @desktop-width - @desktop-padding * 2;
+    padding: 0 70px;
+  }
+
+  .rates__modal {
+    width: 750px;
+    margin: 0 auto;
+    padding-top: 53px;
+  }
+
+  .rates__modal-wrapper {
+    width: 630px;
+    margin: 0 auto 50px;
+    padding: 0;
   }
 }

@@ -1,17 +1,14 @@
 .page-inner {
-  // Временно для сетки
-  outline: 3px solid red;
+  padding-bottom: 240px;
 }
 
 .page-inner__header {
   background-color: @color-darknavy;
   .border-radius();
-  // Временно для сетки
-  outline: 5px dashed green;
 }
 
 .page-inner__container {
-  width: 270px;
+  width: @mobile-width - @mobile-padding * 2;
   margin: 0 auto;
 }
 
@@ -22,14 +19,14 @@
 
 @media (min-width: @tablet-width) {
   .page-inner__container {
-    width: 688px;
+    width: @tablet-width - @tablet-padding * 2;
     padding-left: 35px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-inner__container {
-    width: 1320px;
+    width: @desktop-width - @desktop-padding * 2;
     padding-left: 70px;
   }
 }

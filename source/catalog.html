@@ -9,15 +9,13 @@
   <body>
     <header class="page-header">
       <div class="page-header__container">
-        <a href="index.html" class="page-header__logo logo">
-          <img class="page-header__logo-image" src="http://placehold.it/96x15" alt="Логотип сайта Погнали" width="96" height="15">
-        </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle">
+        <a href="index.html" class="page-header__logo logo"><span class="visually-hidden">Погнали?</span></a>
+        <nav class="page-header__nav main-nav main-nav--opened">
+          <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <div class="main-nav__wrapper">
-            <ul class="main-nav__list site-list">
+            <ul class="main-nav__site-list site-list">
               <li class="site-list__item">
                 <a href="index.html" class="site-list__link">О сервисе</a>
               </li>
@@ -25,19 +23,25 @@
                 <a href="form.html" class="site-list__link">Направления</a>
               </li>
               <li class="site-list__item">
-                <a href="catalog.html" class="site-list__link site-list__link--active">Попутчики</a>
+                <a href="catalog.html" class="site-list__link">Попутчики</a>
               </li>
             </ul>
-            <a href="#" class="main-nav__login login-button">Авторизация</a>
-            <ul class="main-nav__list contact-list">
-              <li class="contact-list__item">
-                <a href="tel:88005558628" class="contact-list__link contact-list__link--phone-top">8&nbsp;800&nbsp;555-86-28</a>
-              </li>
-              <li class="contact-list__item">
-                <a href="mailto:mail@htmlacademy.ru" class="contact-list__link contact-list__link--email-top">mail@htmlacademy.ru</a>
-              </li>
-            </ul>
-            <ul class="main_nav__list social-list">
+            <div class="main-nav__user">
+              <a href="#" class="main-nav__login login-button">Авторизация</a>
+              <ul class="main-nav__contacts contact-list">
+                <li class="contact-list__item">
+                  <a href="tel:88005558628" class="contact-list__link contact-list__link--phone-top">
+                    <span class="contact-list__phone">8&nbsp;800&nbsp;555-86-28</span>
+                  </a>
+                </li>
+                <li class="contact-list__item">
+                  <a href="mailto:mail@htmlacademy.ru" class="contact-list__link contact-list__link--email-top">
+                    <span class="contact-list__email">mail@htmlacademy.ru</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <ul class="main-nav__social social-list social-list--header">
               <li class="social-list__item">
                 <a href="#" class="social-list__link social-list__link--fb">
                   <span class="visually-hidden">Наш Фейсбук</span>
@@ -63,6 +67,7 @@
       <header class="page-inner__header">
         <div class="page-inner__container">
           <h1 class="page-inner__title">Попутчики</h1>
+          <a class="page-inner__home" href="index.html">На главную</a>
         </div>
       </header>
 
@@ -75,7 +80,7 @@
           <ul class="catalog__list">
             <li class="catalog__item">
               <a href="#">
-                <img src="http://placehold.it/70x70" alt="Таня Фирсова" width="70" height="70" class="catalog__avatar">
+                <img src="img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70" height="70" class="catalog__avatar">
               </a>
               <p class="catalog__likes">
                 <span class="visually-hidden">Количество лайков:</span>
@@ -115,27 +120,28 @@
               <h3 class="catalog__subtitle">Транспорт</h3>
               <ul class="catalog__transport-list transport">
                 <li class="transport__item transport__item--plane transport__item--active">
-                  <span class="visually-hidden">Авиаперелет</span>
+                  <span>Авиаперелет</span>
                 </li>
                 <li class="transport__item transport__item--bus">
-                  <span class="visually-hidden">Автотранспорт</span>
+                  <span>Автотранспорт</span>
                 </li>
                 <li class="transport__item transport__item--bicycle">
-                  <span class="visually-hidden">Велосипед</span>
+                  <span>Велосипед</span>
                 </li>
                 <li class="transport__item transport__item--walk">
-                  <span class="visually-hidden">Пешком</span>
+                  <span>Пешком</span>
                 </li>
               </ul>
-              <div class="catalog__level-wrapper">
+              <div class="catalog__level">
                 <span class="catalog__level-title">Левел:</span>
                 <span class="catalog__level-amount">99</span>
               </div>
               <a href="#" class="catalog__button button-inner">Позвать!</a>
             </li>
+
             <li class="catalog__item">
               <a href="#">
-                <img src="http://placehold.it/70x70" alt="Петя Демин" width="70" height="70" class="catalog__avatar">
+                <img src="img/demin-mobile@1x.jpg" alt="Петя Демин" width="70" height="70" class="catalog__avatar">
               </a>
               <p class="catalog__likes">
                 <span class="visually-hidden">Количество лайков:</span>
@@ -171,27 +177,28 @@
               <h3 class="catalog__subtitle">Транспорт</h3>
               <ul class="catalog__transport-list transport">
                 <li class="transport__item transport__item--plane transport__item--active">
-                  <span class="visually-hidden">Авиаперелет</span>
+                  <span>Авиаперелет</span>
                 </li>
                 <li class="transport__item transport__item--bus transport__item--active">
-                  <span class="visually-hidden">Автотранспорт</span>
+                  <span>Автотранспорт</span>
                 </li>
                 <li class="transport__item transport__item--bicycle">
-                  <span class="visually-hidden">Велосипед</span>
+                  <span>Велосипед</span>
                 </li>
                 <li class="transport__item transport__item--walk transport__item--active">
-                  <span class="visually-hidden">Пешком</span>
+                  <span>Пешком</span>
                 </li>
               </ul>
-              <div class="catalog__level-wrapper">
+              <div class="catalog__level">
                 <span class="catalog__level-title">Левел:</span>
                 <span class="catalog__level-amount">80</span>
               </div>
               <a href="#" class="catalog__button button-inner">Позвать!</a>
             </li>
+
             <li class="catalog__item">
               <a href="#">
-                <img src="http://placehold.it/70x70" alt="Марк Смолов" width="70" height="70" class="catalog__avatar">
+                <img src="img/smolov-mobile@1x.jpg" alt="Марк Смолов" width="70" height="70" class="catalog__avatar">
               </a>
               <p class="catalog__likes">
                 <span class="visually-hidden">Количество лайков:</span>
@@ -228,27 +235,28 @@
               <h3 class="catalog__subtitle">Транспорт</h3>
               <ul class="catalog__transport-list transport">
                 <li class="transport__item transport__item--plane transport__item--active">
-                  <span class="visually-hidden">Авиаперелет</span>
+                  <span>Авиаперелет</span>
                 </li>
                 <li class="transport__item transport__item--bus">
-                  <span class="visually-hidden">Автотранспорт</span>
+                  <span>Автотранспорт</span>
                 </li>
                 <li class="transport__item transport__item--bicycle transport__item--active">
-                  <span class="visually-hidden">Велосипед</span>
+                  <span>Велосипед</span>
                 </li>
                 <li class="transport__item transport__item--walk">
-                  <span class="visually-hidden">Пешком</span>
+                  <span>Пешком</span>
                 </li>
               </ul>
-              <div class="catalog__level-wrapper">
+              <div class="catalog__level">
                 <span class="catalog__level-title">Левел:</span>
                 <span class="catalog__level-amount">25</span>
               </div>
               <a href="#" class="catalog__button button-inner">Позвать!</a>
             </li>
+
             <li class="catalog__item">
               <a href="#">
-                <img src="http://placehold.it/70x70" alt="Лариса Роговая" width="70" height="70" class="catalog__avatar">
+                <img src="img/rogovaya-mobile@1x.jpg" alt="Лариса Роговая" width="70" height="70" class="catalog__avatar">
               </a>
               <p class="catalog__likes">
                 <span class="visually-hidden">Количество лайков:</span>
@@ -281,19 +289,19 @@
               <h3 class="catalog__subtitle">Транспорт</h3>
               <ul class="catalog__transport-list transport">
                 <li class="transport__item transport__item--plane transport__item--active">
-                  <span class="visually-hidden">Авиаперелет</span>
+                  <span>Авиаперелет</span>
                 </li>
                 <li class="transport__item transport__item--bus transport__item--active">
-                  <span class="visually-hidden">Автотранспорт</span>
+                  <span>Автотранспорт</span>
                 </li>
                 <li class="transport__item transport__item--bicycle">
-                  <span class="visually-hidden">Велосипед</span>
+                  <span>Велосипед</span>
                 </li>
                 <li class="transport__item transport__item--walk">
-                  <span class="visually-hidden">Пешком</span>
+                  <span>Пешком</span>
                 </li>
               </ul>
-              <div class="catalog__level-wrapper">
+              <div class="catalog__level">
                 <span class="catalog__level-title">Левел:</span>
                 <span class="catalog__level-amount">50</span>
               </div>
@@ -304,10 +312,22 @@
           <div class="catalog__pagination">
             <ul class="catalog__pagination-list">
               <li class="catalog__pagination-item">
-                <a href="#" class="catalog__pagination-link catalog__pagination-link--prev"><span class="visually-hidden">Назад</span></a>
+                <a href="#" class="catalog__pagination-link catalog__pagination-link--prev"><span>Назад</span></a>
               </li>
               <li class="catalog__pagination-item">
-                <a href="#" class="catalog__pagination-link catalog__pagination-link--next"><span class="visually-hidden">Вперед</span></a>
+                <a href="#" class="catalog__pagination-link catalog__pagination-link--active"><span>1</span></a>
+              </li>
+              <li class="catalog__pagination-item">
+                <a href="#" class="catalog__pagination-link"><span>2</span></a>
+              </li>
+              <li class="catalog__pagination-item">
+                <a href="#" class="catalog__pagination-link"><span>3</span></a>
+              </li>
+              <li class="catalog__pagination-item">
+                <a href="#" class="catalog__pagination-link"><span>4</span></a>
+              </li>
+              <li class="catalog__pagination-item">
+                <a href="#" class="catalog__pagination-link catalog__pagination-link--next"><span>Вперед</span></a>
               </li>
             </ul>
           </div>
@@ -318,10 +338,10 @@
     <footer class="page-footer">
       <div class="page-footer__container">
         <a href="index.html" class="page-footer__logo logo">
-          <img class="page-footer__logo-image" src="http://placehold.it/96x15" alt="Логотип сайта Погнали" width="96" height="15">
+          <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" alt="Логотип сайта Погнали" width="96" height="15">
         </a>
         <div class="page-footer__wrapper">
-          <ul class="page-footer__list social-list">
+          <ul class="page-footer__social social-list">
             <li class="social-list__item">
               <a href="#" class="social-list__link social-list__link--fb">
                 <span class="visually-hidden">Наш Фейсбук</span>

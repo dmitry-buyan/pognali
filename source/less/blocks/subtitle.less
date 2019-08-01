@@ -1,4 +1,11 @@
 .subtitle {
+  .indent-reset();
   .heading();
-  margin: 0;
+  font-weight: @font-bold;
+}
+
+@media (min-width: @tablet-width) {
+  .subtitle {
+    .heading(@font-size: 45px, @line-height: 45px);
+  }
 }

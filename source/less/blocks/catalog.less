@@ -1,14 +1,12 @@
 .catalog {
-  padding: 0 25px;
-  // Временно для сетки
-  outline: 5px dashed green;
+  padding: 0 @mobile-padding;
 }
 
 .catalog__container {
-  width: 270px;
+  width: @mobile-width - @mobile-padding * 2;
   margin: 0 auto;
   // Временно для сетки
-  outline: 3px dashed red;
+  outline: 2px dashed green;
 }
 
 .catalog__list {
@@ -20,8 +18,10 @@
   line-height: 18px;
   color: @color-grey;
   background-color: @color-white;
+  border-radius: 18px;
+  margin-bottom: 10px;
   // Временно для сетки
-  outline: 2px dotted green;
+  outline: 1px dotted red;
 }
 
 .catalog__name-link {
@@ -71,18 +71,39 @@
   color: @color-cobalt;
 }
 
+.catalog__pagination {
+  background-color: @color-white;
+  border-radius: 18px;
+}
+
 .catalog__pagination-list {
   .list-reset();
 }
 
 @media (min-width: @tablet-width) {
+  .catalog {
+    padding: 0 @tablet-padding;
+  }
+
   .catalog__container {
-    width: 688px;
+    width: @tablet-width - @tablet-padding * 2;
+  }
+
+  .catalog__item {
+    margin-bottom: 40px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .catalog {
+    padding: 0 @desktop-padding;
+  }
+
   .catalog__container {
-    width: 1320px;
+    width: @desktop-width - @desktop-padding * 2;
+  }
+
+  .catalog__item {
+    margin-bottom: 30px;
   }
 }

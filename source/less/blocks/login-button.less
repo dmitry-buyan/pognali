@@ -2,8 +2,18 @@
   font-size: 17px;
   line-height: 30px;
   font-weight: @font-bold;
+  text-align: center;
   color: #161c35;
   text-transform: uppercase;
   text-decoration: none;
   background-color: @color-yellow;
+  border-radius: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .login-button {
+    min-width: 190px;
+    padding: 10px 5px;
+    font-size: 20px;
+  }
 }
