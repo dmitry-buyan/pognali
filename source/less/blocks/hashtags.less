@@ -1,4 +1,7 @@
 .hashtags__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 180px;
   .list-reset();
 }
 
@@ -10,6 +13,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .hashtags__list {
+    width: 230px;
+  }
+
   .hashtags__link {
     font-size: 20px;
     line-height: 24px;

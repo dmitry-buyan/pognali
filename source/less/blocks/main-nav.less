@@ -1,61 +1,91 @@
 .main-nav {
+  margin: 0 auto;
+  padding: 27px @mobile-padding 30px;
   background-color: @color-white;
+
+  &--opened {
+    display: block;
+  }
+
+  &--closed {
+    background-color: transparent;
+  }
+
+  &--closed .page-header__logo {
+    background-image: url("../img/logo-mobile-white@1x.png");
+  }
+
+  &--closed .main-nav__site-list,
+  &--closed .main-nav__user,
+  &--closed .main-nav__social {
+    display: none;
+  }
+
+  &--closed .main-nav__toggle::before {
+    width: 25px;
+    height: 11px;
+    background-image: url("../img/menu.svg");
+  }
+
+  &--opened .main-nav__toggle::before {
+    width: 19px;
+    height: 19px;
+    background-image: url("../img/menu-close.svg");
+  }
+
+  &--closed .main-nav__logo {
+    background-image: url("../img/logo-mobile-white@1x.png");
+  }
+}
+
+.main-nav__logo {
+  margin-bottom: 75px;
+  background-image: url("../img/logo-mobile-blue@1x.png");
+  background-repeat: no-repeat;
+  // Временно
+  outline: 1px dashed red;
+}
+
+.main-nav__login {
+  box-sizing: border-box;
+  display: block;
+  width: @mobile-width - @mobile-padding * 2;
+  margin: 0 auto 50px;
+  padding: 10px;
 }
 
 .main-nav__toggle {
   position: absolute;
-  top: 27px;
-  right: @mobile-padding;
-  width: 27px;
-  height: 27px;
+  top: 10px;
+  right: 0;
+  width: 50px;
+  height: 50px;
   border: none;
   background-color: transparent;
-}
-
-.main-nav--opened .main-nav__toggle {
-  width: 27px;
-  height: 27px;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 12px;
-    right: 0;
-    width: 25px;
-    height: 3px;
-    background-color: #cccccc;
-  }
 
   &::before {
-    transform: rotate(45deg);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
   }
-
-  &::after {
-    transform: rotate(-45deg);
-  }
-}
-
-.main-nav__wrapper {
-  box-sizing: border-box;
-  width: @mobile-width - @mobile-padding * 2;
-  margin: 0 auto;
 }
 
 .main-nav__site-list {
   .list-reset();
-  margin-bottom: 50px;
+  width: @mobile-width - @mobile-padding * 2;
+  margin: 0 auto;
+  margin-bottom: 55px;
   text-align: center;
 }
 
 .main-nav__user {
+  width: @mobile-width - @mobile-padding * 2;
+  margin: 0 auto;
   margin-bottom: 40px;
-}
-
-.main-nav__login {
-  display: block;
-  margin-bottom: 50px;
-  padding: 10px;
 }
 
 .main-nav__social {
@@ -64,50 +94,105 @@
 }
 
 @media (min-width: @tablet-width) {
+  .main-nav {
+    padding: @tablet-padding;
+
+    &--closed {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 40px;
+
+      .main-nav__logo {
+        margin-bottom: 0;
+      }
+
+      .main-nav__toggle {
+        position: static;
+      }
+
+      .main-nav__user {
+        display: flex;
+        width: auto;
+        margin: 0;
+      }
+
+      .main-nav__login {
+        position: static;
+      }
+
+      .main-nav__contacts {
+        display: none;
+      }
+    }
+  }
+
+  .main-nav__logo {
+    width: 164px;
+    height: 42px;
+    margin-top: 5px;
+  }
+
   .main-nav__toggle {
-    top: 55px;
+    top: 40px;
     right: 50%;
     transform: translateX(50%);
   }
 
   .main-nav__site-list {
+    width: @tablet-width - @tablet-padding * 3;
+    margin-left: 60px;
     text-align: left;
   }
 
-  .main-nav__wrapper {
-    width: @tablet-width - @tablet-padding * 2;
-    padding-left: 60px;
+  .main-nav__user {
+    width: @tablet-width - @tablet-padding * 3;
+    margin-left: 60px;
   }
 
   .main-nav__login {
     position: absolute;
     top: 40px;
     right: @tablet-padding;
+    width: auto;
     margin: 0;
   }
 
   .main-nav__social {
     justify-content: flex-start;
+    margin-left: 60px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-nav {
-    width: 975px;
-    margin-left: auto;
+    display: flex;
+    align-items: center;
+    width: @desktop-width - @desktop-padding * 2;
     padding: 0;
     background-color: transparent;
+
+    &--closed {
+      .main-nav__site-list {
+        display: flex;
+      }
+
+      .main-nav__contacts {
+        display: flex;
+      }
+    }
+  }
+
+  .main-nav__logo {
+    position: static;
+    width: 200px;
+    height: 52px;
+    margin: 0 145px 0 0;
+    background-image: url("../img/logo-mobile-white@1x.png");
   }
 
   .main-nav__toggle {
     display: none;
-  }
-
-  .main-nav__wrapper {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding-left: 0;
   }
 
   .main-nav__site-list {
@@ -125,6 +210,8 @@
 
   .main-nav__login {
     position: static;
+    display: block;
+    margin-bottom: 0;
   }
 
   .main-nav__social {

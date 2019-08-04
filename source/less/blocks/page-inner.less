@@ -1,8 +1,5 @@
-.page-inner {
-  padding-bottom: 240px;
-}
-
 .page-inner__header {
+  padding-top: 15px;
   background-color: @color-darknavy;
   .border-radius();
 }
@@ -12,21 +9,94 @@
   margin: 0 auto;
 }
 
+.page-inner__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: @mobile-width - @mobile-padding * 2;
+  margin: 0 auto;
+}
+
 .page-inner__title {
+  position: relative;
+  display: inline-block;
   margin: 0;
+  padding-bottom: 10px;
   .heading(36px, 40px, @color-white);
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: -2px;
+    width: 100%;
+    height: 5px;
+    border-radius: 2px;
+    background-color: #ff8d30;
+  }
+}
+
+.page-inner__home-link {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-inner__header {
+    padding: 100px @tablet-padding 0;
+  }
+
+  .page-inner__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: @tablet-width - @tablet-padding * 2 - 70;
+  }
+
+  .page-inner__title {
+    padding-bottom: 65px;
+    font-size: 60px;
+    line-height: 70px;
+
+    &::before {
+      bottom: -4px;
+      height: 8px;
+      border-radius: 3px;
+    }
+  }
+
+  .page-inner__home-link {
+    display: block;
+    margin-bottom: 65px;
+    padding-right: 60px;
+    .heading(@font-size: 20px, @line-height: 24px, @color: @color-white);
+    font-weight: @font-bold;
+    background-image: url("../img/return.svg");
+    background-repeat: no-repeat;
+    background-position: right 0;
+    background-size: 32px 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .page-inner__container {
+    width: @tablet-width - @tablet-padding * 2 - 130;
+  }
+
+  .page-inner__wrapper {
     width: @tablet-width - @tablet-padding * 2;
-    padding-left: 35px;
+    padding: 0 @tablet-padding;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-inner__container {
+    width: @desktop-width - @desktop-padding * 2 - 130;
+  }
+
+  .page-inner__wrapper {
+    display: flex;
+    justify-content: space-between;
     width: @desktop-width - @desktop-padding * 2;
-    padding-left: 70px;
+    padding: 0 @desktop-padding;
   }
 }
