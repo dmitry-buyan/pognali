@@ -9,40 +9,42 @@
   border-radius: 50%;
   background-color: @color-lightgrey;
 
-  svg {
-    position: absolute;
-    left: 50%;
-    top: 50;
-    transform: translate(-50%, 50%);
-    fill: @color-cobalt;
-    opacity: 0.15;
-  }
-
-  &--active svg {
+  &--active .transport__icon {
     opacity: 1;
   }
+}
+
+.transport__icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  fill: @color-cobalt;
+  opacity: 0.15;
 }
 
 @media (min-width: @tablet-width) {
   .transport__item {
     background-color: transparent;
+  }
 
-    &--plane svg {
+  .transport__icon {
+    &--plane {
       width: 19px;
       height: 21px;
     }
 
-    &--bus svg {
+    &--bus {
       width: 17px;
       height: 21px;
     }
 
-    &--bike svg {
+    &--bike {
       width: 24px;
       height: 21px;
     }
 
-    &--run svg {
+    &--run {
       width: 20px;
       height: 21px;
     }

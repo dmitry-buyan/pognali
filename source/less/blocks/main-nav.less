@@ -5,36 +5,32 @@
 
   &--opened {
     display: block;
+
+    .main-nav__toggle::before {
+      width: 19px;
+      height: 19px;
+      background-image: url("../img/menu-close.svg");
+    }
   }
 
   &--closed {
     background-color: transparent;
-  }
 
-  &--closed .page-header__logo {
-    background-image: url("../img/logo-mobile-white@1x.png");
-  }
+    .main-nav__logo {
+      background-image: url("../img/logo-mobile-white@1x.png");
+    }
 
-  &--closed .main-nav__site-list,
-  &--closed .main-nav__user,
-  &--closed .main-nav__social {
-    display: none;
-  }
+    .main-nav__site-list,
+    .main-nav__user,
+    .main-nav__social {
+      display: none;
+    }
 
-  &--closed .main-nav__toggle::before {
-    width: 25px;
-    height: 11px;
-    background-image: url("../img/menu.svg");
-  }
-
-  &--opened .main-nav__toggle::before {
-    width: 19px;
-    height: 19px;
-    background-image: url("../img/menu-close.svg");
-  }
-
-  &--closed .main-nav__logo {
-    background-image: url("../img/logo-mobile-white@1x.png");
+    .main-nav__toggle::before {
+      width: 25px;
+      height: 11px;
+      background-image: url("../img/menu.svg");
+    }
   }
 }
 
