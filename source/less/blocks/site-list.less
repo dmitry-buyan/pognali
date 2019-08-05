@@ -6,3 +6,27 @@
   text-transform: uppercase;
   text-decoration: none;
 }
+
+@media (min-width: @tablet-width) {
+  .site-list__link {
+    font-size: 60px;
+    line-height: 71px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    display: flex;
+  }
+
+  .site-list__item {
+    margin-right: 36px;
+  }
+
+  .site-list__link {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: @font-medium;
+    color: @color-white;
+  }
+}

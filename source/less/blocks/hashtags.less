@@ -1,6 +1,24 @@
+.hashtags__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 180px;
+  .list-reset();
+}
+
 .hashtags__link {
   line-height: 18px;
   font-weight: @font-normal;
   color: @color-grey;
   text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .hashtags__list {
+    width: 230px;
+  }
+
+  .hashtags__link {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }

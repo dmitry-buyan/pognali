@@ -1,46 +1,109 @@
 .about {
-  padding: 0 25px;
+  padding: 0 @mobile-padding 80px;
   background-color: @color-darkblue;
-  outline: 5px dashed green;
+  background-image: url("../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  .border-radius();
 }
 
-.about__reviews {
-  background-color: @color-darknavy;
+.about__container {
+  width: @mobile-width - @mobile-padding * 2;
+  margin: 0 auto;
+  padding-top: 45px;
+}
+
+.about__description {
+  padding: 0 35px 0 @mobile-padding;
+}
+
+.about__subtitle {
+  margin-bottom: 20px;
 }
 
 .about__text {
+  .indent-reset();
+  margin-bottom: 20px;
+
   &--bolder {
+    margin-bottom: 0;
     font-weight: @font-bold;
   }
 }
 
-.about__author {
-  font-style: normal;
-  font-weight: @font-bold;
+.about__button {
+  display: none;
 }
 
-.about__guideline {
-  font-weight: @font-bold;
-  font-size: 18px;
-  line-height: 18px;
-  color: @color-darknavy;
+@media (min-width: @tablet-width) {
+  .about {
+    padding: 0 @tablet-padding;
+    background-image: url("../img/about-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: right 8px bottom 88px;
+  }
+
+  .about__container {
+    width: @tablet-width - @tablet-padding * 2;
+    padding-bottom: 88px;
+  }
+
+  .about__description {
+    width: 310px;
+    padding-left: 35px;
+  }
+
+  .about__subtitle {
+    margin-bottom: 40px;
+  }
+
+  .about__text {
+    margin-bottom: 35px;
+
+    &--bolder {
+      margin-bottom: 50px;
+      .heading(21px, 25px, @color-white);
+    }
+  }
+
+  .about__button {
+    box-sizing: border-box;
+    display: block;
+    width: 274px;
+    .heading(@color: @color-cobalt);
+  }
 }
 
-.about__item {
-  background-color: #ff8d30;
+@media (min-width: @desktop-width) {
+  .about {
+    padding: 0 @desktop-padding;
+    background-image: url("../img/about-desktop@1x.png");
+    background-position: right 60px bottom;
+  }
 
-  &:nth-child(2) {
-    background-color: #ffa530;
+  .about__container {
+    width: @desktop-width - @desktop-padding * 2;
+    padding: 135px 0 153px;
   }
-  &:nth-child(3) {
-    background-color: #ffbd30;
-  }
-  &:last-child {
-    background-color: #ffd74b;
-  }
-}
 
-.about__description {
-  background-image: url("../img/about-mobile@1x.png");
-  background-repeat: no-repeat;
+  .about__description {
+    width: 620px;
+    padding-left: 70px;
+  }
+
+  .about__subtitle {
+    margin-bottom: 60px;
+  }
+
+  .about__text {
+    margin-bottom: 40px;
+
+    &--bolder {
+      margin-bottom: 85px;
+    }
+  }
+
+  .about__button {
+    padding: 29px 40px 28px;
+  }
 }

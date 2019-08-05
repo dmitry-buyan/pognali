@@ -1,8 +1,32 @@
 .button {
+  position: relative;
+  display: block;
+  padding: @mobile-padding 40px;
   font-size: 18px;
   line-height: 18px;
   font-weight: @font-bold;
   color: @color-cobalt;
   background-color: @color-yellow;
   text-decoration: none;
+  border-radius: 16px;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 23px;
+    content: "";
+    width: 10px;
+    height: 14px;
+    background-image: url("../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    &::after {
+      right: 35px;
+    }
+  }
 }

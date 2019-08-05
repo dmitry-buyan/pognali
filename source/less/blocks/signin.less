@@ -1,10 +1,153 @@
 .signin {
-  padding: 0 25px;
+  padding: 102px @mobile-padding 30px;
+  text-align: center;
   background-color: @color-darkblue;
-  // Временно для сетки
-  outline: 5px dashed green;
+  .border-radius();
+}
+
+.signin__container {
+  width: 270px;
+  margin: 0 auto;
+}
+
+.signin__title {
+  margin-bottom: 30px;
+}
+
+.signin__text {
+  padding: 0 35px 20px;
+  margin: 0 0 20px;
+}
+
+.signin__extra-text {
+  display: none;
 }
 
 .signin__link {
   color: @color-yellow;
+}
+
+.signin__form {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.signin__email {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 21px 100px 21px 25px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: @font-bold;
+  border: none;
+  border-radius: 16px;
+}
+
+.signin__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  padding: 0;
+  border: none;
+}
+
+.signin__reg {
+  .visually-hidden();
+}
+
+@media (min-width: @tablet-width) {
+  .signin {
+    padding: 132px @tablet-padding 60px;
+  }
+
+  .signin__container {
+    box-sizing: border-box;
+    width: @tablet-width - @tablet-padding * 2;
+    padding: 0 35px;
+  }
+
+  .signin__title {
+    margin-bottom: 60px;
+  }
+
+  .signin__text {
+    .indent-reset();
+    margin-bottom: 65px;
+
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
+  }
+
+  .signin__form {
+    margin-bottom: 60px;
+  }
+
+  .signin__email {
+    padding: 27px 100px 27px 35px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 15px;
+  }
+
+  .signin__button {
+    width: 82px;
+    padding: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    &::after {
+      right: 50%;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .signin {
+    padding: 168px @desktop-padding 104px;
+  }
+
+  .signin__container {
+    width: @desktop-width - @desktop-padding * 2;
+    padding: 0 72px;
+  }
+
+  .signin__button {
+    width: 324px;
+    padding-left: 38px;
+    .heading(24px, 24px, @color-cobalt);
+    text-align: left;
+
+    &::after {
+      right: 36px;
+    }
+  }
+
+  .signin__main-text {
+    display: none;
+  }
+
+  .signin__extra-text {
+    display: inline;
+  }
+
+  .signin__reg {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    border: none;
+    white-space: normal;
+    clip-path: inset(0%);
+    clip: auto;
+    overflow: auto;
+  }
+
+  .signin__list .contact-list__item {
+    &:first-child {
+      margin-right: 111px;
+    }
+  }
 }
