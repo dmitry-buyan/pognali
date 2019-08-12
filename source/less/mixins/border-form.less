@@ -1,0 +1,10 @@
+.border-form(@border-radius: 30px) {
+  border-top-right-radius: @border-radius;
+  border-top-left-radius: @border-radius;
+
+  @media (min-width: @desktop-width) {
+    @border-radius: 60px;
+    border-top-right-radius: @border-radius;
+    border-top-left-radius: @border-radius;
+  }
+}

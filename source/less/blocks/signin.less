@@ -11,7 +11,9 @@
 }
 
 .signin__title {
+  .indent-reset();
   margin-bottom: 30px;
+  .heading(@color: #ff8d30);
 }
 
 .signin__text {
@@ -70,6 +72,7 @@
 
   .signin__title {
     margin-bottom: 60px;
+    .heading(45px, 45px);
   }
 
   .signin__text {
@@ -117,7 +120,7 @@
   .signin__button {
     width: 324px;
     padding-left: 38px;
-    .heading(24px, 24px, @color-cobalt);
+    .heading();
     text-align: left;
 
     &::after {

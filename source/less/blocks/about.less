@@ -18,7 +18,9 @@
 }
 
 .about__subtitle {
+  .indent-reset();
   margin-bottom: 20px;
+  .heading(@color: #ff8d30);
 }
 
 .about__text {
@@ -55,6 +57,7 @@
 
   .about__subtitle {
     margin-bottom: 40px;
+    .heading(45px, 45px);
   }
 
   .about__text {
@@ -70,7 +73,7 @@
     box-sizing: border-box;
     display: block;
     width: 274px;
-    .heading(@color: @color-cobalt);
+    .heading();
   }
 }
 

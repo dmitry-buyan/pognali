@@ -1,0 +1,259 @@
+.form {
+  padding-top: 50px;
+  font-size: 16px;
+  line-height: 22px;
+  color: @color-grey;
+}
+
+.form__container {
+  width: @mobile-width - @mobile-padding * 2;
+  margin: 0 auto;
+}
+
+.form__user-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.form__level {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+
+.form__level-amount {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: inherit;
+  height: inherit;
+  padding-top: 18px;
+  font-size: 38px;
+  line-height: 38px;
+  font-weight: @font-bold;
+  color: @color-cobalt;
+  border-radius: 50%;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: -3px;
+    left: -3px;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    border: 3px solid #ff8d30;
+    border-top-color: transparent;
+  }
+
+  &::before {
+    transform: rotate(40deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &--lv80 {
+    border-left-color: transparent;
+
+    &::before {
+      border-left-color: transparent;
+      transform: rotate(80deg);
+    }
+  }
+}
+
+.form__level-text {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  display: block;
+  width: 50px;
+  padding-top: 5px;
+  font-size: 18px;
+  line-height: 22px;
+  border-top: 2px solid #cbced9;
+  transform: translateX(-50%);
+}
+
+.form__avatar {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.form__button {
+  box-sizing: border-box;
+  display: block;
+  width: inherit;
+  margin: 20px 0 33px;
+  padding: 5px;
+  text-align: center;
+  color: @color-darknavy;
+  background-color: #dfe3f0;
+  border: none;
+}
+
+.form__tags {
+  position: relative;
+  width: inherit;
+  margin-bottom: 25px;
+}
+
+.form__subtitle {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  .indent-reset();
+  padding: 0 18px;
+  .heading(16px, 18px);
+  background-color: @color-lightgrey;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+
+  &--transport {
+    padding: 0 15px;
+  }
+}
+
+.form__textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 90px;
+  .indent-reset();
+  padding: 25px;
+  font-size: 16px;
+  line-height: 22px;
+  color: @color-grey;
+  background-color: transparent;
+  border: 1px solid #cbced9;
+  border-radius: 10px;
+}
+
+.form__transport {
+  position: relative;
+  width: inherit;
+  margin-bottom: 30px;
+}
+
+.form__transport-wrapper {
+  display: flex;
+  justify-content: center;
+  .indent-reset();
+  padding: 15px 25px;
+  border: 1px solid #cbced9;
+  border-radius: 10px;
+}
+
+.transport__checkbox {
+  .visually-hidden();
+}
+
+.transport__checkbox:focus + .transport__item {
+  outline: 2px solid lightblue;
+}
+
+.transport__checkbox:checked + .transport__item .transport__icon {
+  opacity: 1;
+
+  &:hover {
+    fill: #101e44;
+  }
+}
+
+.transport__item {
+  position: relative;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-color: @color-white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.form__plans {
+  padding-top: 30px;
+  background-color: #dfe3f0;
+  .border-form();
+}
+
+.form__title {
+  margin: 0  0 30px;
+  .heading();
+}
+
+.form__list {
+  .list-reset();
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 14px;
+  color: @color-cobalt;
+}
+
+.form__list-item {
+  margin-bottom: 10px;
+  padding: 25px;
+  background-color: @color-white;
+  border-radius: 10px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.form__countries {
+  .indent-reset();
+  margin-bottom: 20px;
+  .heading(16px, 16px);
+}
+
+.form__travelmates-amount,
+.form__period {
+  .indent-reset();
+  line-height: 140%;
+  text-transform: uppercase;
+}
+
+.form__period {
+  margin-bottom: 25px;
+}
+
+.form__plans-change {
+  font-weight: @font-medium;
+  color: fade(#000000, 30%);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.form__editing {
+  margin-bottom: -30px;
+  padding: 30px 0 75px;
+  .border-form();
+  background-color: #d4d9eb;
+}
+
+.form__steps {
+  .list-reset();
+}
+
+@media (min-width: @tablet-width) {
+  .form__container {
+    width: @tablet-width - @tablet-padding * 2;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__container {
+    width: @desktop-width - @desktop-padding * 2;
+  }
+}

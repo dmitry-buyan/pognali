@@ -49,7 +49,7 @@
 .catalog__name {
   position: relative;
   .indent-reset();
-  .heading(20px, 20px, @color-cobalt);
+  .heading(20px, 20px);
 
   &::before {
     content: "";
@@ -528,14 +528,14 @@
   }
 
   .catalog__level-amount {
-    width: 60px;
-    height: 60px;
+    width: inherit;
+    height: inherit;
     margin-top: 8px;
 
     &::before,
     &::after {
-      width: 60px;
-      height: 60px;
+      width: inherit;
+      height: inherit;
     }
   }
 
