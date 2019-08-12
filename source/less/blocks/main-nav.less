@@ -4,8 +4,6 @@
   background-color: @color-white;
 
   &--opened {
-    display: block;
-
     .main-nav__toggle::before {
       width: 19px;
       height: 19px;
@@ -212,5 +210,13 @@
 
   .main-nav__social {
     display: none;
+  }
+}
+
+@media (max-width: @mobile-tablet-width) {
+  .main-nav {
+    &--nojs .main-nav__toggle {
+      display: none;
+    }
   }
 }

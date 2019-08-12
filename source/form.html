@@ -65,7 +65,509 @@
           <h1 class="page-inner__title">Направления</h1>
         </div>
       </header>
-      <!-- Form will be here -->
+      <form class="page-inner__form form" method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru">
+        <div class="form__container">
+          <div class="form__user-area">
+            <div class="form__level">
+              <span class="form__level-amount form__level-amount--lv80">80</span>
+              <span class="form__level-text">level</span>
+            </div>
+            <div class="form__avatar-wrapper">
+              <img src="img/demin-mobile@1x.jpg" alt="Петя Демин" width="100" height="100" class="form__avatar">
+            </div>
+            <a href="#" class="form__button button-inner">Сменить фото</a>
+            <div class="form__tags">
+              <h3 class="form__subtitle">Тэги</h3>
+              <textarea class="form__textarea" name="hashtags" rows="2">#бургер #бар #футбол #концерт #крафт</textarea>
+            </div>
+            <div class="form__transport">
+              <h3 class="form__subtitle form__title--transport">Транспорт</h3>
+              <div class="form__transport-wrapper transport">
+                <input id="plane" class="transport__checkbox" type="checkbox" name="plane" checked>
+                <label for="plane" class="transport__item  transport__item--plane">
+                  <span class="visually-hidden">Авиаперелет</span>
+                  <svg class="transport__icon transport__icon--plane" xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 19 21">
+                    <path d="M18.9 18.9c-.1-.3-3.7-10.1-3.7-10.1-.1-.5.1-.7.3-1.1 0 0 2.1-3.5 2.8-4.6.7-1.2.6-2.3-.1-2.8s-1.7-.1-2.5 1-3 4.5-3 4.5c-.3.4-.4.7-.9.8-.1-.1-10.3.4-10.6.4-.3 0-.7.1-1 .6-.4.7-.2.9.2 1 0 0 8 2.6 8.3 2.7.3 0 .3.2.2.6-.2.4-1.4 2.3-1.6 2.6-.1.2-.2.2-.4.3l-2.8 1c-.1 0-.3.1-.4.3l-.4.6c-.2.3-.1.5.2.5.3.1 2.1.2 2.1.2s.3.1.4.1c.2.1.4.3.2.6-.3.6-.4 1.2-.2 1.3s.6-.2 1-.7c.2-.3.4-.2.6 0 .2-.1.4.1.4.1s.8 1.6 1 1.9c.2.3.4.3.6 0l.4-.6c.1-.1.1-.3.1-.5l-.3-3.1c0-.2 0-.2.1-.5.1-.2 1.4-2.2 1.6-2.5.2-.3.4-.3.6-.1.2.2 5.7 6.7 5.7 6.7.3.3.5.4.9-.2.4-.4.3-.8.2-1z"/>
+                  </svg>
+                </label>
+
+                <input id="bus" class="transport__checkbox" type="checkbox" name="bus" checked>
+                <label for="bus" class="transport__item  transport__item--bus">
+                  <span class="visually-hidden">Автотранспорт</span>
+                  <svg class="transport__icon transport__icon--bus" xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 17 21">
+                    <path d="M16.2 3.1c-.2-1.2-1-1.6-2.1-2.1-1.1-.4-3.7-1-5.6-1C6.6 0 4 .6 2.9 1c-1.1.5-1.8.9-2.1 2.1L0 9.5v8.8h1.4v1.4c0 1.7 2.5 1.7 2.5 0v-1.4h9.2v1.4c0 1.7 2.5 1.7 2.5 0v-1.4H17V9.5l-.8-6.4zM5 1.6h7c.7 0 .7 1 0 1H5c-.7.1-.7-1 0-1zm-2.3 14c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2-.1.6-.6 1.2-1.2 1.2zm5.7-5.4H2.2c-.6 0-.7-.4-.7-.9l.6-4.7c.1-.6.3-.9 1-.9h10.7c.7 0 .9.4 1 .9l.6 4.7c.1.4-.1.9-.7.9H8.4zm5.9 5.4c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2 0 .6-.5 1.2-1.2 1.2z"/>
+                  </svg>
+                </label>
+
+                <input id="bike" class="transport__checkbox" type="checkbox" name="bike">
+                <label for="bike" class="transport__item transport__item--bike">
+                  <span class="visually-hidden">Велосипед</span>
+                  <svg class="transport__icon transport__icon--bike" xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 24 21">
+                    <path d="M16 3.6c1 0 1.8-.8 1.8-1.8S17 0 16 0s-1.8.8-1.8 1.8.8 1.8 1.8 1.8zm3 7.4c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zM14.8 8.9H19V7.1h-3.2l-1.9-3.3c-.3-.5-.8-.8-1.5-.8-.5 0-.9.2-1.2.5L7.5 7.2c-.3.3-.5.7-.5 1.2 0 .6.3 1.2.8 1.5l3.3 2v5H13v-6.5l-2.2-1.7 2.3-2.4 1.7 2.6zM5 11c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.6 3.5-3.5 3.5z"/>
+                  </svg>
+                </label>
+
+                <input id="run" class="transport__checkbox" type="checkbox" name="run" checked>
+                <label for="run" class="transport__item  transport__item--run">
+                  <span class="visually-hidden">Пешком</span>
+                  <svg class="transport__icon transport__icon--run" xmlns="http://www.w3.org/2000/svg" width="15" height="17" viewBox="0 0 20 21">
+                    <ellipse cx="14.3" cy="2" rx="2.1" ry="2"/>
+                    <path d="M19.4 4.6c-.5-.2-1.2-.1-1.4.4l-.9 1.6L13 4.3c-.2-.1-.3-.1-.6-.1H7.9c-.4 0-.7.1-.9.5L5.3 7.6c-.3.5-.1 1.1.4 1.3.2.1.4.1.5.1.4 0 .8-.2 1-.5l1.4-2.4h1.6l-4.7 8.1H1.1c-.6 0-1.1.4-1.1 1s.5 1 1.1 1h5c.4 0 .7-.2.9-.5l1.9-3.2 3 2.6-.2 4.9c-.1.5.4 1 1 1h.1c.6 0 1-.4 1.1-.9l.3-5.4c0-.3-.1-.6-.3-.8l-2.6-2.2L14 7.1l3.1 1.8c0 .1.4.2.6.1.3-.1.5-.2.7-.5L19.9 6c.3-.5.1-1.1-.5-1.4z"/>
+                  </svg>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="form__plans">
+          <div class="form__container">
+            <h2 class="form__title">Мои планы:</h2>
+            <ol class="form__list">
+              <li class="form__list-item">
+                <h3 class="form__countries">Франция, Италия</h3>
+                <p class="form__travelmates-amount">3 попутчика</p>
+                <p class="form__period">26 мар - 29 мар</p>
+                <a href="#" class="form__plans-change">Изменить</a>
+              </li>
+              <li class="form__list-item">
+                <h3 class="form__countries">Тайланд, Индонезия</h3>
+                <p class="form__travelmates-amount">1 попутчик</p>
+                <p class="form__period">1 июл - 15 июл</p>
+                <a href="#" class="form__plans-change">Изменить</a>
+              </li>
+            </ol>
+          </div>
+
+          <div class="form__editing">
+            <div class="form__container">
+              <h2 class="form__title">Добавить план:</h2>
+              <ol class="form__steps steps">
+                <li class="steps__item" id="step1">
+                  <div class="steps__wrapper">
+                    <ul class="steps__marker-list">
+                      <li class="steps__marker steps__marker--active"><span class="steps__marker-text">Даты</span></li>
+                      <li class="steps__marker"><span class="steps__marker-text">Маршрут</span></li>
+                      <li class="steps__marker"><span class="steps__marker-text">Развлечения</span></li>
+                    </ul>
+                    <h3 class="steps__title">Шаг 1.<br> Даты пребывания</h3>
+                    <p>Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+                    <div class="steps__input">
+                      <label for="people" class="steps__label">Ищу попутчиков:</label>
+                      <div class="steps__wrapper-inner">
+                        <button class="steps__input-btn steps__input-btn--min" type="button"><span class="visually-hidden">Убрать</span></button>
+                        <button class="steps__input-btn steps__input-btn--max" type="button"><span class="visually-hidden">Добавить</span></button>
+                        <input id="people" class="steps__input-field" type="number" name="people" min="1">
+                      </div>
+                      <span class="steps__text">чел.</span>
+                    </div>
+                    <div class="steps__input">
+                      <label for="marchays" class="steps__label">Длительность:</label>
+                      <div class="steps__wrapper-inner">
+                        <button class="steps__input-btn steps__input-btn--min" type="button"><span class="visually-hidden">Убрать</span></button>
+                        <button class="steps__input-btn steps__input-btn--max" type="button"><span class="visually-hidden">Добавить</span></button>
+                        <input id="marchays" class="steps__input-field" type="number" name="marays" min="1">
+                      </div>
+                      <span class="steps__text">дн.</span>
+                    </div>
+                    <p class="steps__children">
+                      <input id="children" class="steps__children-field" type="checkbox" checked>
+                      <label for="children" class="steps__children-label"> Можно с детьми</label>
+                    </p>
+                    <div class="steps__calendar calendar">
+                      <div class="calendar__header">
+                        <button class="calendar__btn calendar__btn--prev" type="button"><span class="visually-hidden">Предыдущий</span></button>
+                        <h3 class="calendar__month">Март 2019</h3>
+                        <button class="calendar__btn calendar__btn--next" type="button"><span class="visually-hidden">Следующий</span></button>
+                      </div>
+                      <table class="calendar__table">
+                        <tr class="calendar__row">
+                          <th class="calendar__cell calendar__cell--heading">П</th>
+                          <th class="calendar__cell calendar__cell--heading">В</th>
+                          <th class="calendar__cell calendar__cell--heading">С</th>
+                          <th class="calendar__cell calendar__cell--heading">Ч</th>
+                          <th class="calendar__cell calendar__cell--heading">П</th>
+                          <th class="calendar__cell calendar__cell--heading calendar__cell--dayoff">С</th>
+                          <th class="calendar__cell calendar__cell--heading calendar__cell--dayoff">В</th>
+                        </tr>
+
+                        <tr class="calendar__row">
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="feb24" type="checkbox" name="feb24" disabled>
+                            <label class="calendar__date" for="feb24">24</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="feb25" type="checkbox" name="feb25" disabled>
+                            <label class="calendar__date" for="feb25">25</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="feb26" type="checkbox" name="feb26" disabled>
+                            <label class="calendar__date" for="feb26">26</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="feb27" type="checkbox" name="feb27" disabled>
+                            <label class="calendar__date" for="feb27">27</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="feb28" type="checkbox" name="feb28" disabled>
+                            <label class="calendar__date" for="feb28">28</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march1" type="checkbox" name="mar1" disabled>
+                            <label class="calendar__date" for="march1">1</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march2" type="checkbox" name="mar2" disabled>
+                            <label class="calendar__date" for="march2">2</label>
+                          </td>
+                        </tr>
+
+                        <tr class="calendar__row">
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march3" type="checkbox" name="mar3" disabled>
+                            <label class="calendar__date" for="march3">3</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march4" type="checkbox" name="mar4" disabled>
+                            <label class="calendar__date" for="march4">4</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march5" type="checkbox" name="mar5" disabled>
+                            <label class="calendar__date" for="march5">5</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march6" type="checkbox" name="mar6" disabled>
+                            <label class="calendar__date" for="march6">6</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march7" type="checkbox" name="mar7" disabled>
+                            <label class="calendar__date" for="march7">7</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march8" type="checkbox" name="mar8" disabled>
+                            <label class="calendar__date" for="march8">8</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march9" type="checkbox" name="mar9" disabled>
+                            <label class="calendar__date" for="march9">9</label>
+                          </td>
+                        </tr>
+
+                        <tr class="calendar__row">
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march10" type="checkbox" name="mar10" disabled>
+                            <label class="calendar__date" for="march10">10</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march11" type="checkbox" name="mar11" disabled>
+                            <label class="calendar__date" for="march11">11</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march12" type="checkbox" name="mar12" disabled>
+                            <label class="calendar__date" for="march12">12</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march13" type="checkbox" name="mar13" disabled>
+                            <label class="calendar__date" for="march13">13</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march14" type="checkbox" name="mar14" disabled>
+                            <label class="calendar__date" for="march14">14</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march15" type="checkbox" name="mar15" disabled>
+                            <label class="calendar__date" for="march15">15</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march16" type="checkbox" name="mar16" disabled>
+                            <label class="calendar__date" for="march16">16</label>
+                          </td>
+                        </tr>
+
+                        <tr class="calendar__row">
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march17" type="checkbox" name="mar17" disabled>
+                            <label class="calendar__date" for="march17">17</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march18" type="checkbox" name="mar18" disabled>
+                            <label class="calendar__date" for="march18">18</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march19" type="checkbox" name="mar19" disabled>
+                            <label class="calendar__date" for="march19">19</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march20" type="checkbox" name="mar20" disabled>
+                            <label class="calendar__date" for="march20">20</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march21" type="checkbox" name="mar21" disabled>
+                            <label class="calendar__date" for="march21">21</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march22" type="checkbox" name="mar22" disabled>
+                            <label class="calendar__date" for="march22">22</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march23" type="checkbox" name="mar23" disabled>
+                            <label class="calendar__date" for="march23">23</label>
+                          </td>
+                        </tr>
+
+                        <tr class="calendar__row">
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march24" type="checkbox" name="mar24" disabled>
+                            <label class="calendar__date" for="march24">24</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march25" type="checkbox" name="mar25" disabled>
+                            <label class="calendar__date" for="march25">25</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march26" type="checkbox" name="mar26" disabled>
+                            <label class="calendar__date" for="march26">26</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march27" type="checkbox" name="mar27" checked>
+                            <label class="calendar__date" for="march27">27</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march28" type="checkbox" name="mar28" checked>
+                            <label class="calendar__date" for="march28">28</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march29" type="checkbox" name="mar29" checked>
+                            <label class="calendar__date" for="march29">29</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march30" type="checkbox" name="mar30">
+                            <label class="calendar__date" for="march30">30</label>
+                          </td>
+                        </tr>
+
+                        <tr class="calendar__row">
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="march31" type="checkbox" name="mar31">
+                            <label class="calendar__date" for="march31">31</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="april1" type="checkbox" name="apr1">
+                            <label class="calendar__date" for="april1">1</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="april2" type="checkbox" name="apr2">
+                            <label class="calendar__date" for="april2">2</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="april3" type="checkbox" name="apr3">
+                            <label class="calendar__date" for="april3">3</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="april4" type="checkbox" name="apr4">
+                            <label class="calendar__date" for="april4">4</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="april5" type="checkbox" name="apr5">
+                            <label class="calendar__date" for="april5">5</label>
+                          </td>
+                          <td class="calendar__cell">
+                            <input class="calendar__input" id="april6" type="checkbox" name="apr6">
+                            <label class="calendar__date" for="april6">6</label>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <a href="#step2" class="steps__button button">Следующий шаг</a>
+                </li>
+
+                <li class="steps__item" id="step2">
+                  <div class="steps__wrapper">
+                    <ul class="steps__marker-list">
+                      <li class="steps__marker"><span class="steps__marker-text">Даты</span></li>
+                      <li class="steps__marker steps__marker--active"><span class="steps__marker-text">Маршрут</span></li>
+                      <li class="steps__marker"><span class="steps__marker-text">Развлечения</span></li>
+                    </ul>
+                    <h3 class="steps__title">Шаг 2.<br> Маршрут</h3>
+                    <p>Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+                    <div class="steps__country">
+                      <div class="steps__country-container">
+                        <div class="steps__input-wrapper">
+                          <input id="country-1" class="steps__country-name" type="text" value="Босния и Герцеговина">
+                          <button class="steps__arrow" type="button">
+                            <span class="visually-hidden">Показать еще</span>
+                            <svg class="steps__dropdown" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                              width="12" height="7" viewBox="0 0 17 9" style="enable-background:new 0 0 17 9;" xml:space="preserve">
+                              <path d="M8.5,7.2l-7.2-7C1-0.1,0.5-0.1,0.2,0.2c-0.3,0.3-0.3,0.8,0,1L8,8.8c0.3,0.3,0.8,0.3,1.1,0l7.7-7.5C16.9,1.1,17,0.9,17,0.7
+                              s-0.1-0.4-0.2-0.5c-0.3-0.3-0.8-0.3-1.1,0L8.5,7.2z"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <label for="country-1" class="steps__country-label steps__country-label--bosnia"><span class="visually-hidden">Босния и Герцеговина</span></label>
+                        <button class="steps__button steps__button--remove" type="button"><span class="visually-hidden">Удалить</span></button>
+                      </div>
+                      <div class="steps__country-container">
+                        <div class="steps__input-wrapper">
+                          <input id="country-2" class="steps__country-name" type="text" value="Чехословакия">
+                          <button class="steps__arrow" type="button">
+                            <span class="visually-hidden">Показать еще</span>
+                            <svg class="steps__dropdown" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                              width="12" height="7" viewBox="0 0 17 9" style="enable-background:new 0 0 17 9;" xml:space="preserve">
+                              <path d="M8.5,7.2l-7.2-7C1-0.1,0.5-0.1,0.2,0.2c-0.3,0.3-0.3,0.8,0,1L8,8.8c0.3,0.3,0.8,0.3,1.1,0l7.7-7.5C16.9,1.1,17,0.9,17,0.7
+                              s-0.1-0.4-0.2-0.5c-0.3-0.3-0.8-0.3-1.1,0L8.5,7.2z"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <label for="country-2" class="steps__country-label steps__country-label--czech"><span class="visually-hidden">Чехословакия</span></label>
+                        <button class="steps__button steps__button--remove" type="button"><span class="visually-hidden">Удалить</span></button>
+                      </div>
+                      <div class="steps__country-container steps__country-container--dropdown">
+                        <div class="steps__input-wrapper steps__input-wrapper--choose">
+                          <input id="choose" class="steps__country-name steps__country-name--choice" type="text">
+                          <label for="choose" class="steps__country-choice">Выберите страну</label>
+                          <button class="steps__arrow" type="button">
+                            <span class="visually-hidden">Показать еще</span>
+                            <svg class="steps__dropdown" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                              width="12" height="7" viewBox="0 0 17 9" style="enable-background:new 0 0 17 9;" xml:space="preserve">
+                              <path d="M8.5,7.2l-7.2-7C1-0.1,0.5-0.1,0.2,0.2c-0.3,0.3-0.3,0.8,0,1L8,8.8c0.3,0.3,0.8,0.3,1.1,0l7.7-7.5C16.9,1.1,17,0.9,17,0.7
+                              s-0.1-0.4-0.2-0.5c-0.3-0.3-0.8-0.3-1.1,0L8.5,7.2z"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <button class="steps__button steps__button--remove" type="button"><span class="visually-hidden">Удалить</span></button>
+                        <div class="steps__country-modal">
+                          <button class="steps__modal-button"><span class="visually-hidden">Закрыть</span></button>
+                          <table class="steps__country-table">
+                            <caption class="steps__table-title">Выберите страну</caption>
+                            <tr class="steps__country-row">
+                              <td class="steps__country-cell steps__country-cell--active">А</td>
+                              <td class="steps__country-cell">Б</td>
+                              <td class="steps__country-cell">В</td>
+                              <td class="steps__country-cell">Г</td>
+                              <td class="steps__country-cell">Д</td>
+                            </tr>
+                            <tr class="steps__country-row">
+                              <td class="steps__country-cell">Е</td>
+                              <td class="steps__country-cell">Ё</td>
+                              <td class="steps__country-cell">Ж</td>
+                              <td class="steps__country-cell">З</td>
+                              <td class="steps__country-cell">И</td>
+                            </tr>
+                            <tr class="steps__country-row">
+                              <td class="steps__country-cell">Й</td>
+                              <td class="steps__country-cell">К</td>
+                              <td class="steps__country-cell">Л</td>
+                              <td class="steps__country-cell">М</td>
+                              <td class="steps__country-cell">Н</td>
+                            </tr>
+                            <tr class="steps__country-row">
+                              <td class="steps__country-cell">О</td>
+                              <td class="steps__country-cell">П</td>
+                              <td class="steps__country-cell">Р</td>
+                              <td class="steps__country-cell">С</td>
+                              <td class="steps__country-cell">Т</td>
+                            </tr>
+                            <tr class="steps__country-row">
+                              <td class="steps__country-cell">У</td>
+                              <td class="steps__country-cell">Ф</td>
+                              <td class="steps__country-cell">Х</td>
+                              <td class="steps__country-cell">Ц</td>
+                              <td class="steps__country-cell">Ч</td>
+                            </tr>
+                            <tr class="steps__country-row">
+                              <td class="steps__country-cell">Ш</td>
+                              <td class="steps__country-cell">Щ</td>
+                              <td class="steps__country-cell">Э</td>
+                              <td class="steps__country-cell">Ю</td>
+                              <td class="steps__country-cell">Я</td>
+                            </tr>
+                          </table>
+                          <ul class="steps__country-list">
+                            <li>
+                              <label class="steps__country-link">
+                                <input class="visually-hidden" type="checkbox" name="Afganistan">Афганистан
+                              </label>
+                            </li>
+                            <li>
+                              <label class="steps__country-link">
+                                <input class="visually-hidden" type="checkbox" name="Albania">Албания
+                              </label>
+                            </li>
+                            <li>
+                              <label class="steps__country-link">
+                                <input class="visually-hidden" type="checkbox" name="Algenia">Алгерия
+                              </label>
+                            </li>
+                            <li>
+                              <label class="steps__country-link">
+                                <input class="visually-hidden" type="checkbox" name="Andorra">Андорра
+                              </label>
+                            </li>
+                            <li>
+                              <label class="steps__country-link">
+                                <input class="visually-hidden" type="checkbox" name="Argentina">Аргентина
+                              </label>
+                            </li>
+                            <li>
+                              <label class="steps__country-link">
+                                <input class="visually-hidden" type="checkbox" name="Armenia">Армения
+                              </label>
+                            </li>
+                            <li>
+                              <label class="steps__country-link">
+                                <input class="visually-hidden" type="checkbox" name="Australia">Австралия
+                              </label>
+                            </li>
+                            <li>
+                              <label class="steps__country-link">
+                                <input class="visually-hidden" type="checkbox" name="Austria">Австрия
+                              </label>
+                            </li>
+                            <li>
+                              <label class="steps__country-link">
+                                <input class="visually-hidden" type="checkbox" name="Azerbaijan">Азербайджан
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="steps__input-wrapper steps__input-wrapper--choose">
+                        <button class="steps__button steps__button--add" type="button">Добавить страну</button>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#step3" class="button steps__button">Следующий шаг</a>
+                  <a href="#step1" class="button steps__button steps__button--prev">На шаг назад</a>
+                </li>
+
+                <li class="steps__item" id="step3">
+                  <div class="steps__wrapper">
+                    <ul class="steps__marker-list">
+                      <li class="steps__marker"><span class="steps__marker-text">Даты</span></li>
+                      <li class="steps__marker"><span class="steps__marker-text">Маршрут</span></li>
+                      <li class="steps__marker steps__marker--active"><span class="steps__marker-text">Развлечения</span></li>
+                    </ul>
+                    <h3 class="steps__title">Шаг 3.<br> Развлечения</h3>
+                    <p>Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+                    <div class="steps__cover">
+                      <label class="steps__subtitle steps__subtitle--bosnia" for="field-1">Босния и герцеговина</label>
+                      <textarea id="field-1" class="steps__description" placeholder="План действий"></textarea>
+                    </div>
+                    <div class="steps__cover">
+                      <label class="steps__subtitle steps__subtitle--czech" for="field-2">Чехословакия</label>
+                      <textarea id="field-2" class="steps__description">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                    </div>
+                  </div>
+                  <button class="steps__button button">Отправить</button>
+                  <a href="#step2" class="button steps__button steps__button--prev">На шаг назад</a>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+      </form>
     </main>
 
     <footer class="page-footer">
@@ -92,7 +594,7 @@
         </ul>
         <p class="page-footer__copyright">
           <span>Разработано</span>
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__link"><span>HTML Academy</span></a>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__link"><span class="visually-hidden">HTML Academy</span></a>
         </p>
       </div>
     </footer>

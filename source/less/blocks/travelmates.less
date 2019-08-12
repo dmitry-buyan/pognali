@@ -20,7 +20,9 @@
 .travelmates__subtitle {
   position: relative;
   z-index: 3;
+  .indent-reset();
   margin-bottom: 20px;
+  .heading(@color: #ff8d30);
 }
 
 .travelmates__text {
@@ -126,7 +128,7 @@
 
 .travelmates__name {
   .indent-reset();
-  .heading(21px, 21px, @color-cobalt);
+  .heading(21px, 21px);
 }
 
 @media (min-width: @tablet-width) {
@@ -148,6 +150,7 @@
 
   .travelmates__subtitle {
     margin-bottom: 60px;
+    .heading(45px, 45px);
   }
 
   .travelmates__text {
@@ -185,11 +188,11 @@
   }
 
   .travelmates__name {
-    .heading(@color: @color-cobalt);
+    .heading();
   }
 
   .travelmates__to-all {
-    .heading(24px, 24px, @color-cobalt);
+    .heading();
   }
 }
 
