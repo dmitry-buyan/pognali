@@ -200,7 +200,7 @@
   }
 
   .main-nav__logo {
-    position: static;
+    position: relative;
     width: 200px;
     height: 52px;
     margin: 0 145px 0 0;
@@ -208,6 +208,17 @@
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/logo-desktop-white@2x.png");
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -100px;
+      width: 60px;
+      height: 2px;
+      background-color: @color-white;
+      transform: translateY(-50%);
     }
   }
 

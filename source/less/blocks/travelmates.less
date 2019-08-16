@@ -1,9 +1,36 @@
 .travelmates {
+  position: relative;
   padding: 102px @mobile-padding 30px;
   background-color: @color-darkblue;
-  background-image: url("../img/rogovaya-back-mobile@1x.png");
+  background-image:
+    url("../img/smolov-back-desktop@1x.png"),
+    url("../img/rogovaya-back-mobile@1x.png");
   background-repeat: no-repeat;
+  background-position:
+    right @mobile-padding top 70px,
+    left -10px top 340px;
+  background-size:
+    143px 143px,
+    71px 71px;
   .border-radius();
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image:
+      url("../img/smolov-back-desktop@2x.png"),
+      url("../img/rogovaya-back-mobile@2x.png");
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -19px;
+    top: 70px;
+    z-index: -1;
+    width: 132px;
+    height: 132px;
+    background-color: #141b3b;
+    border-radius: 20px;
+  }
 }
 
 .travelmates__container {
@@ -265,13 +292,37 @@
 
 @media (min-width: @tablet-width) {
   .travelmates {
-    padding: 190px @tablet-padding 88px;
+    padding: 55px @tablet-padding 88px;
+    background-image: none;
+
+    &::before {
+      top: 140px;
+      left: @tablet-padding;
+      width: 213px;
+      height: 213px;
+    }
   }
 
   .travelmates__container {
     box-sizing: border-box;
     width: @tablet-width - @tablet-padding * 2;
-    padding: 0 35px;
+    padding: 135px 35px 0;
+    background-image:
+      url("../img/smolov-back-desktop@1x.png"),
+      url("../img/rogovaya-back-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position:
+      left 0 top 426px,
+      right 35px top 90px;
+    background-size:
+      143px auto,
+      285px auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image:
+        url("../img/smolov-back-desktop@2x.png"),
+        url("../img/rogovaya-back-desktop@2x.png");
+    }
   }
 
   .travelmates__wrapper {
