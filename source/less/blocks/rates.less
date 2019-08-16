@@ -1,5 +1,6 @@
 .rates {
   padding: 37px @mobile-padding;
+  color: @color-grey;
   background-color: #e6e8f1;
   .border-radius();
 }
@@ -24,6 +25,10 @@
     background-image: url("../img/rates@1x.png");
     background-size: contain;
     background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/rates@2x.png");
+    }
   }
 }
 
@@ -41,9 +46,11 @@
 }
 
 .rates__list {
+  width: 200px;
   .list-reset();
-  margin-bottom: 30px;
+  margin-bottom: 32px;
   color: @color-grey;
+  counter-reset: myCounter;
 }
 
 .rates__toggle {
@@ -51,20 +58,88 @@
   line-height: 16px;
   color: @color-darkblue;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    .rates__link {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    .rates__link {
+      opacity: 0.3;
+    }
+  }
+}
+
+.rates__icon-wrapper {
+  display: none;
 }
 
 .rates__modal {
   background-color: @color-white;
-  border-radius: 18px;
+  border-radius: 20px;
 }
 
 .rates__modal-wrapper {
   padding: 35px @mobile-padding 33px;
 }
 
+.rates__item {
+  position: relative;
+  padding: 11px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+  &:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  &::after {
+    content: counter(myCounter);
+    position: absolute;
+    top: 4px;
+    right: -45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    font: inherit;
+    color: @color-white;
+    background-color: #ffa530;
+    border-radius: 50%;
+    counter-increment: myCounter;
+  }
+
+  &:nth-child(2) {
+    &::after {
+      background-color: #ffbd30;
+    }
+  }
+
+  &:nth-child(3) {
+    &::after {
+      background-color: #ffd74b;
+    }
+  }
+}
+
+.rates__price {
+  display: block;
+}
+
 .rates__offer-list {
   .list-reset();
-  color: @color-grey;
+}
+
+.rates__offer-item {
+  padding: 12px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+  &:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
 }
 
 .rates__modal-close {
@@ -77,14 +152,14 @@
   color: @color-cobalt;
   background-color: #f3f4f8;
   border: none;
-  border-bottom-left-radius: 18px;
-  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   text-transform: uppercase;
 }
 
 @media (min-width: @tablet-width) {
   .rates {
-    padding: 75px @tablet-padding 60px;
+    padding: 123px @tablet-padding 60px;
   }
 
   .rates__container {
@@ -92,26 +167,106 @@
   }
 
   .rates__wrapper {
+    margin-bottom: 20px;
     padding: 0;
+
+    &::before {
+      top: auto;
+      bottom: -20px;
+      right: 50px;
+    }
   }
 
   .rates__title {
     margin-bottom: 74px;
     padding: 0;
-    .heading(45px, 45px);
+    .heading(45px, 45px, #ff8d30);
     text-align: center;
   }
 
+  .rates__list {
+    position: relative;
+    width: auto;
+    margin: 0 35px 32px 91px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -43px;
+      right: -35px;
+      z-index: -1;
+      width: 198px;
+      height: 285px;
+      background-color: #e2e5f2;
+      border-radius: 20px;
+    }
+  }
+
+  .rates__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+
+    &::after {
+      left: -91px;
+      top: 50%;
+      width: 67px;
+      height: 67px;
+      transform: translateY(-50%);
+    }
+  }
+
   .rates__toggle {
+    display: inline-flex;
+    align-items: center;
     .heading(20px, 20px, #132576);
+
+    &:hover,
+    &:focus {
+      .rates__icon {
+        opacity: 0.7;
+      }
+    }
+
+    &:active {
+      .rates__icon {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .rates__icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 67px;
+    height: 67px;
+    margin-right: 23px;
+    background-color: #e2e5f2;
+    border-radius: 50%;
+  }
+
+  .rates__icon {
+    path {
+      fill: #132576;
+    }
   }
 
   .rates__modal {
-    border-radius: 25px;
+    border-radius: 30px;
   }
 
   .rates__modal-wrapper {
     padding: 53px 91px 51px;
+  }
+
+  .rates__offer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    font-size: 22px;
+    line-height: 28px;
   }
 
   .rates__modal-close {
@@ -132,6 +287,13 @@
     box-sizing: border-box;
     width: @desktop-width - @desktop-padding * 2;
     padding: 0 70px;
+  }
+
+  .rates__wrapper {
+    &::before {
+      width: 198px;
+      height: 198px;
+    }
   }
 
   .rates__modal {

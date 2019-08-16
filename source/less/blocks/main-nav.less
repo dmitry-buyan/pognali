@@ -12,10 +12,16 @@
   }
 
   &--closed {
+    height: 0;
     background-color: transparent;
 
     .main-nav__logo {
+      margin: 0;
       background-image: url("../img/logo-mobile-white@1x.png");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/logo-mobile-white@2x.png");
+      }
     }
 
     .main-nav__site-list,
@@ -33,11 +39,17 @@
 }
 
 .main-nav__logo {
+  display: inline-block;
+  width: 100px;
+  height: 19px;
   margin-bottom: 75px;
   background-image: url("../img/logo-mobile-blue@1x.png");
+  background-size: 100% auto;
   background-repeat: no-repeat;
-  // Временно
-  outline: 1px dashed red;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/logo-mobile-blue@2x.png");
+  }
 }
 
 .main-nav__login {
@@ -95,10 +107,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-top: 40px;
+      padding-top: 65px;
 
       .main-nav__logo {
         margin-bottom: 0;
+        background-image: url("../img/logo-tablet-white@1x.png");
+
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+          background-image: url("../img/logo-tablet-white@2x.png");
+        }
       }
 
       .main-nav__toggle {
@@ -125,6 +142,11 @@
     width: 164px;
     height: 42px;
     margin-top: 5px;
+    background-image: url("../img/logo-tablet-blue@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/logo-tablet-blue@2x.png");
+    }
   }
 
   .main-nav__toggle {
@@ -182,7 +204,11 @@
     width: 200px;
     height: 52px;
     margin: 0 145px 0 0;
-    background-image: url("../img/logo-mobile-white@1x.png");
+    background-image: url("../img/logo-desktop-white@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/logo-desktop-white@2x.png");
+    }
   }
 
   .main-nav__toggle {
