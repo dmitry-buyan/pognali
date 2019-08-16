@@ -26,7 +26,10 @@
 }
 
 .signin__link {
+  display: inline-block;
+  text-decoration: none;
   color: @color-yellow;
+  border-bottom: 1px solid @color-yellow;
 }
 
 .signin__form {
@@ -100,10 +103,6 @@
     padding: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-
-    &::after {
-      right: 50%;
-    }
   }
 }
 

@@ -1,20 +1,35 @@
 .about {
-  padding: 1px @mobile-padding 80px;
   background-color: @color-darkblue;
-  background-image: url("../img/about-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: 50% 100%;
   .border-radius();
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 220px;
+    left: -15px;
+    z-index: -1;
+    width: 50%;
+    height: 132px;
+    background-color: #141b3b;
+  }
 }
 
-.about__container {
-  width: @mobile-width - @mobile-padding * 2;
-  margin: -81px auto 0;
+.about__wrapper-inner {
+  padding: 1px 0 60px;
+  background-image: url("../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 292px auto;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/about-mobile@2x.png");
+  }
 }
 
 .about__list {
+  width: @mobile-width - @mobile-padding * 2;
   .list-reset();
-  margin-bottom: 70px;
+  margin: -85px auto 70px;
   counter-reset: myCounter;
   font-weight: @font-bold;
   font-size: 18px;
@@ -58,6 +73,9 @@
 }
 
 .about__description {
+  box-sizing: border-box;
+  width: @mobile-width - @mobile-padding * 2;
+  margin: 0 auto;
   padding: 0 35px 0 @mobile-padding;
 }
 
@@ -83,22 +101,39 @@
 
 @media (min-width: @tablet-width) {
   .about {
-    padding: 0 @tablet-padding;
-    background-image: url("../img/about-tablet@1x.png");
-    background-repeat: no-repeat;
-    background-position: right 8px bottom 88px;
+    &::after {
+      top: 235px;
+      left: 40px;
+      width: 688px;
+      height: 213px;
+      border-radius: 20px;
+    }
   }
 
   .about__container {
+    background-image: url("../img/about-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: right 8px bottom 88px;
+    background-size: 376px auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/about-tablet@2x.png");
+    }
+  }
+
+  .about__wrapper-inner {
     width: @tablet-width - @tablet-padding * 2;
-    margin-top: -143px;
+    margin: -144px auto;
     padding-bottom: 88px;
+    background-image: none;
   }
 
   .about__list {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 -35px 140px;
+    width: 100%;
+    margin: 0 auto 140px;
     .heading(@color: @color-darknavy);
   }
 
@@ -128,18 +163,21 @@
     }
 
     &:nth-child(even) {
-      width: 345px;
+      width: 344px;
     }
 
     &:nth-child(odd) {
-      margin-left: 35px;
+      width: 364px;
+      margin-left: 0;
       margin-right: -35px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
     }
   }
 
   .about__description {
-    width: 310px;
-    padding-left: 35px;
+    width: auto;
+    padding: 0 352px 0 35px;
   }
 
   .about__subtitle {
@@ -167,18 +205,45 @@
 @media (min-width: @desktop-width) {
   .about {
     padding: 0 @desktop-padding;
-    background-image: url("../img/about-desktop@1x.png");
-    background-position: right 60px bottom;
   }
 
   .about__list {
+    position: relative;
+    top: -225px;
     flex-wrap: nowrap;
     margin: 0;
   }
 
   .about__item {
+    padding-top: 29px;
+    padding-bottom: 30px;
+
+    &::after {
+      top: 32px;
+      left: 300px;
+      font-size: 24px;
+    }
+
+    &:first-child {
+      &::after {
+        left: 270px;
+      }
+    }
+
     &:not(:last-child) {
       margin-right: -35px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:last-child {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+
+      &::after {
+        left: 270px;
+      }
     }
 
     &:not(:first-child) {
@@ -187,12 +252,18 @@
 
     &:nth-child(odd) {
       margin-left: 0;
+      border-bottom-left-radius: 20px;
+    }
+
+    &:nth-child(even) {
+      border-bottom-left-radius: 20px;
     }
   }
 
-  .about__container {
+  .about__wrapper-inner {
     width: @desktop-width - @desktop-padding * 2;
-    padding: 135px 0 153px;
+    margin-top: 0;
+    padding: 0 0 153px;
   }
 
   .about__description {
