@@ -4,22 +4,55 @@
 
 .transport__item {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 32px;
   height: 32px;
   border-radius: 50%;
   background-color: @color-lightgrey;
 
-  &--active .transport__icon {
-    opacity: 1;
+  &--active {
+    .transport__icon {
+      fill: @color-cobalt;
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    .transport__type {
+      display: block;
+    }
+  }
+}
+
+.transport__type {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  z-index: 1;
+  display: none;
+  padding: 10px;
+  font-weight: @font-normal;
+  text-align: center;
+  color: @color-white;
+  background-color: #101d41;
+  border-radius: 4px;
+  transform: translateX(-50%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: inherit;
+    transform: translateX(-50%) rotate(45deg);
   }
 }
 
 .transport__icon {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  fill: @color-cobalt;
   opacity: 0.15;
 }
 

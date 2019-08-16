@@ -47,22 +47,50 @@
 
 .travelmates__avatar {
   display: block;
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .travelmates__item-wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 27px @mobile-padding 22px;
   background-color: @color-white;
-  border-bottom-left-radius: 18px;
-  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
-.travelmates__sublist {
-  .list-reset();
+.travelmates__name {
+  position: relative;
+  .indent-reset();
+  margin-bottom: 15px;
+  .heading(21px, 21px);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--offline {
+    &::before {
+      background-color: #f97676;
+    }
+  }
+
+  &--online {
+    &::before {
+      background-color: #81e31e;
+    }
+  }
 }
 
 .travelmates__level {
@@ -126,9 +154,113 @@
   font-weight: @font-normal;
 }
 
-.travelmates__name {
-  .indent-reset();
-  .heading(21px, 21px);
+.travelmates__sublist {
+  order: -1;
+  display: flex;
+  justify-content: center;
+  .list-reset();
+  margin: -40px 0 15px;
+}
+
+.travelmates__subitem {
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 24px;
+  margin-right: 19px;
+  background-size: 100%;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &--shrilanka {
+    background-image: url("../img/flag-sri-lanka.svg");
+  }
+
+  &--thailand {
+    background-image: url("../img/flag-thailand.svg");
+  }
+
+  &--seychelles {
+    background-image: url("../img/flag-seychelles.svg");
+  }
+
+  &--belgium {
+    background-image: url("../img/flag-belgium.svg");
+  }
+
+  &--czech {
+    background-image: url("../img/flag-czech.svg");
+  }
+
+  &:hover {
+    .travelmates__country {
+      display: block;
+    }
+  }
+}
+
+.travelmates__country {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  display: none;
+  min-width: 100px;
+  padding: 10px;
+  .heading(20px, 24px, @color-white);
+  font-weight: @font-normal;
+  text-align: center;
+  background-color: #101d41;
+  border-radius: 4px;
+  transform: translateX(-50%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: inherit;
+    transform: translateX(-50%) rotate(45deg);
+  }
+}
+
+.travelmates__hashtags {
+  margin-bottom: 15px;
+}
+
+.travelmates__hashtags .hashtags__list {
+  justify-content: center;
+}
+
+.travelmates__transport-list {
+  display: flex;
+
+  .transport__item {
+    background-color: transparent;
+  }
+
+  .transport__icon {
+    height: 21px;
+
+    &--plane {
+      width: 19px;
+    }
+
+    &--bus {
+      width: 17px;
+    }
+
+    &--bike {
+      width: 24px;
+    }
+
+    &--run {
+      width: 20px;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -150,7 +282,7 @@
 
   .travelmates__subtitle {
     margin-bottom: 60px;
-    .heading(45px, 45px);
+    .heading(45px, 45px, #ff8d30);
   }
 
   .travelmates__text {
@@ -171,24 +303,26 @@
   .travelmates__item {
     width: 285px;
     margin-bottom: 0;
-    background-color: @color-white;
-    border-radius: 30px;
   }
 
   .travelmates__avatar {
     width: 100%;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
 
   .travelmates__item-wrapper {
     padding: 32px 25px 29px;
-    border-radius: 0;
-    background-color: transparent;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 
   .travelmates__name {
     .heading();
+  }
+
+  .travelmates__sublist {
+    margin-top: -45px;
   }
 
   .travelmates__to-all {

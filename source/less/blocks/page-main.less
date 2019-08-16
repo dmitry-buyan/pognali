@@ -1,6 +1,16 @@
+.page-main {
+  background-color: @color-darkblue;
+}
+
+.page-main__about {
+  position: relative;
+  z-index: 6;
+}
+
 .page-main__countries {
   position: relative;
   z-index: 5;
+  margin-top: -30px;
 }
 
 .page-main__travelmates {
@@ -32,8 +42,28 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page-main {
+    background-color: #182044;
+    background-image: url("../img/globe-back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center top 199px;
+    background-size: 1479px auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/globe-back-tablet@2x.jpg");
+    }
+  }
+
   .page-main__intro {
     margin-bottom: 85px;
+  }
+
+  .page-main__about {
+    padding-top: 1px;
+  }
+
+  .page-main__countries {
+    margin-top: -60px;
   }
 
   .page-main__travelmates {
