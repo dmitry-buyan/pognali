@@ -9,7 +9,7 @@
   <body>
     <header class="page-header">
       <!-- Открытие/скрытие кропки осуществляется с помощью добавления/удаления модификатора "main-nav--nojs" к элементу nav-->
-      <nav class="main-nav main-nav--opened main-nav--nojs">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <a class="main-nav__logo">
           <span class="visually-hidden">Погнали?</span>
         </a>
@@ -73,49 +73,50 @@
     </header>
 
     <main class="page-main">
-      <section class="intro">
-        <div class="intro__container">
-          <h1 class="intro__title">В путешествие с крутыми попутчиками!</h1>
-          <div class="intro__user">
-            <ul class="intro__contacts contact-list">
-              <li class="contact-list__item">
-                <a href="tel:88005558628" class="contact-list__link contact-list__link--phone">
-                  <span class="visually-hidden">8&nbsp;800&nbsp;555-86-28</span>
-                </a>
-              </li>
-              <li class="contact-list__item">
-                <a href="mailto:mail@htmlacademy.ru" class="contact-list__link contact-list__link--email">
-                  <span class="visually-hidden">mail@htmlacademy.ru</span>
-                </a>
-              </li>
-            </ul>
-            <a href="#" class="intro__login login-button">Авторизация</a>
+      <div class="page-main__container">
+        <section class="intro">
+          <div class="intro__container">
+            <h1 class="intro__title">В путешествие с крутыми попутчиками!</h1>
+            <div class="intro__user">
+              <ul class="intro__contacts contact-list">
+                <li class="contact-list__item">
+                  <a href="tel:88005558628" class="contact-list__link contact-list__link--phone">
+                    <span class="visually-hidden">8&nbsp;800&nbsp;555-86-28</span>
+                  </a>
+                </li>
+                <li class="contact-list__item">
+                  <a href="mailto:mail@htmlacademy.ru" class="contact-list__link contact-list__link--email">
+                    <span class="visually-hidden">mail@htmlacademy.ru</span>
+                  </a>
+                </li>
+              </ul>
+              <a href="#" class="intro__login login-button">Авторизация</a>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="feedback">
-        <div class="feedback__container">
-          <div class="feedback__reviews">
-            <h2 class="visually-hidden">Отзывы о нас</h2>
-            <blockquote class="feedback__quotation">
-              <p class="feedback__text">&laquo;Лучшее приложение, что я видел в жизни!&raquo;</p>
-              <cite class="feedback__author">Мурат Эльтазин<br> главный редактор газеты «гаджетлайф»</cite>
-            </blockquote>
+        <section class="feedback">
+          <div class="feedback__container">
+            <div class="feedback__reviews">
+              <h2 class="visually-hidden">Отзывы о нас</h2>
+              <blockquote class="feedback__quotation">
+                <p class="feedback__text">&laquo;Лучшее приложение, что я видел в жизни!&raquo;</p>
+                <cite class="feedback__author">Мурат Эльтазин<br> главный редактор газеты «гаджетлайф»</cite>
+              </blockquote>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+        <ol class="page-main__list">
+          <li class="page-main__item">Выберите направление</li>
+          <li class="page-main__item">Изучите идеи путешественников</li>
+          <li class="page-main__item">Находите тех,<br> кто похож на вас</li>
+          <li class="page-main__item">Путешествуйте вместе!</li>
+        </ol>
+      </div>
 
       <section class="page-main__about about">
         <div class="about__container">
           <div class="about__wrapper-inner">
-            <ol class="about__list">
-              <li class="about__item">Выберите направление</li>
-              <li class="about__item">Изучите идеи путешественников</li>
-              <li class="about__item">Находите тех, кто похож на вас</li>
-              <li class="about__item">Путешествуйте вместе!</li>
-            </ol>
-
             <div class="about__description">
               <h2 class="about__subtitle">О сервисе</h2>
               <p class="about__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
