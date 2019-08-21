@@ -11,9 +11,17 @@
 }
 
 .form__user-area {
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  width: 100%;
+}
+
+.form__user-photo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -107,6 +115,7 @@
 .form__tags {
   position: relative;
   width: inherit;
+  height: 90px;
   margin-bottom: 25px;
 }
 
@@ -129,7 +138,7 @@
 .form__textarea {
   box-sizing: border-box;
   width: 100%;
-  min-height: 90px;
+  height: 100%;
   .indent-reset();
   padding: 25px;
   font-size: 16px;
@@ -207,10 +216,14 @@
   .heading(16px, 16px);
 }
 
+.form__wrapper {
+  font-weight: @font-medium;
+}
+
 .form__travelmates-amount,
 .form__period {
   .indent-reset();
-  line-height: 140%;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -237,13 +250,221 @@
 }
 
 @media (min-width: @tablet-width) {
+  .form {
+    padding-top: 94px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
   .form__container {
-    width: @tablet-width - @tablet-padding * 2;
+    width: @tablet-width - @tablet-padding * 2 - 70px;
+  }
+
+  .form__user-area {
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+
+  .form__level {
+    width: 94px;
+    height: 94px;
+  }
+
+  .form__avatar {
+    width: 94px;
+    height: 94px;
+    border-radius: 4px;
+  }
+
+  .form__button {
+    margin: 52px 0 50px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .form__subtitle {
+    top: auto;
+    bottom: -8px;
+    font-size: inherit;
+    font-weight: @font-medium;
+  }
+
+  .form__tags {
+    margin: 0;
+    height: 94px;
+  }
+
+  .form__textarea {
+    padding: 35px 40px 0;
+    font-size: inherit;
+  }
+
+  .form__transport {
+    order: -1;
+    width: 308px;
+    margin-bottom: -95px;
+
+    .transport__item {
+      width: 43px;
+      height: 43px;
+      background-color: @color-white;
+    }
+  }
+
+  .form__transport-wrapper {
+    padding: 25px;
+  }
+
+  .form__plans {
+    padding-top: 50px;
+  }
+
+  .form__title {
+    margin-bottom: 50px;
+    .heading(36px, 50px);
+  }
+
+  .form__list {
+    margin-bottom: 74px;
+  }
+
+  .form__list-item {
+    padding: 27px 0 0;
+  }
+
+  .form__countries {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    .indent-reset();
+    padding: 0 32px 20px 37px;
+    .heading(24px, 50px);
+  }
+
+  .form__wrapper {
+    display: flex;
+    align-items: center;
+    padding: 20px 36px 20px 33px;
+    font-size: 20px;
+    border-top: 1px solid #eff0f4;
+  }
+
+  .form__travelmates-amount {
+    width: 185px;
+  }
+
+  .form__period {
+    margin: 0;
+  }
+
+  .form__plans-change {
+    margin-left: auto;
+  }
+
+  .form__editing {
+    padding-top: 50px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .form {
+    padding-top: 0;
+  }
+
   .form__container {
     width: @desktop-width - @desktop-padding * 2;
+  }
+
+  .form__user-area {
+    justify-content: space-between;
+    padding-left: 64px;
+  }
+
+  .form__user-photo {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 95px;
+  }
+
+  .form__level {
+    position: absolute;
+    top: 43px;
+    right: 235px;
+  }
+
+  .form__level-amount {
+    color: @color-white;
+  }
+
+  .form__level-text {
+    color: @color-white;
+  }
+
+  .form__avatar {
+    width: 190px;
+    height: 190px;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .form__button {
+    width: 190px;
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .form__tags {
+    width: 730px;
+  }
+
+  .form__tags .form__subtitle {
+    left: 63px;
+  }
+
+  .form__transport {
+    order: 0;
+    width: 384px;
+    margin-bottom: 0;
+  }
+
+  .form__title {
+    margin-left: 73px;
+  }
+
+  .form__list {
+    margin: 0  0 64px 64px;
+  }
+
+  .form__list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 25px 42px 25px 44px;
+  }
+
+  .form__countries {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 566px;
+    .indent-reset();
+  }
+
+  .form__counter {
+    margin-right: 40px;
+  }
+
+  .form__wrapper {
+    display: flex;
+    width: 630px;
+    .indent-reset();
+    border: none;
+  }
+
+  .form__plans-change {
+    margin-left: auto;
   }
 }
