@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Погнали? - Попутчики</title>
     <link href="css/style.css" rel="stylesheet">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <header class="page-header">
@@ -81,18 +86,138 @@
         </div>
       </header>
 
-      <section class="filter">
+      <section class="filter-outer">
         <!-- Filter will be here -->
       </section>
       <div class="page-inner__wrapper">
-        <section class="search-form">
-          <!-- Form will be here -->
+        <section class="filter-inner">
+          <form class="filter-inner__form" method="post" action="https://echo.htmlacademy.ru">
+            <div class="filter-inner__container">
+              <h2 class="filter-inner__title">Подберите идеального попутчика</h2>
+              <div class="filter-inner__group">
+                <h3 class="filter-inner__subtitle">Хобби</h3>
+                <p class="filter-inner__field">
+                  <input class="filter-inner__input" type="checkbox" name="gym" id="gym" checked>
+                  <label class="filter-inner__label" for="gym">Спортзал</label>
+                </p>
+
+                <p class="filter-inner__field">
+                  <input class="filter-inner__input" type="checkbox" name="hookah" id="hookah">
+                  <label class="filter-inner__label" for="hookah">Кальян</label>
+                </p>
+
+                <p class="filter-inner__field">
+                  <input class="filter-inner__input" type="checkbox" name="sofa" id="sofa">
+                  <label class="filter-inner__label" for="sofa">Диван</label>
+                </p>
+              </div>
+
+              <div class="filter-inner__group">
+                <h3 class="filter-inner__subtitle">Музыка</h3>
+                <p class="filter-inner__field">
+                  <input class="filter-inner__input" type="checkbox" name="rock" id="rock" checked>
+                  <label class="filter-inner__label" for="rock">Тяжелый рок</label>
+                </p>
+
+                <p class="filter-inner__field">
+                  <input class="filter-inner__input" type="checkbox" name="reb" id="reb">
+                  <label class="filter-inner__label" for="reb">Русский рэп</label>
+                </p>
+
+                <p class="filter-inner__field">
+                  <input class="filter-inner__input" type="checkbox" name="eurodance" id="eurodance">
+                  <label class="filter-inner__label" for="eurodance">Евроденс</label>
+                </p>
+              </div>
+
+              <div class="filter-inner__group">
+                <h3 class="filter-inner__subtitle">Еда</h3>
+                <p class="filter-inner__field">
+                  <input class="filter-inner__input" type="checkbox" name="meat" id="meat" checked>
+                  <label class="filter-inner__label" for="meat">Мясоед</label>
+                </p>
+
+                <p class="filter-inner__field">
+                  <input class="filter-inner__input" type="checkbox" name="healty-food" id="healty">
+                  <label class="filter-inner__label" for="healty">Сидит на ПП</label>
+                </p>
+
+                <p class="filter-inner__field">
+                  <input class="filter-inner__input" type="checkbox" name="vegan" id="vegan">
+                  <label class="filter-inner__label" for="vegan">Веган-сыроед</label>
+                </p>
+              </div>
+
+              <div class="filter-inner__group">
+                <h3 class="filter-inner__subtitle">Транспорт</h3>
+                <div class="filter-inner__transport transport">
+                  <input id="plane" class="transport__checkbox" type="checkbox" name="plane" checked>
+                  <label for="plane" class="transport__item  transport__item--plane">
+                    <span class="visually-hidden">Авиаперелет</span>
+                    <svg class="transport__icon transport__icon--plane" xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 19 21">
+                      <path d="M18.9 18.9c-.1-.3-3.7-10.1-3.7-10.1-.1-.5.1-.7.3-1.1 0 0 2.1-3.5 2.8-4.6.7-1.2.6-2.3-.1-2.8s-1.7-.1-2.5 1-3 4.5-3 4.5c-.3.4-.4.7-.9.8-.1-.1-10.3.4-10.6.4-.3 0-.7.1-1 .6-.4.7-.2.9.2 1 0 0 8 2.6 8.3 2.7.3 0 .3.2.2.6-.2.4-1.4 2.3-1.6 2.6-.1.2-.2.2-.4.3l-2.8 1c-.1 0-.3.1-.4.3l-.4.6c-.2.3-.1.5.2.5.3.1 2.1.2 2.1.2s.3.1.4.1c.2.1.4.3.2.6-.3.6-.4 1.2-.2 1.3s.6-.2 1-.7c.2-.3.4-.2.6 0 .2-.1.4.1.4.1s.8 1.6 1 1.9c.2.3.4.3.6 0l.4-.6c.1-.1.1-.3.1-.5l-.3-3.1c0-.2 0-.2.1-.5.1-.2 1.4-2.2 1.6-2.5.2-.3.4-.3.6-.1.2.2 5.7 6.7 5.7 6.7.3.3.5.4.9-.2.4-.4.3-.8.2-1z"/>
+                    </svg>
+                  </label>
+
+                  <input id="bus" class="transport__checkbox" type="checkbox" name="bus" checked>
+                  <label for="bus" class="transport__item  transport__item--bus">
+                    <span class="visually-hidden">Автотранспорт</span>
+                    <svg class="transport__icon transport__icon--bus" xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 17 21">
+                      <path d="M16.2 3.1c-.2-1.2-1-1.6-2.1-2.1-1.1-.4-3.7-1-5.6-1C6.6 0 4 .6 2.9 1c-1.1.5-1.8.9-2.1 2.1L0 9.5v8.8h1.4v1.4c0 1.7 2.5 1.7 2.5 0v-1.4h9.2v1.4c0 1.7 2.5 1.7 2.5 0v-1.4H17V9.5l-.8-6.4zM5 1.6h7c.7 0 .7 1 0 1H5c-.7.1-.7-1 0-1zm-2.3 14c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2-.1.6-.6 1.2-1.2 1.2zm5.7-5.4H2.2c-.6 0-.7-.4-.7-.9l.6-4.7c.1-.6.3-.9 1-.9h10.7c.7 0 .9.4 1 .9l.6 4.7c.1.4-.1.9-.7.9H8.4zm5.9 5.4c-.6 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2c.6 0 1.2.5 1.2 1.2 0 .6-.5 1.2-1.2 1.2z"/>
+                    </svg>
+                  </label>
+
+                  <input id="bike" class="transport__checkbox" type="checkbox" name="bike">
+                  <label for="bike" class="transport__item transport__item--bike">
+                    <span class="visually-hidden">Велосипед</span>
+                    <svg class="transport__icon transport__icon--bike" xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 24 21">
+                      <path d="M16 3.6c1 0 1.8-.8 1.8-1.8S17 0 16 0s-1.8.8-1.8 1.8.8 1.8 1.8 1.8zm3 7.4c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zM14.8 8.9H19V7.1h-3.2l-1.9-3.3c-.3-.5-.8-.8-1.5-.8-.5 0-.9.2-1.2.5L7.5 7.2c-.3.3-.5.7-.5 1.2 0 .6.3 1.2.8 1.5l3.3 2v5H13v-6.5l-2.2-1.7 2.3-2.4 1.7 2.6zM5 11c-2.8 0-5 2.3-5 5s2.2 5 5 5 5-2.3 5-5-2.2-5-5-5zm0 8.6c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.5 3.5 3.5-1.6 3.5-3.5 3.5z"/>
+                    </svg>
+                  </label>
+
+                  <input id="run" class="transport__checkbox" type="checkbox" name="run" checked>
+                  <label for="run" class="transport__item  transport__item--run">
+                    <span class="visually-hidden">Пешком</span>
+                    <svg class="transport__icon transport__icon--run" xmlns="http://www.w3.org/2000/svg" width="15" height="17" viewBox="0 0 20 21">
+                      <ellipse cx="14.3" cy="2" rx="2.1" ry="2"/>
+                      <path d="M19.4 4.6c-.5-.2-1.2-.1-1.4.4l-.9 1.6L13 4.3c-.2-.1-.3-.1-.6-.1H7.9c-.4 0-.7.1-.9.5L5.3 7.6c-.3.5-.1 1.1.4 1.3.2.1.4.1.5.1.4 0 .8-.2 1-.5l1.4-2.4h1.6l-4.7 8.1H1.1c-.6 0-1.1.4-1.1 1s.5 1 1.1 1h5c.4 0 .7-.2.9-.5l1.9-3.2 3 2.6-.2 4.9c-.1.5.4 1 1 1h.1c.6 0 1-.4 1.1-.9l.3-5.4c0-.3-.1-.6-.3-.8l-2.6-2.2L14 7.1l3.1 1.8c0 .1.4.2.6.1.3-.1.5-.2.7-.5L19.9 6c.3-.5.1-1.1-.5-1.4z"/>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+
+              <div class="filter-inner__group">
+                <h3 class="filter-inner__subtitle">Левел</h3>
+                <div class="filter-inner__wrapper">
+                  <p class="filter-inner__counter">
+                    <label class="visually-hidden" for="min-field">Минимум</label>
+                    <input class="filter-inner__level filter-inner__level--min" id="min-field" type="text" name="min">
+                  </p>
+                  <p class="filter-inner__counter">
+                    <label class="visually-hidden" for="max-field">Максимум</label>
+                    <input class="filter-inner__level filter-inner__level--max" id="max-field" type="text" name="max">
+                  </p>
+                </div>
+                <div class="filter-inner__scale">
+                  <div class="filter-inner__bar">
+                    <button class="filter-inner__toggle filter-inner__toggle--min" type="button">
+                      <span class="visually-hidden">От</span>
+                    </button>
+                    <button class="filter-inner__toggle filter-inner__toggle--max" type="button">
+                      <span class="visually-hidden">До</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="filter-inner__btn">Показать</button>
+          </form>
         </section>
         <section class="catalog">
           <ul class="catalog__list">
             <li class="catalog__item">
               <div class="catalog__wrapper">
-                <a href="#" class="catalog__avatar-wrapper">
+                <a href="#firsova.html" class="catalog__avatar-wrapper">
                   <picture>
                     <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
@@ -100,7 +225,7 @@
                   </picture>
                 </a>
                 <div class="catalog__cover">
-                  <a href="#" class="catalog__name-link">
+                  <a href="#firsova.html" class="catalog__name-link">
                     <h2 class="catalog__name catalog__name--offline">Таня Фирсова</h2>
                   </a>
                   <div class="catalog__hashtags hashtags">
@@ -130,7 +255,7 @@
                       <span class="visually-hidden">Количество лайков:</span>
                       <span class="catalog__likes-amount">1,5 М</span>
                     </p>
-                    <a href="#" class="catalog__button button-inner">Позвать!</a>
+                    <a href="#firsova.html" class="catalog__button button-inner">Позвать!</a>
                   </div>
                 </div>
               </div>
@@ -183,7 +308,7 @@
 
             <li class="catalog__item">
               <div class="catalog__wrapper">
-                <a href="#" class="catalog__avatar-wrapper">
+                <a href="#demin.html" class="catalog__avatar-wrapper">
                   <picture>
                     <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
@@ -191,7 +316,7 @@
                   </picture>
                 </a>
                 <div class="catalog__cover">
-                  <a href="#" class="catalog__name-link">
+                  <a href="#demin" class="catalog__name-link">
                     <h2 class="catalog__name catalog__name--offline">Петя Демин</h2>
                   </a>
                   <div class="catalog__hashtags hashtags">
@@ -218,7 +343,7 @@
                       <span class="visually-hidden">Количество лайков:</span>
                       <span class="catalog__likes-amount">150</span>
                     </p>
-                    <a href="#" class="catalog__button button-inner">Позвать!</a>
+                    <a href="#demin.html" class="catalog__button button-inner">Позвать!</a>
                   </div>
                 </div>
               </div>
@@ -270,7 +395,7 @@
 
             <li class="catalog__item">
               <div class="catalog__wrapper">
-                <a href="#" class="catalog__avatar-wrapper">
+                <a href="#smolov.html" class="catalog__avatar-wrapper">
                   <picture>
                     <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
@@ -278,7 +403,7 @@
                   </picture>
                 </a>
                 <div class="catalog__cover">
-                  <a href="#" class="catalog__name-link">
+                  <a href="#smolov.html" class="catalog__name-link">
                     <h2 class="catalog__name catalog__name--offline">Марк Смолов</h2>
                   </a>
                   <div class="catalog__hashtags hashtags">
@@ -305,7 +430,7 @@
                       <span class="visually-hidden">Количество лайков:</span>
                       <span class="catalog__likes-amount">1700</span>
                     </p>
-                    <a href="#" class="catalog__button button-inner">Позвать!</a>
+                    <a href="#smolov.html" class="catalog__button button-inner">Позвать!</a>
                   </div>
                 </div>
               </div>
@@ -358,7 +483,7 @@
 
             <li class="catalog__item">
               <div class="catalog__wrapper">
-                <a href="#" class="catalog__avatar-wrapper">
+                <a href="#rogovaya.html" class="catalog__avatar-wrapper">
                   <picture>
                     <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
@@ -366,7 +491,7 @@
                   </picture>
                 </a>
                 <div class="catalog__cover">
-                  <a href="#" class="catalog__name-link">
+                  <a href="#rogovaya.html" class="catalog__name-link">
                     <h2 class="catalog__name catalog__name--online">Лариса Роговая</h2>
                   </a>
                   <div class="catalog__hashtags hashtags">
@@ -390,7 +515,7 @@
                       <span class="visually-hidden">Количество лайков:</span>
                       <span class="catalog__likes-amount">23</span>
                     </p>
-                    <a href="#" class="catalog__button button-inner">Позвать!</a>
+                    <a href="#rogovaya.html" class="catalog__button button-inner">Позвать!</a>
                   </div>
                 </div>
               </div>
@@ -442,14 +567,14 @@
           </ul>
           <a href="#" class="catalog__show-more">Показать еще</a>
           <div class="catalog__pagination">
-            <a href="#" class="catalog__pagination-link catalog__pagination-link--prev"><span>Назад</span></a>
+            <a href="#prev.html" class="catalog__pagination-link catalog__pagination-link--prev"><span class="visually-hidden">Назад</span></a>
             <div class="catalog__pagination-wrapper">
-              <a href="#" class="catalog__pagination-link catalog__pagination-link--active"><span>1</span></a>
-              <a href="#" class="catalog__pagination-link"><span>2</span></a>
-              <a href="#" class="catalog__pagination-link"><span>3</span></a>
-              <a href="#" class="catalog__pagination-link"><span>4</span></a>
+              <a href="#" class="catalog__pagination-link catalog__pagination-link--active">1</a>
+              <a href="#" class="catalog__pagination-link">2</a>
+              <a href="#" class="catalog__pagination-link">3</a>
+              <a href="#" class="catalog__pagination-link">4</a>
             </div>
-            <a href="#" class="catalog__pagination-link catalog__pagination-link--next"><span>Вперед</span></a>
+            <a href="#next.html" class="catalog__pagination-link catalog__pagination-link--next"><span class="visually-hidden">Вперед</span></a>
           </div>
         </section>
       </div>
