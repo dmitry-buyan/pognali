@@ -16,15 +16,46 @@
   margin: 0 auto 22px;
 }
 
+.steps__marker-list {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 47px;
+  .list-reset();
+
+  &--step2,
+  &--step3 {
+    display: none;
+  }
+}
+
+
 .steps__marker {
+  position: relative;
   font-size: 20px;
   line-height: 14px;
   color: rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
-}
 
-.steps__marker-list {
-  .list-reset();
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background-color: #808285;
+    border-radius: 50%;
+  }
+
+  &--active {
+    &::before {
+      background-color: @color-cobalt;
+    }
+  }
 }
 
 .steps__marker-text {
@@ -575,6 +606,11 @@
     margin-bottom: 0;
   }
 
+  .steps__marker-list {
+    top: 25px;
+    right: 5px;
+  }
+
   .steps__title {
     margin-bottom: 37px;
     .heading(36px, 36px);
@@ -926,8 +962,38 @@
   }
 
   .steps__wrapper {
+    position: relative;
     width: 100%;
     margin-bottom: 56px;
+  }
+
+  .steps__marker-list {
+    top: 15px;
+    right: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+  }
+
+  .steps__marker {
+    margin-bottom: 27px;
+
+    &::before {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &--active {
+      .steps__marker-text {
+        color: #000000;
+      }
+    }
+  }
+
+  .steps__marker-text {
+    display: inline-block;
+    padding-left: 43px;
   }
 
   .steps__title {
