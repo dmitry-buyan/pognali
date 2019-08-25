@@ -1,5 +1,4 @@
 .travelmates {
-  position: relative;
   padding: 102px @mobile-padding 30px;
   background-color: @color-darkblue;
   background-image:
@@ -19,6 +18,11 @@
       url("../img/smolov-back-desktop@2x.png"),
       url("../img/rogovaya-back-mobile@2x.png");
   }
+}
+
+.travelmates__container {
+  width: @mobile-width - @mobile-padding * 2;
+  margin: 0 auto;
 
   &::before {
     content: "";
@@ -31,11 +35,6 @@
     background-color: #141b3b;
     border-radius: 20px;
   }
-}
-
-.travelmates__container {
-  width: @mobile-width - @mobile-padding * 2;
-  margin: 0 auto;
 }
 
 .travelmates__wrapper {
@@ -70,6 +69,11 @@
 .travelmates__item {
   position: relative;
   margin-bottom: 10px;
+
+  &:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+  }
 }
 
 .travelmates__avatar {
@@ -294,16 +298,10 @@
   .travelmates {
     padding: 55px @tablet-padding 88px;
     background-image: none;
-
-    &::before {
-      top: 140px;
-      left: @tablet-padding;
-      width: 213px;
-      height: 213px;
-    }
   }
 
   .travelmates__container {
+    position: relative;
     box-sizing: border-box;
     width: @tablet-width - @tablet-padding * 2;
     padding: 135px 35px 0;
@@ -322,6 +320,13 @@
       background-image:
         url("../img/smolov-back-desktop@2x.png"),
         url("../img/rogovaya-back-desktop@2x.png");
+    }
+
+    &::before {
+      top: 90px;
+      left: 0;
+      width: 213px;
+      height: 213px;
     }
   }
 
@@ -383,14 +388,24 @@
 
 @media (min-width: @desktop-width) {
   .travelmates {
-    padding: 195px @desktop-padding 135px;
+    padding: 195px @desktop-padding 0;
   }
 
   .travelmates__container {
     display: flex;
     flex-wrap: wrap;
     width: @desktop-width - @desktop-padding * 2;
-    padding: 0;
+    padding: 0 0 135px;
+    background-position:
+      left 485px top,
+      left 131px top 250px;
+    background-size:
+      143px auto,
+      285px auto;
+
+    &::before {
+      top: -60px;
+    }
   }
 
   .travelmates__wrapper {

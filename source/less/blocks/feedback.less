@@ -48,10 +48,10 @@
 
   .feedback__container {
     width: @tablet-width - @tablet-padding * 2;
-    padding: 90px 0 210px;
+    padding: 90px 0 212px;
     background-image: url("../img/traveller-illustration-tablet@1x.png");
     background-repeat: no-repeat;
-    background-position: right 70px bottom;
+    background-position: right 72px bottom;
     background-size: 372px auto;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -64,6 +64,10 @@
     margin-left: 35px;
   }
 
+  .feedback__text {
+    margin-bottom: 45px;
+  }
+
   .feedback__author {
     display: block;
     width: auto;
@@ -74,8 +78,7 @@
 
 @media (min-width: @desktop-width) {
   .feedback {
-    margin: -200px 0 375px;
-    padding-bottom: 0;
+    .indent-reset();
     background-image: none;
   }
 
@@ -88,6 +91,6 @@
 
   .feedback__reviews {
     width: 280px;
-    margin-left: auto;
+    margin: 12px 6px 0 auto;
   }
 }
