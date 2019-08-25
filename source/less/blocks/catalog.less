@@ -368,60 +368,14 @@
 }
 
 .catalog__pagination {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  // Временно для сетки
+  height: 50px;
   margin-bottom: 46px;
   background-color: @color-white;
-  border-radius: 20px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 1px;
-    height: 100%;
-    background-color: @color-lightgrey;
-    transform: translateX(-50%);
-  }
-}
-
-.catalog__pagination-link {
-  position: relative;
-  display: block;
-  width: 50%;
-  padding: 25px 0;
-  text-align: center;
-  text-decoration: none;
-
-  &--prev,
-  &--next {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 10px;
-      height: 20px;
-      background-position: center;
-      background-repeat: no-repeat;
-      transform: translate(-50%, -50%);
-    }
-  }
-
-  &--prev {
-    &::before {
-      background-image: url("../img/triangle-arrow-left.svg");
-    }
-  }
-
-  &--next {
-    &::before {
-      background-image: url("../img/triangle-arrow-right.svg");
-    }
-  }
+  border-radius: 15px;
 }
 
 .catalog__pagination-wrapper {
@@ -431,10 +385,6 @@
 @media (min-width: @tablet-width) {
   .catalog {
     width: @tablet-width - @tablet-padding * 2;
-  }
-
-  .catalog__list {
-    margin-bottom: 45px;
   }
 
   .catalog__item {
@@ -602,7 +552,6 @@
 
   .catalog__show-more {
     width: 200px;
-    margin-bottom: 51px;
     padding-left: 52px;
     font-size: 20px;
     line-height: 30px;
@@ -613,44 +562,10 @@
     }
   }
 
-  .catalog__pagination {
-    margin-bottom: 62px;
-    padding: 25px 35px 25px 28px;
-
-    &::before {
-      display: none;
-    }
-  }
-
   .catalog__pagination-wrapper {
     order: -1;
-    display: flex;
+    display: block;
     margin-right: auto;
-  }
-
-  .catalog__pagination-link {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    padding: 0;
-    .heading(20px, 30px, @color-darknavy);
-    border-radius: 50%;
-
-    &--prev,
-    &--next {
-      width: 10px;
-      height: 20px;
-    }
-
-    &--next {
-      margin-left: 33px;
-    }
-
-    &--active {
-      background-color: @color-yellow;
-    }
   }
 }
 
