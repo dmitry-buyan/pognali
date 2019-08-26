@@ -161,11 +161,154 @@
 
   &--bottom {
     box-sizing: border-box;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     padding: 5px;
     text-align: center;
     background-color: #d6daed;
     border-radius: 20px;
+
+    .filter__text {
+      margin-left: 12px;
+    }
+  }
+}
+
+.filter__close {
+  width: 12px;
+  height: 12px;
+}
+
+@media (min-width: @tablet-width) {
+  .filter {
+    padding: 120px 0 74px;
+  }
+
+  .filter__container {
+    width: @tablet-width - @tablet-padding * 2;
+  }
+
+  .filter__title {
+    display: none;
+  }
+
+  .filter__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 34px;
+  }
+
+  .filter__list {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 380px;
+    margin: 0 0 70px;
+  }
+
+  .filter__anchor {
+    width: auto;
+    margin: 0 0 0 -25px;
+  }
+
+  .filter__anchor-list {
+    justify-content: space-between;
+    width: 410px;
+    margin-bottom: 30px;
+    border: none;
+  }
+
+  .filter__anchor-item {
+    margin-bottom: 40px;
+    height: auto;
+  }
+
+  .filter__anchor-link {
+    display: inline-block;
+    font-size: 60px;
+    line-height: 1;
+    font-weight: @font-bold;
+    color: fade(@color-darkblue, 20%);
+    text-align: center;
+    background-color: transparent;
+    border: none;
+
+    &--active {
+      color: @color-darkblue;
+      background-color: transparent;
+    }
+  }
+
+  .filter__alphabet {
+    width: 175px;
+    margin: 0 0 0 auto;
+  }
+
+  .filter__item {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  .filter__continent {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .filter__sublist {
+    width: 175px;
+  }
+
+  .filter__country {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .filter__btn {
+    font-size: 20px;
+
+    &--top {
+      top: 9px;
+      right: 34px;
+      padding: 0 83px 0 0;
+      line-height: 24px;
+
+      &::before {
+        left: auto;
+        right: 0;
+        width: 18px;
+        height: 18px;
+      }
+
+      .filter__text {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        white-space: normal;
+        clip-path: none;
+        clip: auto;
+        overflow: visible;
+      }
+    }
+
+    &--bottom {
+      width: 618px;
+      padding: 35px;
+
+      .filter__text {
+        margin-left: 21px;
+      }
+    }
+  }
+
+  .filter__close {
+    width: 18px;
+    height: 18px;
   }
 }
