@@ -38,6 +38,7 @@
 }
 
 .filter__item {
+  display: flex;
   margin-bottom: 10px;
 }
 
@@ -109,16 +110,6 @@
 
 .filter__subtitle {
   display: none;
-}
-
-.filter__link {
-  box-sizing: border-box;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  text-decoration: none;
-  color: @color-cobalt;
 }
 
 .filter__sublist {
@@ -273,7 +264,7 @@
     font-size: 20px;
 
     &--top {
-      top: 9px;
+      top: 0;
       right: 34px;
       padding: 0 83px 0 0;
       line-height: 24px;
@@ -310,5 +301,68 @@
   .filter__close {
     width: 18px;
     height: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter__container {
+    width: @desktop-width - @desktop-padding * 2;
+  }
+
+  .filter__wrapper {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .filter__title {
+    display: block;
+    margin: 0 35px 0 20px;
+    padding-left: 44px;
+    .heading(20px, 24px, @color-darkblue);
+    background-size: 23px 16px;
+  }
+
+  .filter__list {
+    flex-grow: 1;
+    justify-content: flex-start;
+    margin: 0 0 60px;
+  }
+
+  .filter__anchor {
+    display: none;
+  }
+
+  .filter__alphabet {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 0 0 65px;
+  }
+
+  .filter__letter {
+    display: flex;
+    flex-direction: column;
+    width: 209px;
+    margin-bottom: 70px;
+  }
+
+  .filter__subtitle {
+    display: block;
+    .indent-reset();
+    font-size: 60px;
+    line-height: 1;
+    color: @color-darkblue;
+  }
+
+  .filter__btn {
+    &--top {
+      right: 67px;
+    }
+
+    &--bottom {
+      width: 100%;
+    }
   }
 }
