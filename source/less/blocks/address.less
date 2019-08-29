@@ -49,6 +49,24 @@
   color: @color-cobalt;
   text-decoration: none;
   border: 3px solid @color-darkblue;
+
+  &:hover,
+  &:focus {
+    color: @color-white;
+    background-color: @color-darkblue;
+
+    &::before {
+      border-left-color: @color-white;
+    }
+  }
+
+  &:active {
+    color: fade(@color-white, 30%);
+
+    &::before {
+      border-left-color: fade(@color-white, 30%);
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {

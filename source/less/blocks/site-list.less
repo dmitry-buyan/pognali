@@ -1,14 +1,48 @@
 .site-list__link {
+  position: relative;
+  display: inline-block;
+  padding-right: 4px;
   font-size: 30px;
   line-height: 36px;
   font-weight: @font-medium;
   color: @color-darkblue;
   text-transform: uppercase;
   text-decoration: none;
+  overflow: hidden;
+
+  &:hover[href],
+  &:focus[href] {
+    color: @color-yellow;
+    outline: none;
+
+    .site-list__text {
+      transform: translateY(-100%);
+    }
+  }
+
+  &:active[href] {
+    color: @color-yellow;
+    opacity: 0.3;
+  }
+}
+
+.site-list__text {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s;
+
+  &::before {
+    content: attr(data-hover);
+    position: absolute;
+    top: 100%;
+    font-weight: @font-bold;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @media (min-width: @tablet-width) {
   .site-list__link {
+    padding-right: 10px;
     font-size: 60px;
     line-height: 71px;
   }

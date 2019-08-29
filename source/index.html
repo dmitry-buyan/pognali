@@ -31,13 +31,19 @@
         </button>
         <ul class="main-nav__site-list site-list">
           <li class="site-list__item">
-            <a class="site-list__link">О сервисе</a>
+            <a class="site-list__link">
+              <span data-hover="О&nbsp;сервисе" class="site-list__text">О сервисе</span>
+            </a>
           </li>
           <li class="site-list__item">
-            <a href="form.html" class="site-list__link">Направления</a>
+            <a href="form.html" class="site-list__link">
+              <span data-hover="Направления" class="site-list__text">Направления</span>
+            </a>
           </li>
           <li class="site-list__item">
-            <a href="catalog.html" class="site-list__link">Попутчики</a>
+            <a href="catalog.html" class="site-list__link">
+              <span data-hover="Попутчики" class="site-list__text">Попутчики</span>
+            </a>
           </li>
         </ul>
         <div class="main-nav__user main-nav__user--bottom">
@@ -208,7 +214,9 @@
                 <span class="travelmates__level-title">level</span>
               </div>
               <div class="travelmates__item-wrapper">
-                <h3 class="travelmates__name travelmates__name--offline">Таня Фирсова</h3>
+                <a href="#" class="travelmates__name-link">
+                  <h3 class="travelmates__name travelmates__name--offline">Таня Фирсова</h3>
+                </a>
                 <h4 class="visually-hidden">Хочет посетить</h4>
                 <ul class="travelmates__sublist">
                   <li class="travelmates__subitem travelmates__subitem--shrilanka">
@@ -287,7 +295,9 @@
                 <span class="travelmates__level-title">level</span>
               </div>
               <div class="travelmates__item-wrapper">
-                <h3 class="travelmates__name travelmates__name--online">Петя Демин</h3>
+                <a href="#" class="travelmates__name-link">
+                  <h3 class="travelmates__name travelmates__name--online">Петя Демин</h3>
+                </a>
                 <h4 class="visually-hidden">Хочет посетить</h4>
                 <ul class="travelmates__sublist">
                   <li class="travelmates__subitem travelmates__subitem--belgium">
@@ -388,7 +398,8 @@
           <h2 class="signin__title">Заинтересовались?</h2>
           <p class="signin__text">Зарегистрируйтесь, это быстро и бесплатно!<br> Уже зарегистрированы? Тогда скорее <a href="#" class="signin__link">авторизуйтесь</a>.</p>
           <form class="signin__form" action="https://echo.htmlacademy.ru" method="post">
-            <input type="email" name="email" class="signin__email" placeholder="E-mail" required>
+            <input id="email-field" type="email" name="email" class="signin__email" required>
+            <label for="email-field" class="signin__label">E-mail</label>
             <button type="submit" class="signin__button button">
               <span class="signin__reg">Регистрация</span>
             </button>
@@ -398,11 +409,25 @@
             <ul class="signin__list contact-list">
               <li class="contact-list__item">
                 <span class="visually-hidden">Позвоните нам по номеру 8 800 555-86-28</span>
-                <a href="tel:88005558628" class="contact-list__link contact-list__link--phone-bottom">8&nbsp;800&nbsp;555-86-28</a>
+                <a href="tel:88005558628" class="contact-list__link contact-list__link--phone-bottom">
+                  <span class="contact-list__wrapper">
+                    <svg class="contact-list__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="18" height="18">
+                      <path fill="#ffd74b" d="M18 0C11.6 0 5.2 1.1 2.8 3.4.9 5.3.2 8.7 0 10.8v.3c0 .8.7 1.5 1.5 1.5.1 0 3.7-.3 5.9-.5h.2c.8 0 1.5-.7 1.5-1.5v-3C9 6.7 9.7 6 10.7 6h14.7c.8 0 1.6.7 1.6 1.7v3c0 .8.7 1.5 1.5 1.5h.2c2.2.2 5.8.5 5.9.5.8 0 1.5-.7 1.5-1.5v-.3c-.2-2.1-.9-5.5-2.8-7.4C30.8 1.1 24.4 0 18 0zm0 19.5c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-2.3-6.8v-1.9c0-1-.8-1.9-1.9-1.9s-1.8.9-1.8 2v1.9L1.9 23.6c-.7.7-1.1 1.6-1.1 2.7v3c0 1.7 1.3 3 3 3h.8v1.9c0 1 .8 1.9 1.9 1.9s1.9-.8 1.9-1.9v-1.9h19.5v1.9c0 1 .8 1.9 1.9 1.9 1 0 1.9-.8 1.9-1.9v-1.9h.8c1.7 0 3-1.3 3-3v-3c0-1.1-.4-2-1.1-2.7L24 12.7v-1.9c0-1-.8-1.9-1.9-1.9s-1.9.8-1.9 1.9v1.9h-4.5zm2.3 3.8c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6z"/>
+                    </svg>
+                  </span>
+                  <span class="contact-list__text">8&nbsp;800&nbsp;555-86-28</span>
+                </a>
               </li>
               <li class="contact-list__item">
                 <span class="visually-hidden">Напишите нам на электронную почту: mail@htmlacademy.ru</span>
-                <a href="mailto:mail@htmlacademy.ru" class="contact-list__link contact-list__link--email-bottom">mail@htmlacademy.ru</a>
+                <a href="mailto:mail@htmlacademy.ru" class="contact-list__link contact-list__link--email-bottom">
+                  <span class="contact-list__wrapper">
+                    <svg class="contact-list__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 26" width="18" height="18">
+                      <path fill="#ffd74b" d="M0 23c0 1.6 1.3 3 3 3h30c1.7 0 3-1.3 3-3V3c0-1.6-1.3-3-3-3H3C1.3 0 0 1.3 0 3v20zm11-10L4.2 6.2c-.6-.6-.6-1.5 0-2 .6-.6 1.5-.6 2.1 0l11 10.9c.4.4 1.2.4 1.6 0l11-10.9c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2L25 13l6.9 6.8c.6.6.6 1.5 0 2-.6.6-1.5.6-2.1 0L22.9 15s-2.1 2.2-2.5 2.5c-.6.6-1.4 1-2.4 1-.9 0-1.8-.4-2.4-1L13.1 15l-6.9 6.8c-.6.6-1.5.6-2.1 0-.6-.6-.6-1.5 0-2L11 13z"/>
+                    </svg>
+                  </span>
+                  <span class="contact-list__text">mail@htmlacademy.ru</span>
+                </a>
               </li>
             </ul>
           </div>

@@ -155,6 +155,18 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: @color-lightgrey;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: fade(@color-cobalt, 30%);
+    background-color: @color-lightgrey;
+    outline: none;
+  }
 }
 
 @media (min-width: @tablet-width) {

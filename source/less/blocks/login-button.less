@@ -8,6 +8,15 @@
   text-decoration: none;
   background-color: @color-yellow;
   border-radius: 25px;
+
+  &:hover,
+  &:focus {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: fade(@color-darknavy, 30%);
+  }
 }
 
 @media (min-width: @tablet-width) {
