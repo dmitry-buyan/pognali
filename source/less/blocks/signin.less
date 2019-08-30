@@ -30,11 +30,31 @@
   text-decoration: none;
   color: @color-yellow;
   border-bottom: 1px solid @color-yellow;
+
+  &:hover,
+  &:focus {
+    color: #ff8d30;
+    border-color: #ff8d30;
+  }
+
+  &:active {
+    color: #ff8d30;
+    border-color: #ff8d30;
+    opacity: 0.3;
+  }
 }
 
 .signin__form {
   position: relative;
   margin-bottom: 30px;
+}
+
+.signin__label {
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  .heading(24px, 24px, fade(@color-grey, 30%));
+  transform: translateY(-50%);
 }
 
 .signin__email {
@@ -46,6 +66,26 @@
   font-weight: @font-bold;
   border: none;
   border-radius: 10px;
+
+  &:hover {
+    background-color: @color-lightgrey;
+
+    + .signin__label {
+      color: fade(@color-grey, 50%);
+    }
+  }
+
+  &:focus {
+    padding: 17px 100px 17px 25px;
+    color: @color-white;
+    background-color: transparent;
+    border: 4px solid @color-white;
+    outline: none;
+
+    + .signin__label {
+      display: none;
+    }
+  }
 }
 
 .signin__button {
@@ -56,6 +96,15 @@
   height: 100%;
   padding: 0;
   border: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::before {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .signin__reg {
@@ -96,6 +145,10 @@
     font-size: 24px;
     line-height: 24px;
     border-radius: 20px;
+
+    &:focus {
+      padding: 23px 100px 23px 35px;
+    }
   }
 
   .signin__button {
@@ -122,7 +175,8 @@
     .heading();
     text-align: left;
 
-    &::after {
+    &::before {
+      left: auto;
       right: 36px;
     }
   }

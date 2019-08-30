@@ -11,16 +11,34 @@
   border: none;
   border-radius: 10px;
 
-  &::after {
+  &::before {
+    content: "";
     position: absolute;
     top: 50%;
     right: 23px;
-    content: "";
-    width: 10px;
-    height: 14px;
-    background-image: url("../img/triangle-arrow-right.svg");
-    background-repeat: no-repeat;
+    width: 0;
+    height: 0;
+    border: 10px solid @color-cobalt;
+    border-top-width: 7px;
+    border-bottom-width: 7px;
+    border-right-width: 0;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
     transform: translateY(-50%);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ffbd30;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: fade(@color-cobalt, 30%);
+
+    &::before {
+      border-left-color: fade(@color-cobalt, 30%);
+    }
   }
 }
 
