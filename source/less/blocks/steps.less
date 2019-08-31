@@ -96,7 +96,7 @@
   background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.3;
+  opacity: 0.2;
   transform: translateY(-50%);
 
   &--min {
@@ -120,6 +120,16 @@
       background-size: 20px 20px;
     }
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.4;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .steps__input-field {
@@ -131,6 +141,15 @@
   text-align: center;
   border: 1px solid #cbced9;
   border-radius: 4px;
+
+  &:hover {
+    border-color: #959bb2;
+    outline: none;
+  }
+
+  &:focus {
+    border-color: @color-darknavy;
+  }
 }
 
 .steps__text {
@@ -148,7 +167,7 @@
   .visually-hidden();
 
   &:checked + .steps__children-label {
-    &::before {
+    &::after {
       background-image: url("../img/tick.svg");
       background-repeat: no-repeat;
       background-position: center;
@@ -163,16 +182,39 @@
   .heading(15px, 15px, @color-grey);
   font-weight: @font-normal;
 
-  &::before {
+  &::before,
+  &::after {
     content: "";
+    box-sizing: border-box;
     position: absolute;
     top: 50%;
     left: 0;
     width: 24px;
     height: 24px;
-    border: 1px solid #cbced9;
     border-radius: 4px;
     transform: translateY(-50%);
+  }
+
+  &::after {
+    border: 1px solid #cbced9;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      border-color: #959bb2;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: #e2e5f1;
+    }
+
+    &::after {
+      border: none;
+      opacity: 0.3;
+    }
   }
 }
 
@@ -250,12 +292,20 @@
       display: none;
     }
   }
+
+  &:hover {
+    border-color: #959bb2;
+
+    + .steps__arrow .steps__dropdown {
+      opacity: 0.5;
+    }
+  }
 }
 
 .steps__arrow {
   position: absolute;
-  right: 2px;
   top: 2px;
+  right: 2px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -354,6 +404,7 @@
   border: none;
   background-color: transparent;
   transform: translateY(-50%);
+  opacity: 0.3;
 
   &::before,
   &::after {
@@ -372,6 +423,16 @@
 
   &::after {
     transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.1;
   }
 }
 
@@ -419,6 +480,10 @@
 
   &--active {
     background-color: @color-lightgrey;
+  }
+
+  &:hover {
+    outline: 1px solid #959bb2;
   }
 }
 
@@ -512,6 +577,16 @@
   font-weight: @font-normal;
   border: 1px solid #cbced9;
   border-radius: 4px;
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:focus {
+    color: @color-grey;
+    border-color: @color-darknavy;
+    outline: none;
+  }
 }
 
 .steps__button {
@@ -525,6 +600,7 @@
   border-radius: 20px;
   border: none;
 
+  &::before,
   &::after {
     display: none;
   }
@@ -533,6 +609,12 @@
     width: auto;
     margin-top: 10px;
     background-color: transparent;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+      background-color: transparent;
+    }
   }
 
   &--add {
@@ -542,7 +624,7 @@
     .heading(14px, 18px);
     font-weight: @font-medium;
     text-align: left;
-    background-color: @color-lightgrey;
+    background-color: transparent;
     border-radius: 4px;
 
     &::before {
@@ -555,7 +637,25 @@
       background-image: url("../img/qty-plus-mobile.svg");
       background-repeat: no-repeat;
       transform: translateY(-50%);
-      opacity: 0.3;
+      opacity: 0.2;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #dfe3f0;
+      cursor: pointer;
+
+      &::before {
+        opacity: 0.3;
+      }
+    }
+
+    &:active {
+      color: fade(@color-cobalt, 30%);
+
+      &::before {
+        opacity: 0.1;
+      }
     }
   }
 }
@@ -588,6 +688,11 @@
   &::after {
     display: block;
     transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
   }
 }
 
@@ -668,7 +773,7 @@
 
   .steps__children-field {
     &:checked + .steps__children-label {
-      &::before {
+      &::after {
         background-size: 12px 12px;
       }
     }
@@ -680,7 +785,8 @@
     font-weight: @font-normal;
     text-transform: uppercase;
 
-    &::before {
+    &::before,
+    &::after {
       width: 36px;
       height: 36px;
     }
@@ -693,12 +799,9 @@
 
   .steps__button {
     &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 23px;
-      background-repeat: no-repeat;
-      transform: translateY(-50%);
+      display: block;
+      width: 0;
+      height: 0;
     }
 
     &--next {
@@ -709,12 +812,6 @@
       text-align: left;
       text-transform: none;
       border-radius: 20px;
-
-      &::before {
-        width: 10px;
-        height: 14px;
-        background-image: url("../img/triangle-arrow-right.svg");
-      }
     }
 
     &--prev {
@@ -726,9 +823,7 @@
 
       &::before {
         left: 0;
-        width: 10px;
-        height: 14px;
-        background-image: url("../img/triangle-arrow-left.svg");
+        transform: translateY(-50%) rotate(180deg);
       }
     }
 
@@ -791,11 +886,11 @@
   }
 
   .steps__arrow {
-    top: 1px;
+    top: 2px;
     right: 1px;
     justify-content: center;
     width: 65px;
-    height: 95%;
+    height: 93%;
     box-shadow: none;
   }
 
@@ -830,7 +925,22 @@
     &::after {
       width: inherit;
       height: 2px;
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &:hover,
+    &:focus {
+      &::before,
+      &::after {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    &:active {
+      &::before,
+      &::after {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
     }
   }
 
@@ -874,7 +984,9 @@
     width: 369px;
     padding: 34px 27px 36px 27px;
     background-color: @color-white;
-    border: none;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
     border-right: 1px solid #eaecf2;
     border-bottom-left-radius: 10px;
   }
@@ -887,6 +999,14 @@
 
   .steps__country-row {
     width: 100%;
+
+    &:not(:last-child) {
+      .steps__country-cell {
+        &:hover {
+          outline: 1px solid #959bb2;
+        }
+      }
+    }
   }
 
   .steps__country-list {
@@ -1015,7 +1135,7 @@
 
     &::before {
       right: 225px;
-      height: 140%;
+      height: 115%;
     }
   }
 
@@ -1152,5 +1272,10 @@
     margin: 0 15px 15px 0;
     border: 1px solid #cbced9;
     border-radius: 4px;
+
+    &:hover {
+      outline: none;
+      border: 1px solid #959bb2;
+    }
   }
 }

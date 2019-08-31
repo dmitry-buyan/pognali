@@ -69,19 +69,23 @@
 .travelmates__item {
   position: relative;
   margin-bottom: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  z-index: 1;
 
   &:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-    z-index: 1;
+    box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);
+
+    .travelmates__avatar {
+      transform: scale(1.1);
+    }
   }
 }
 
 .travelmates__avatar {
   display: block;
   height: auto;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 .travelmates__item-wrapper {
@@ -373,12 +377,12 @@
   .travelmates__item {
     width: 285px;
     margin-bottom: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
 
   .travelmates__avatar {
     width: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
   }
 
   .travelmates__item-wrapper {
