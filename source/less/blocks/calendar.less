@@ -26,6 +26,15 @@
   &--next {
     background-image: url("../img/month-arrow-right.svg");
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .calendar__month {
@@ -108,13 +117,20 @@
   &:checked {
     + .calendar__date {
       color: @color-white;
-      background-color: @color-cobalt;
+      background-color: #101d41;
     }
+  }
 
-    &:hover + .calendar__date,
-    &:focus + .calendar__date {
-      position: relative;
-      outline: 2px solid #ff5c23;
+  &:not(:disabled):not(:checked) {
+    + .calendar__date {
+      &:hover,
+      &:focus {
+        position: relative;
+        color: @color-white;
+        background-color: @color-cobalt;
+        outline: 2px solid #ff5c23;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -177,8 +193,16 @@
     &:checked {
       &:hover + .calendar__date,
       &:focus + .calendar__date {
-        outline-width: 4px;
         cursor: pointer;
+      }
+    }
+
+    &:not(:disabled):not(:checked) {
+      + .calendar__date {
+        &:hover,
+        &:focus {
+          outline-width: 4px;
+        }
       }
     }
   }
