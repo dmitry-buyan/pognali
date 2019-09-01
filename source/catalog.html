@@ -104,7 +104,7 @@
 
       <section class="page-inner__filter filter">
         <div class="filter__container">
-          <!-- Модификатор flter__wrapper--nojs скрывает кнопки "Свернуть" -->
+          <!-- Модификатор nojs скрывает кнопки "Свернуть" -->
           <div class="filter__wrapper filter__wrapper--nojs">
             <h2 class="filter__title">Фильтрация по странам:</h2>
             <ul class="filter__list">
@@ -127,8 +127,8 @@
             <button class="filter__btn filter__btn--show" type="button">
               <span class="filter__text">Показать все</span>
             </button>
-            <!-- Модификатор flter__cover--closed скрывает фильтр-->
-            <!-- Модификатор flter__cover--opened показывает фильтр-->
+            <!-- Модификатор closed скрывает фильтр-->
+            <!-- Модификатор opened показывает фильтр-->
             <div class="filter__cover filter__cover--opened">
               <div class="filter__anchor">
                 <ul class="filter__anchor-list">
@@ -510,61 +510,68 @@
             <div class="filter-inner__container">
               <h2 class="filter-inner__title">Подберите идеального попутчика</h2>
               <div class="filter-inner__group">
-                <h3 class="filter-inner__subtitle">Хобби</h3>
-                <p class="filter-inner__field">
-                  <input class="filter-inner__input" type="checkbox" name="gym" id="gym" checked="">
-                  <label class="filter-inner__label" for="gym">Спортзал</label>
-                </p>
+                <!-- Открытие/скрытие кропки осуществляется с помощью добавления/удаления модификатора filter-inner__subtitle--closed элементу button-->
+                <button class="filter-inner__subtitle" type="button">Хобби</button>
+                <div class="filter-inner__input-wrapper">
+                  <p class="filter-inner__field">
+                    <input class="filter-inner__input" type="checkbox" name="gym" id="gym" checked="">
+                    <label class="filter-inner__label" for="gym">Спортзал</label>
+                  </p>
 
-                <p class="filter-inner__field">
-                  <input class="filter-inner__input" type="checkbox" name="hookah" id="hookah">
-                  <label class="filter-inner__label" for="hookah">Кальян</label>
-                </p>
+                  <p class="filter-inner__field">
+                    <input class="filter-inner__input" type="checkbox" name="hookah" id="hookah">
+                    <label class="filter-inner__label" for="hookah">Кальян</label>
+                  </p>
 
-                <p class="filter-inner__field">
-                  <input class="filter-inner__input" type="checkbox" name="sofa" id="sofa">
-                  <label class="filter-inner__label" for="sofa">Диван</label>
-                </p>
+                  <p class="filter-inner__field">
+                    <input class="filter-inner__input" type="checkbox" name="sofa" id="sofa">
+                    <label class="filter-inner__label" for="sofa">Диван</label>
+                  </p>
+                </div>
               </div>
 
               <div class="filter-inner__group">
-                <h3 class="filter-inner__subtitle">Музыка</h3>
-                <p class="filter-inner__field">
-                  <input class="filter-inner__input" type="checkbox" name="rock" id="rock" checked="">
-                  <label class="filter-inner__label" for="rock">Тяжелый рок</label>
-                </p>
+                <button class="filter-inner__subtitle" type="button">Музыка</button>
+                <div class="filter-inner__input-wrapper">
+                  <p class="filter-inner__field">
+                    <input class="filter-inner__input" type="checkbox" name="rock" id="rock" checked="">
+                    <label class="filter-inner__label" for="rock">Тяжелый рок</label>
+                  </p>
 
-                <p class="filter-inner__field">
-                  <input class="filter-inner__input" type="checkbox" name="reb" id="reb">
-                  <label class="filter-inner__label" for="reb">Русский рэп</label>
-                </p>
+                  <p class="filter-inner__field">
+                    <input class="filter-inner__input" type="checkbox" name="reb" id="reb">
+                    <label class="filter-inner__label" for="reb">Русский рэп</label>
+                  </p>
 
-                <p class="filter-inner__field">
-                  <input class="filter-inner__input" type="checkbox" name="eurodance" id="eurodance">
-                  <label class="filter-inner__label" for="eurodance">Евроденс</label>
-                </p>
+                  <p class="filter-inner__field">
+                    <input class="filter-inner__input" type="checkbox" name="eurodance" id="eurodance">
+                    <label class="filter-inner__label" for="eurodance">Евроденс</label>
+                  </p>
+                </div>
               </div>
 
               <div class="filter-inner__group">
-                <h3 class="filter-inner__subtitle">Еда</h3>
-                <p class="filter-inner__field">
-                  <input class="filter-inner__input" type="checkbox" name="meat" id="meat" checked="">
-                  <label class="filter-inner__label" for="meat">Мясоед</label>
-                </p>
+                <button class="filter-inner__subtitle" type="button">Еда</button>
+                <div class="filter-inner__input-wrapper">
+                  <p class="filter-inner__field">
+                    <input class="filter-inner__input" type="checkbox" name="meat" id="meat" checked="">
+                    <label class="filter-inner__label" for="meat">Мясоед</label>
+                  </p>
 
-                <p class="filter-inner__field">
-                  <input class="filter-inner__input" type="checkbox" name="healty-food" id="healty">
-                  <label class="filter-inner__label" for="healty">Сидит на ПП</label>
-                </p>
+                  <p class="filter-inner__field">
+                    <input class="filter-inner__input" type="checkbox" name="healty-food" id="healty">
+                    <label class="filter-inner__label" for="healty">Сидит на ПП</label>
+                  </p>
 
-                <p class="filter-inner__field">
-                  <input class="filter-inner__input" type="checkbox" name="vegan" id="vegan">
-                  <label class="filter-inner__label" for="vegan">Веган-сыроед</label>
-                </p>
+                  <p class="filter-inner__field">
+                    <input class="filter-inner__input" type="checkbox" name="vegan" id="vegan">
+                    <label class="filter-inner__label" for="vegan">Веган-сыроед</label>
+                  </p>
+                </div>
               </div>
 
               <div class="filter-inner__group">
-                <h3 class="filter-inner__subtitle">Транспорт</h3>
+                <button class="filter-inner__subtitle" type="button">Транспорт</button>
                 <div class="filter-inner__transport transport">
                   <input id="plane-field" class="transport__checkbox" type="checkbox" name="plane" checked="">
                   <label for="plane-field" class="transport__item  transport__item--plane">
@@ -601,7 +608,7 @@
               </div>
 
               <div class="filter-inner__group">
-                <h3 class="filter-inner__subtitle">Левел</h3>
+                <button class="filter-inner__subtitle" type="button">Левел</button>
                 <div class="filter-inner__wrapper">
                   <p class="filter-inner__counter">
                     <label class="visually-hidden" for="min-field">Минимум</label>
@@ -668,10 +675,10 @@
                     </ul>
                   </div>
                   <div class="catalog__likes-wrapper">
-                    <p class="catalog__likes catalog__likes--active">
-                      <span class="visually-hidden">Количество лайков:</span>
+                    <div class="catalog__likes">
+                      <button class="catalog__likes-btn catalog__likes-btn--active" aria-label="Количество лайков"></button>
                       <span class="catalog__likes-amount">1,5 М</span>
-                    </p>
+                    </div>
                     <a href="#firsova.html" class="catalog__button button-inner">Позвать!</a>
                   </div>
                 </div>
@@ -758,10 +765,10 @@
                     </ul>
                   </div>
                   <div class="catalog__likes-wrapper">
-                    <p class="catalog__likes">
-                      <span class="visually-hidden">Количество лайков:</span>
+                    <div class="catalog__likes">
+                      <button class="catalog__likes-btn" aria-label="Количество лайков"></button>
                       <span class="catalog__likes-amount">150</span>
-                    </p>
+                    </div>
                     <a href="#demin.html" class="catalog__button button-inner">Позвать!</a>
                   </div>
                 </div>
@@ -847,10 +854,10 @@
                     </ul>
                   </div>
                   <div class="catalog__likes-wrapper">
-                    <p class="catalog__likes">
-                      <span class="visually-hidden">Количество лайков:</span>
+                    <div class="catalog__likes">
+                      <button class="catalog__likes-btn" aria-label="Количество лайков"></button>
                       <span class="catalog__likes-amount">1700</span>
-                    </p>
+                    </div>
                     <a href="#smolov.html" class="catalog__button button-inner">Позвать!</a>
                   </div>
                 </div>
@@ -934,10 +941,10 @@
                     </ul>
                   </div>
                   <div class="catalog__likes-wrapper">
-                    <p class="catalog__likes">
-                      <span class="visually-hidden">Количество лайков:</span>
+                    <div class="catalog__likes">
+                      <button class="catalog__likes-btn" aria-label="Количество лайков"></button>
                       <span class="catalog__likes-amount">23</span>
-                    </p>
+                    </div>
                     <a href="#rogovaya.html" class="catalog__button button-inner">Позвать!</a>
                   </div>
                 </div>
@@ -991,7 +998,7 @@
           <div class="catalog__pagination">
             <a href="#prev.html" class="catalog__pagination-link catalog__pagination-link--prev"><span class="visually-hidden">Назад</span></a>
             <div class="catalog__pagination-wrapper">
-              <a href="#" class="catalog__pagination-link catalog__pagination-link--active">1</a>
+              <a class="catalog__pagination-link catalog__pagination-link--active">1</a>
               <a href="#" class="catalog__pagination-link">2</a>
               <a href="#" class="catalog__pagination-link">3</a>
               <a href="#" class="catalog__pagination-link">4</a>
