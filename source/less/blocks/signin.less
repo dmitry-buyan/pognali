@@ -12,13 +12,13 @@
 
 .signin__title {
   .indent-reset();
-  margin-bottom: 30px;
+  margin-bottom: 18px;
   .heading(@color: #ff8d30);
 }
 
 .signin__text {
   padding: 0 35px 20px;
-  margin: 0 0 20px;
+  margin: 0 0 9px;
 }
 
 .signin__extra-text {
@@ -27,9 +27,7 @@
 
 .signin__link {
   display: inline-block;
-  text-decoration: none;
   color: @color-yellow;
-  border-bottom: 1px solid @color-yellow;
 
   &:hover,
   &:focus {
@@ -46,14 +44,18 @@
 
 .signin__form {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
+}
+
+.signin__list {
+  margin-top: -10px;
 }
 
 .signin__label {
   position: absolute;
-  left: 25px;
+  left: 23px;
   top: 50%;
-  .heading(24px, 24px, fade(@color-grey, 30%));
+  .heading(18px, 18px, fade(@color-grey, 30%));
   transform: translateY(-50%);
 }
 
@@ -102,7 +104,7 @@
   }
 
   &::before {
-    left: 50%;
+    left: 32px;
     transform: translate(-50%, -50%);
   }
 }
@@ -113,7 +115,7 @@
 
 @media (min-width: @tablet-width) {
   .signin {
-    padding: 132px @tablet-padding 60px;
+    padding: 127px @tablet-padding 60px;
   }
 
   .signin__container {
@@ -129,15 +131,11 @@
 
   .signin__text {
     .indent-reset();
-    margin-bottom: 65px;
-
-    &:last-of-type {
-      margin-bottom: 40px;
-    }
+    margin-bottom: 64px;
   }
 
   .signin__form {
-    margin-bottom: 60px;
+    margin-bottom: 55px;
   }
 
   .signin__email {
@@ -151,17 +149,30 @@
     }
   }
 
+  .signin__label {
+    left: 35px;
+    font-size: 24px;
+  }
+
   .signin__button {
     width: 82px;
     padding: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+
+    &::before {
+      left: 41px;
+    }
+  }
+
+  .signin__list {
+    margin-top: -23px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .signin {
-    padding: 168px @desktop-padding 104px;
+    padding: 163px @desktop-padding 104px;
   }
 
   .signin__container {
@@ -169,16 +180,32 @@
     padding: 0 72px;
   }
 
+  .signin__title {
+    margin-bottom: 58px;
+  }
+
+  .signin__text {
+    margin-bottom: 60px;
+  }
+
+  .signin__form {
+    margin-bottom: 64px;
+  }
+
   .signin__button {
-    width: 324px;
-    padding-left: 38px;
+    width: 325px;
+    padding-left: 34px;
     .heading();
     text-align: left;
 
     &::before {
       left: auto;
-      right: 36px;
+      right: 33px;
     }
+  }
+
+  .signin__list {
+    margin-top: -15px;
   }
 
   .signin__main-text {

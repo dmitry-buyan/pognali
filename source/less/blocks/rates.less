@@ -1,5 +1,5 @@
 .rates {
-  padding: 67px @mobile-padding 38px;
+  padding: 67px @mobile-padding 35px;
   color: @color-grey;
   background-color: #e6e8f1;
   .border-radius();
@@ -12,7 +12,7 @@
 
 .rates__wrapper {
   position: relative;
-  padding: 15px @mobile-padding 0;
+  padding: 13px @mobile-padding 0;
   background-color: transparent;
 
   &::before {
@@ -48,7 +48,7 @@
 .rates__list {
   width: 200px;
   .list-reset();
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   color: @color-grey;
   counter-reset: myCounter;
 }
@@ -88,7 +88,7 @@
 
 .rates__item {
   position: relative;
-  padding: 11px 0;
+  padding: 10px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 
   &:last-child {
@@ -171,7 +171,7 @@
 
 @media (min-width: @tablet-width) {
   .rates {
-    padding: 123px @tablet-padding 60px;
+    padding: 125px @tablet-padding 46px;
   }
 
   .rates__container {
@@ -184,22 +184,21 @@
 
     &::before {
       top: auto;
-      bottom: -20px;
-      right: 50px;
+      bottom: -18px;
+      right: 46px;
     }
   }
 
   .rates__title {
     margin-bottom: 74px;
-    padding: 0;
+    padding: 0 0 0 98px;
     .heading(45px, 45px, #ff8d30);
-    text-align: center;
   }
 
   .rates__list {
     position: relative;
     width: auto;
-    margin: 0 35px 32px 91px;
+    margin: 0 35px 35px 91px;
 
     &::after {
       content: "";
@@ -296,7 +295,7 @@
 
 @media (min-width: @desktop-width) {
   .rates {
-    padding: 168px @desktop-padding 165px;
+    padding: 165px @desktop-padding 146px;
   }
 
   .rates__container {
@@ -307,11 +306,17 @@
 
   .rates__wrapper {
     &::before {
-      top: 130px;
+      top: 182px;
       right: 3px;
       width: 198px;
       height: 198px;
     }
+  }
+
+  .rates__title {
+    margin-bottom: 134px;
+    padding-left: 0;
+    text-align: center;
   }
 
   .rates__list {

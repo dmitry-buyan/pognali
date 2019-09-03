@@ -1,5 +1,5 @@
 .form {
-  padding-top: 50px;
+  padding-top: 53px;
   font-size: 16px;
   line-height: 22px;
   color: @color-grey;
@@ -22,7 +22,7 @@
 .form__user-photo {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 }
 
@@ -32,8 +32,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 100px;
+  width: 95px;
+  height: 93px;
+  margin: 3px 2px 0 4px;
   text-align: center;
 }
 
@@ -87,7 +88,7 @@
   bottom: 12px;
   display: block;
   width: 50px;
-  padding-top: 5px;
+  padding-top: 2px;
   font-size: 18px;
   line-height: 22px;
   border-top: 2px solid #cbced9;
@@ -105,7 +106,7 @@
   box-sizing: border-box;
   display: block;
   width: inherit;
-  margin: 20px 0 33px;
+  margin: 19px 0 33px;
   padding: 5px;
   text-align: center;
   color: @color-darknavy;
@@ -126,7 +127,7 @@
   position: relative;
   width: inherit;
   height: 90px;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .form__subtitle {
@@ -150,7 +151,7 @@
   width: 100%;
   height: 100%;
   .indent-reset();
-  padding: 25px;
+  padding: 21px 25px;
   font-size: 16px;
   line-height: 22px;
   color: fade(@color-grey, 60%);
@@ -172,19 +173,11 @@
 .form__transport {
   position: relative;
   width: inherit;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 
   .transport__item {
+    margin-right: 1px;
     background-color: @color-white;
-
-    // &:hover {
-    //   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
-    //   cursor: pointer;
-    //
-    //   .transport__icon {
-    //     opacity: 0.3;
-    //   }
-    // }
   }
 }
 
@@ -240,13 +233,13 @@
 }
 
 .form__plans {
-  padding-top: 30px;
+  padding-top: 27px;
   background-color: #dfe3f0;
   .border-form();
 }
 
 .form__title {
-  margin: 0  0 30px;
+  margin: 0  0 31px;
   .heading();
 }
 
@@ -260,7 +253,7 @@
 
 .form__list-item {
   margin-bottom: 10px;
-  padding: 25px;
+  padding: 24px 25px 24px 24px;
   background-color: @color-white;
   border-radius: 10px;
 
@@ -286,12 +279,17 @@
   text-transform: uppercase;
 }
 
+.form__travelmates-amount {
+  margin-bottom: 5px;
+}
+
 .form__period {
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 }
 
 .form__plans-change {
   font-weight: @font-medium;
+  letter-spacing: 0.1em;
   color: fade(#000000, 30%);
   text-decoration: none;
   text-transform: uppercase;
@@ -308,7 +306,7 @@
 
 .form__editing {
   margin-bottom: -30px;
-  padding: 30px 0 75px;
+  padding: 28px 0 75px;
   .border-form();
   background-color: #d4d9eb;
 }
@@ -333,9 +331,28 @@
     margin-bottom: 60px;
   }
 
+  .form__user-photo {
+    justify-content: space-between;
+  }
+
   .form__level {
-    width: 94px;
-    height: 94px;
+    width: 88px;
+    height: 88px;
+    margin: 2px 0 0 2px;
+  }
+
+  .form__level-amount {
+    padding-top: 16px;
+
+    &--lv80 {
+      &::before {
+        transform: rotate(75deg);
+      }
+    }
+  }
+
+  .form__level-text {
+    bottom: 8px;
   }
 
   .form__avatar {
@@ -347,6 +364,7 @@
   .form__button {
     margin: 52px 0 50px;
     padding: 15px;
+    letter-spacing: 0.1em;
     border-radius: 10px;
   }
 
@@ -355,6 +373,7 @@
     bottom: -8px;
     font-size: inherit;
     font-weight: @font-medium;
+    letter-spacing: 0.1em;
   }
 
   .form__tags {
@@ -379,15 +398,16 @@
   }
 
   .form__transport-wrapper {
-    padding: 25px;
+    justify-content: space-around;
+    padding: 25px 50px;
   }
 
   .form__plans {
-    padding-top: 50px;
+    padding-top: 48px;
   }
 
   .form__title {
-    margin-bottom: 50px;
+    margin-bottom: 44px;
     .heading(36px, 50px);
   }
 
@@ -408,6 +428,10 @@
     .heading(24px, 50px);
   }
 
+  .form__counter {
+    font-size: 20px;
+  }
+
   .form__wrapper {
     display: flex;
     align-items: center;
@@ -418,6 +442,8 @@
 
   .form__travelmates-amount {
     width: 185px;
+    margin: 0;
+    letter-spacing: 0.1em;
   }
 
   .form__period {
@@ -426,10 +452,15 @@
 
   .form__plans-change {
     margin-left: auto;
+    letter-spacing: 0.08em;
   }
 
   .form__editing {
-    padding-top: 50px;
+    padding: 46px 0 94px;
+
+    .form__title {
+      margin-bottom: 52px;
+    }
   }
 }
 
@@ -443,8 +474,13 @@
     width: @desktop-width - @desktop-padding * 2;
   }
 
+  .form__editing {
+    padding-bottom: 102px;
+  }
+
   .form__user-area {
     justify-content: space-between;
+    margin-bottom: 64px;
     padding-left: 64px;
   }
 
@@ -458,7 +494,7 @@
   .form__level {
     position: absolute;
     top: 43px;
-    right: 235px;
+    right: 238px;
   }
 
   .form__level-amount {
@@ -479,9 +515,14 @@
 
   .form__button {
     width: 190px;
-    margin-top: 0;
+    margin: 0 0 25px;
+    padding: 8px 8px 9px 8px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+  }
+
+  .form__change-avatar {
+    .visually-hidden();
   }
 
   .form__tags {
@@ -492,14 +533,27 @@
     left: 63px;
   }
 
+  .form__transport-wrapper {
+    justify-content: center;
+    padding: 25px;
+  }
+
   .form__transport {
     order: 0;
     width: 384px;
     margin-bottom: 0;
+
+    .transport__item {
+      margin-right: -1px;
+    }
+  }
+
+  .form__plans {
+    padding-top: 47px;
   }
 
   .form__title {
-    margin-left: 73px;
+    margin-left: 70px;
   }
 
   .form__list {
@@ -511,7 +565,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
-    padding: 25px 42px 25px 44px;
+    padding: 22px 42px 25px 43px;
   }
 
   .form__countries {
@@ -522,14 +576,18 @@
   }
 
   .form__counter {
-    margin-right: 40px;
+    margin-right: 36px;
   }
 
   .form__wrapper {
     display: flex;
-    width: 630px;
+    width: 588px;
     .indent-reset();
     border: none;
+  }
+
+  .form__travelmates-amount {
+    width: 175px;
   }
 
   .form__plans-change {
