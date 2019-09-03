@@ -1,5 +1,5 @@
 .countries {
-  padding: 72px @mobile-padding 30px;
+  padding: 100px @mobile-padding 30px;
   color: @color-grey;
   background-color: @color-lightgrey;
   .border-radius();
@@ -12,7 +12,7 @@
 }
 
 .countries__wrapper {
-  margin-bottom: 65px;
+  margin-bottom: 60px;
   padding: 0 50px 0 @mobile-padding;
 }
 
@@ -28,7 +28,7 @@
 
 .countries__list {
   .list-reset();
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 }
 
 .countries__item {
@@ -62,7 +62,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  margin-top: -10px;
+  margin-top: -12px;
   padding: @mobile-padding;
   background-color: @color-white;
   border-radius: 10px;
@@ -148,7 +148,7 @@
     background-image: url("../img/flags-back@1x.png");
     background-size: 289px auto;
     background-repeat: no-repeat;
-    background-position: right top 140px;
+    background-position: right top 150px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/flags-back@2x.png");
@@ -157,7 +157,7 @@
 
   .countries__wrapper {
     width: 350px;
-    margin-bottom: 110px;
+    margin-bottom: 104px;
     padding: 0;
   }
 
@@ -210,24 +210,24 @@
   .countries__inner {
     width: 100%;
     .indent-reset();
+    padding: 29px 0 18px;
     background-color: transparent;
 
     &::before {
-      top: -7px;
-      right: -35px;
+      top: 16px;
+      right: -36px;
       width: 70px;
       height: 47px;
     }
   }
 
   .countries__name {
-    margin-bottom: 5px;
     .heading(@color: @color-darknavy);
   }
 
   .countries__visitors {
     order: 1;
-    margin: 0;
+    margin: auto 0 0;
     padding-left: 30px;
     font-size: 20px;
     line-height: 30px;
@@ -239,12 +239,13 @@
   }
 
   .countries__text {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 20px;
   }
 
   .countries__show-all {
     .heading();
+    padding: 28px 40px 29px 33px;
   }
 }
 

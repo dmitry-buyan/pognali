@@ -1,5 +1,5 @@
 .travelmates {
-  padding: 102px @mobile-padding 30px;
+  padding: 100px @mobile-padding 30px;
   background-color: @color-darkblue;
   background-image:
     url("../img/smolov-back-desktop@1x.png"),
@@ -38,7 +38,7 @@
 }
 
 .travelmates__wrapper {
-  margin-bottom: 55px;
+  margin-bottom: 58px;
   padding: 0 @mobile-padding;
   background-repeat: no-repeat;
 }
@@ -93,7 +93,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 27px @mobile-padding 22px;
+  padding: 27px @mobile-padding 17px;
   background-color: @color-white;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -115,13 +115,13 @@
 .travelmates__name {
   position: relative;
   .indent-reset();
-  margin-bottom: 15px;
+  margin-bottom: 11px;
   .heading(21px, 21px);
 
   &::before {
     content: "";
     position: absolute;
-    left: -12px;
+    left: -16px;
     top: 50%;
     width: 5px;
     height: 5px;
@@ -150,8 +150,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  width: 54px;
+  height: 54px;
   color: @color-white;
   border-radius: 50%;
   border: 3px solid #ff8d30;
@@ -164,8 +164,8 @@
     content: "";
     top: -3px;
     left: -3px;
-    width: 60px;
-    height: 60px;
+    width: 54px;
+    height: 54px;
     border-radius: 50%;
     border: 3px solid #ff8d30;
     border-top-color: transparent;
@@ -184,13 +184,13 @@
 
     &::before {
       border-left-color: transparent;
-      transform: rotate(80deg);
+      transform: rotate(75deg);
     }
   }
 }
 
 .travelmates__level-amount {
-  margin-bottom: 5px;
+  margin-top: 9px;
   font-size: 24px;
   line-height: 24px;
   font-weight: @font-bold;
@@ -198,6 +198,7 @@
 }
 
 .travelmates__level-title {
+  margin: auto 0 5px;
   font-size: 14px;
   line-height: 14px;
   font-weight: @font-normal;
@@ -208,7 +209,7 @@
   display: flex;
   justify-content: center;
   .list-reset();
-  margin: -40px 0 15px;
+  margin: -40px 0 14px;
 }
 
 .travelmates__subitem {
@@ -277,17 +278,22 @@
 }
 
 .travelmates__hashtags {
-  margin-bottom: 15px;
-}
+  margin-bottom: 7px;
 
-.travelmates__hashtags .hashtags__list {
-  justify-content: center;
+  .hashtags__list {
+    justify-content: center;
+  }
+
+  .hashtags__item {
+    margin-right: 4px;
+  }
 }
 
 .travelmates__transport-list {
   display: flex;
 
   .transport__item {
+    margin-right: 2px;
     background-color: transparent;
   }
 
@@ -329,7 +335,7 @@
     background-repeat: no-repeat;
     background-position:
       left 0 top 426px,
-      right 35px top 90px;
+      right 35px top 80px;
     background-size:
       143px auto,
       285px auto;
@@ -341,7 +347,7 @@
     }
 
     &::before {
-      top: 90px;
+      top: 80px;
       left: 0;
       width: 213px;
       height: 213px;
@@ -381,60 +387,92 @@
     border-top-right-radius: 20px;
   }
 
+  .travelmates__level {
+    top: 20px;
+    left: 21px;
+  }
+
   .travelmates__avatar {
     width: 100%;
   }
 
   .travelmates__item-wrapper {
-    padding: 32px 25px 29px;
+    padding: 32px 25px 24px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
 
   .travelmates__name {
     .heading();
+    margin-bottom: 21px;
+
+    &::before {
+      left: -22px;
+      width: 7px;
+      height: 7px;
+    }
   }
 
   .travelmates__sublist {
-    margin-top: -45px;
+    margin: -44px 0 17px;
+  }
+
+  .travelmates__hashtags {
+    margin-bottom: 20px;
+
+    .hashtags__item {
+      display: flex;
+    }
+  }
+
+  .travelmates__transport-list {
+    .transport__item {
+      margin: 0;
+    }
   }
 
   .travelmates__to-all {
     .heading();
+    padding: 28px 40px 29px 33px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .travelmates {
-    padding: 195px @desktop-padding 0;
+    padding: 194px @desktop-padding 0;
   }
 
   .travelmates__container {
     display: flex;
     flex-wrap: wrap;
     width: @desktop-width - @desktop-padding * 2;
-    padding: 0 0 135px;
+    padding: 0 0 133px;
     background-position:
-      left 485px top,
+      left 487px top,
       left 131px top 250px;
     background-size:
       143px auto,
       285px auto;
 
     &::before {
-      top: -60px;
+      top: -67px;
     }
   }
 
   .travelmates__wrapper {
     width: 430px;
-    margin-left: 70px;
+    margin: -11px 0 45px 70px;
   }
 
   .travelmates__list {
     width: 630px;
     margin-left: auto;
     margin-bottom: -81px;
+  }
+
+  .travelmates__level {
+    top: 22px;
+    left: 22px;
   }
 
   .travelmates__to-all {

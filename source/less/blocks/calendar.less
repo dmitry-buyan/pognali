@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 17px;
+  margin-bottom: 15px;
   padding: 11px 0;
   border: 1px solid #cbced9;
   border-right: none;
@@ -67,8 +67,8 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  width: 32px;
-  height: 32px;
+  width: 31px;
+  height: 31px;
   .indent-reset();
   font-size: 14px;
   line-height: 18px;
@@ -156,6 +156,7 @@
 
 @media (min-width: @tablet-width) {
   .calendar__header {
+    margin: 0;
     padding: 20px 16px;
   }
 
@@ -170,13 +171,14 @@
   }
 
   .calendar__cell {
-    height: 70px;
+    height: 69px;
     font-size: 18px;
     line-height: 30px;
 
     &--heading {
       align-items: flex-end;
-      padding: 0;
+      height: 66px;
+      padding: 0 0 3px 0;
       letter-spacing: 0;
 
       &::before {
@@ -219,13 +221,13 @@
 
   .calendar__cell {
     flex-grow: 1;
-    height: 72px;
+    height: 71px;
 
     &--heading {
       justify-content: flex-start;
       align-items: flex-start;
-      height: 36px;
-      padding-left: 16px;
+      height: 55px;
+      padding: 10px 0 0 16px;
     }
   }
 

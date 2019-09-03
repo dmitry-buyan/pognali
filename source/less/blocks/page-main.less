@@ -21,7 +21,7 @@
   position: relative;
   box-sizing: border-box;
   margin-top: -25px;
-  padding: 20px 105px 50px @mobile-padding;
+  padding: 20px 105px 49px @mobile-padding;
   background-color: #ff8d30;
   border-radius: 10px;
 
@@ -38,7 +38,7 @@
   }
 
   &:last-child {
-    padding-bottom: 25px;
+    padding-bottom: 24px;
     background-color: #ffd74b;
   }
 
@@ -91,6 +91,14 @@
 .page-main__map {
   height: 342px;
   margin: -35px 0;
+  background-image: url("../img/map-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/map-mobile@2x.jpg");
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -107,7 +115,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: @tablet-width - @tablet-padding * 2;
-    margin: -142px auto 140px;
+    margin: -140px auto 140px;
     .heading(@color: @color-darknavy);
   }
 
@@ -174,8 +182,13 @@
   }
 
   .page-main__map {
-    height: 600px;
+    height: 571px;
     margin: -55px 0;
+    background-image: url("../img/map-tablet@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
   }
 }
 
@@ -282,6 +295,12 @@
   }
 
   .page-main__map {
+    height: 516px;
     margin: -60px 0;
+    background-image: url("../img/map-desktop@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/map-desktop@2x.jpg");
+    }
   }
 }

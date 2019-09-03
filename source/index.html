@@ -13,6 +13,7 @@
     <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/bloggersans-mediumitalic.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
+
     <script>
       // Picture element HTML5 shiv
       document.createElement( "picture" );
@@ -24,8 +25,9 @@
       <include src="build/img/sprite.svg"></include>
     </div>
     <header class="page-header">
-      <!-- Открытие/скрытие кропки осуществляется с помощью добавления/удаления модификатора nojs к элементу nav-->
-      <nav class="main-nav main-nav--opened main-nav--nojs">
+      <!-- Показ/скрытие меню с помощью модификаторов opened/closed  -->
+      <!-- Модификатор nojs при отключенном JS не показывает кнопки  -->
+      <nav class="main-nav main-nav--closed main-nav">
         <a class="main-nav__logo">
           <span class="visually-hidden">Погнали?</span>
         </a>
@@ -213,12 +215,10 @@
           <ul class="travelmates__list">
             <li class="travelmates__item">
               <picture>
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
-                <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
-                <img src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" alt="Таня Фирсова" width="270" height="270" class="travelmates__avatar">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
+                <source type="image/webp" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+                <img src="img/firsova-tablet@1x.jpg" srcset="img/firsova-tablet@2x.jpg 2x" alt="Таня Фирсова" width="270" height="270" class="travelmates__avatar">
               </picture>
               <div class="travelmates__level">
                 <span class="travelmates__level-amount">99</span>
@@ -294,12 +294,10 @@
             </li>
             <li class="travelmates__item">
               <picture>
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
-                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
-                <img src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Петя Демин" width="270" height="270" class="travelmates__avatar">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+                <source type="image/webp" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                <img src="img/demin-tablet@1x.jpg" srcset="img/demin-tablet@2x.jpg 2x" alt="Петя Демин" width="270" height="270" class="travelmates__avatar">
               </picture>
               <div class="travelmates__level travelmates__level--lv80">
                 <span class="travelmates__level-amount">80</span>
@@ -388,7 +386,7 @@
               <span class="rates__link">Показать тарифы для бизнеса</span>
             </a>
           </div>
-          <div class="rates__modal">
+          <div class="rates__modal" style="display: none">
             <div class="rates__modal-wrapper">
               <h2 class="rates__title rates__title--modal">Бизнес-тарифы</h2>
               <ul class="rates__offer-list">

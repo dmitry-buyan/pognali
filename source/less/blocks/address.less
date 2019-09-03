@@ -1,5 +1,5 @@
 .address {
-  padding: 55px @mobile-padding 35px;
+  padding: 60px @mobile-padding 35px;
   font-style: normal;
   font-weight: @font-bold;
   color: @color-darkblue;
@@ -20,7 +20,7 @@
   position: relative;
   display: inline-flex;
   .indent-reset();
-  margin-bottom: 35px;
+  margin-bottom: 33px;
   padding-left: 62px;
   text-transform: uppercase;
 
@@ -67,11 +67,15 @@
       border-left-color: fade(@color-white, 30%);
     }
   }
+
+  &::before {
+    right: 20px;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .address {
-    padding: 102px @tablet-padding 85px;
+    padding: 99px @tablet-padding 85px;
   }
 
   .address__container {
@@ -87,7 +91,7 @@
   .address__text {
     display: flex;
     align-items: center;
-    margin-bottom: 44px;
+    margin-bottom: 64px;
     padding-left: 94px;
     line-height: 28px;
 
@@ -99,14 +103,18 @@
   }
 
   .address__route {
-    padding: 25px 33px 25px 35px;
+    padding: 25px 33px;
     .heading(@color: @color-darkblue);
+
+    &::before {
+      right: 33px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .address {
-    padding: 102px @desktop-padding 60px;
+    padding: 120px @desktop-padding 60px;
   }
 
   .address__container {
