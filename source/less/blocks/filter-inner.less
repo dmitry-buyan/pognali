@@ -26,7 +26,7 @@
   display: flex;
   flex-direction: column;
   .indent-reset();
-  padding-top: 14px;
+  padding-top: 13px;
   border: none;
   border-top: 1px solid #f3c72b;
 }
@@ -34,7 +34,7 @@
 .filter-inner__subtitle {
   position: relative;
   .indent-reset();
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   .heading(16px, 18px);
   text-align: left;
   text-transform: uppercase;
@@ -76,8 +76,7 @@
 }
 
 .filter-inner__field {
-  .indent-reset();
-  margin-bottom: 12px;
+  margin: 8px 0 15px;
 }
 
 .filter-inner__input {
@@ -105,6 +104,10 @@
       border: 1px solid lightblue;
     }
   }
+}
+
+.filter-inner__input-wrapper {
+  margin-bottom: 3px;
 }
 
 .filter-inner__label {
@@ -148,13 +151,13 @@
 
 .filter-inner__transport {
   display: flex;
-  margin-bottom: 19px;
+  margin: 7px 0 20px;
 }
 
 .filter-inner__wrapper {
   position: relative;
   display: flex;
-  margin-bottom: 20px;
+  margin: 2px 0 25px;
 
   &::before,
   &::after {
@@ -298,7 +301,8 @@
 @media (min-width: @tablet-width) and (max-width: @mobile-tablet-width) {
   .filter-inner {
     width: @tablet-width - @tablet-padding * 2;
-    padding: 37px 35px 38px;
+    margin-bottom: 40px;
+    padding: 35px 35px 38px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -309,7 +313,7 @@
   }
 
   .filter-inner__title {
-    margin-bottom: 37px;
+    margin-bottom: 39px;
     .heading(30px, 30px);
   }
 
@@ -331,6 +335,10 @@
       margin: 0;
       padding-bottom: 36px;
       border-bottom: 1px solid #f3c72b;
+    }
+
+    &--transport {
+      margin-bottom: 13px;
     }
   }
 
@@ -383,7 +391,7 @@
   }
 
   .filter-inner__transport {
-    margin: 0;
+    margin: 0 0 0 -6px;
 
     .transport__item {
       width: 43px;
@@ -422,12 +430,16 @@
   }
 
   .filter-inner__bar {
-    width: 205px;
+    width: 211px;
   }
 
   .filter-inner__toggle {
     width: 13px;
     height: 13px;
+
+    &--max {
+      right: -2px;
+    }
   }
 
   .filter-inner__btn {
@@ -452,7 +464,7 @@
   }
 
   .filter-inner__title {
-    margin-bottom: 37px;
+    margin-bottom: 28px;
     .heading(30px, 30px);
   }
 
@@ -462,8 +474,13 @@
   }
 
   .filter-inner__subtitle {
+    margin-bottom: 10px;
     .heading(20px, 30px);
     font-weight: @font-medium;
+  }
+
+  .filter-inner__field {
+    margin: 13px 0 22px;
   }
 
   .filter-inner__input {
@@ -486,7 +503,7 @@
   }
 
   .filter-inner__transport {
-    margin-bottom: 37px;
+    margin: 7px 0 30px -3px;
 
     .transport__item {
       width: 43px;
@@ -524,7 +541,7 @@
   }
 
   .filter-inner__bar {
-    width: 125px;
+    width: 132px;
   }
 
   .filter-inner__toggle {
@@ -533,6 +550,9 @@
   }
 
   .filter-inner__btn {
-    width: 100%;
+    width: 196px;
+    padding: 10px;
+    letter-spacing: 0.1em;
+    border-radius: 25px;
   }
 }

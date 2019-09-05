@@ -26,7 +26,7 @@
     <header class="page-header">
       <!-- Показ/скрытие меню с помощью модификаторов opened/closed  -->
       <!-- Модификатор nojs при отключенном JS не показывает кнопки  -->
-      <nav class="main-nav main-nav--closed main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <a href="index.html" class="main-nav__logo">
           <span class="visually-hidden">Погнали?</span>
         </a>
@@ -106,8 +106,9 @@
 
       <section class="page-inner__filter filter">
         <div class="filter__container">
-          <!-- Модификатор nojs скрывает кнопки "Свернуть" -->
-          <div class="filter__wrapper filter__wrapper--nojs">
+          <!-- Скрытие меню с помощью модификатора closed  -->
+          <!-- Модификатор nojs при отключенном JS не показывает кнопки  -->
+          <div class="filter__wrapper filter__wrapper--opened filter__wrapper--nojs">
             <h2 class="filter__title">Фильтрация по странам:</h2>
             <ul class="filter__list">
               <li class="filter__item">
@@ -129,9 +130,7 @@
             <button class="filter__btn filter__btn--show" type="button">
               <span class="filter__text">Показать все</span>
             </button>
-            <!-- Модификатор closed скрывает фильтр-->
-            <!-- Модификатор opened показывает фильтр-->
-            <div class="filter__cover filter__cover--opened">
+            <div class="filter__cover">
               <div class="filter__anchor">
                 <ul class="filter__anchor-list">
                   <li class="filter__anchor-item"><a href="#letter1" class="filter__anchor-link filter__anchor-link--active">А</a></li>
@@ -512,8 +511,8 @@
             <div class="filter-inner__container">
               <h2 class="filter-inner__title">Подберите идеального попутчика</h2>
               <div class="filter-inner__group">
-                <!-- Открытие/скрытие кропки осуществляется с помощью добавления/удаления модификатора filter-inner__subtitle--closed элементу button-->
-                <button class="filter-inner__subtitle" type="button">Хобби</button>
+                <!-- Открытие/скрытие кропки осуществляется с помощью добавления/удаления модификатора closed -->
+                <button class="filter-inner__subtitle filter-inner__subtitle--closed" type="button">Хобби</button>
                 <div class="filter-inner__input-wrapper">
                   <p class="filter-inner__field">
                     <input class="filter-inner__input" type="checkbox" name="gym" id="gym" checked="">
@@ -553,7 +552,7 @@
               </div>
 
               <div class="filter-inner__group">
-                <button class="filter-inner__subtitle" type="button">Еда</button>
+                <button class="filter-inner__subtitle filter-inner__subtitle--closed" type="button">Еда</button>
                 <div class="filter-inner__input-wrapper">
                   <p class="filter-inner__field">
                     <input class="filter-inner__input" type="checkbox" name="meat" id="meat" checked="">
@@ -572,7 +571,7 @@
                 </div>
               </div>
 
-              <div class="filter-inner__group">
+              <div class="filter-inner__group filter-inner__group--transport">
                 <button class="filter-inner__subtitle" type="button">Транспорт</button>
                 <div class="filter-inner__transport transport">
                   <input id="plane-field" class="transport__checkbox" type="checkbox" name="plane" checked="">

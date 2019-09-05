@@ -26,7 +26,7 @@
     <header class="page-header">
       <!-- Показ/скрытие меню с помощью модификаторов opened/closed  -->
       <!-- Модификатор nojs при отключенном JS не показывает кнопки  -->
-      <nav class="main-nav main-nav--closed main-nav">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <a href="index.html" class="main-nav__logo">
           <span class="visually-hidden">Погнали?</span>
         </a>
@@ -480,7 +480,8 @@
                         </div>
                         <button class="steps__remove" type="button"><span class="visually-hidden">Удалить</span></button>
                         <!-- Показ/скрытие модальног окна осуществляется с помощью модификатора opened|closed -->
-                        <section class="steps__country-modal steps__country-modal--closed">
+                        <!-- Модификатор nojs при отключенном JS не показывает кнопку  -->
+                        <section class="steps__country-modal steps__country-modal--opened steps__country-modal--nojs">
                           <header class="steps__modal-header">
                             <h3 class="steps__modal-title">Выберите страну</h3>
                             <button class="steps__modal-button" type="button"><span class="visually-hidden">Закрыть</span></button>

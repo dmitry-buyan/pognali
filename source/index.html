@@ -27,7 +27,7 @@
     <header class="page-header">
       <!-- Показ/скрытие меню с помощью модификаторов opened/closed  -->
       <!-- Модификатор nojs при отключенном JS не показывает кнопки  -->
-      <nav class="main-nav main-nav--closed main-nav">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <a class="main-nav__logo">
           <span class="visually-hidden">Погнали?</span>
         </a>
@@ -368,7 +368,8 @@
         </div>
       </section>
 
-      <section class="page-main__rates rates">
+      <!-- Модификатор nojs при отключенном JS не показывает кнопку  -->
+      <section class="page-main__rates rates rates--nojs">
         <div class="rates__container">
           <div class="rates__wrapper">
             <h2 class="rates__title">Добавьте свой профиль!</h2>
@@ -386,7 +387,7 @@
               <span class="rates__link">Показать тарифы для бизнеса</span>
             </a>
           </div>
-          <div class="rates__modal" style="display: none">
+          <div class="rates__modal">
             <div class="rates__modal-wrapper">
               <h2 class="rates__title rates__title--modal">Бизнес-тарифы</h2>
               <ul class="rates__offer-list">
