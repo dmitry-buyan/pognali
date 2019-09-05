@@ -3,6 +3,17 @@
   color: @color-grey;
   background-color: #e6e8f1;
   .border-radius();
+
+  &--nojs {
+    .rates__toggle,
+    .rates__modal-close {
+      display: none;
+    }
+
+    .rates__wrapper {
+      padding-bottom: 25px;
+    }
+  }
 }
 
 .rates__container {
@@ -172,6 +183,12 @@
 @media (min-width: @tablet-width) {
   .rates {
     padding: 125px @tablet-padding 46px;
+
+    &--nojs {
+      .rates__wrapper {
+        padding-bottom: 65px;
+      }
+    }
   }
 
   .rates__container {
