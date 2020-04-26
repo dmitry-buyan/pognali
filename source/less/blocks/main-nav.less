@@ -3,14 +3,6 @@
   padding: 27px @mobile-padding 30px;
   background-color: @color-white;
 
-  &--opened {
-    .main-nav__toggle::before {
-      width: 19px;
-      height: 19px;
-      background-image: url("../img/menu-close.svg");
-    }
-  }
-
   &--closed {
     height: 0;
     background-color: transparent;
@@ -71,6 +63,8 @@
 
   &::before {
     content: "";
+    width: 19px;
+    height: 19px;
     position: absolute;
     width: 19px;
     height: 19px;
