@@ -1,6 +1,6 @@
-let navigation = document.querySelector('.main-nav');
-let toggleButton = navigation.querySelector('.main-nav__toggle');
-let ratesModal = document.querySelector('.rates-modal');
+var navigation = document.querySelector('.main-nav');
+var toggleButton = navigation.querySelector('.main-nav__toggle');
+var ratesModal = document.querySelector('.rates-modal');
 
 navigation.classList.remove('main-nav--opened', 'main-nav--nojs');
 navigation.classList.add('main-nav--closed');
