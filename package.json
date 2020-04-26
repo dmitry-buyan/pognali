@@ -47,6 +47,7 @@
     "node": "8.16"
   },
   "dependencies": {
+    "caniuse-lite": "^1.0.30001048",
     "normalize.css": "^8.0.1"
   }
 }
